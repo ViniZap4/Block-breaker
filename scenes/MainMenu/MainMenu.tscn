@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://fonts/font.ttf" type="DynamicFontData" id=1]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[node name="main" type="Node2D"]
+
+[node name="score" type="Button" parent="."]
+margin_left = 81
+margin_top = 320.271
+margin_right = 202.594
+margin_bottom = 364.271
+custom_fonts/font = SubResource( 1 )
+text = "Start"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HighScore" type="Button" parent="."]
+margin_left = 81
+margin_top = 390.434
+margin_right = 204.973
+margin_bottom = 434.434
+custom_fonts/font = SubResource( 1 )
+text = "High Score"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Close" type="Button" parent="."]
+margin_left = 81
+margin_top = 457.029
+margin_right = 202.594
+margin_bottom = 501.029
+custom_fonts/font = SubResource( 1 )
+text = "Close"
+__meta__ = {
+"_edit_use_anchors_": false
+}

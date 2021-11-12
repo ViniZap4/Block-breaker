@@ -11,7 +11,14 @@ config_version=4
 [application]
 
 config/name="arknoid"
-run/main_scene="res://scenes/main.tscn"
+run/main_scene="res://scenes/MainMenu/MainMenu.tscn"
+
+[display]
+
+window/size/width=720
+window/size/height=720
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
 
 [physics]
 
