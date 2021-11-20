@@ -1,10 +1,173 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://components/themes/defaultButtonTheme.tres" type="Theme" id=1]
 [ext_resource path="res://graphics/background.png" type="Texture" id=2]
 [ext_resource path="res://scenes/MainMenu/MainMenu.gd" type="Script" id=3]
 [ext_resource path="res://components/themes/defaultFont.tres" type="Theme" id=4]
 [ext_resource path="res://components/themes/panel.tres" type="Theme" id=5]
+[ext_resource path="res://components/themes/TitleFont.tres" type="Theme" id=6]
+
+[sub_resource type="Animation" id=3]
+resource_name = "movFont"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Play/Textplay:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -0.355362, -0.108887 ), Vector2( -0.355362, -6.10889 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Play:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -9 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "movFontBack"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Play/Textplay:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -0.355362, -6.10889 ), Vector2( -0.355362, -0.108887 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Play:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -9 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "movFont"
+tracks/0/type = "value"
+tracks/0/path = NodePath("HighScore/TextHighScore:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -0.346273, -0.144257 ), Vector2( -0.346273, -6.14426 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("HighScore:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 82 ), Vector2( 0, 73 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "movFontBack"
+tracks/0/type = "value"
+tracks/0/path = NodePath("HighScore/TextHighScore:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -0.346273, -6.14426 ), Vector2( -0.346273, -0.144257 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("HighScore:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 73 ), Vector2( 0, 82 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "movFont"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Close/TextClose:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -1 ), Vector2( 0, -6 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Close:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 164 ), Vector2( 0, 155 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "movFontBack"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Close/TextClose:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -6 ), Vector2( 0, -1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Close:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 155 ), Vector2( 0, 164 ) ]
+}
 
 [sub_resource type="Animation" id=1]
 resource_name = "mov"
@@ -23,28 +186,28 @@ tracks/0/keys = {
 "values": [ Vector2( 289, -101 ), Vector2( 289, 125 ), Vector2( 289, 60 ), Vector2( 289, 125 ), Vector2( 289, 115 ), Vector2( 289, 125 ), Vector2( 289, 125 ), Vector2( 289, 120 ), Vector2( 289, 125 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Label:custom_constants/shadow_offset_y")
+tracks/1/path = NodePath("Title:custom_constants/shadow_offset_y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 1.01, 1.34 ),
+"times": PoolRealArray( 0.97, 1.35 ),
 "transitions": PoolRealArray( 0.732043, 1.8025 ),
 "update": 0,
 "values": [ 1, 6 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Label:rect_position")
+tracks/2/path = NodePath("Title:rect_position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 1.01, 1.34 ),
+"times": PoolRealArray( 0.97, 1.35 ),
 "transitions": PoolRealArray( 0.707107, 1.23114 ),
 "update": 0,
-"values": [ Vector2( 20.5, 22 ), Vector2( 20.5, 17 ) ]
+"values": [ Vector2( 20.5, 30 ), Vector2( 20.5, 17 ) ]
 }
 
 [node name="Menu" type="Control"]
@@ -71,17 +234,21 @@ __meta__ = {
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_left = 44.2892
-margin_top = -268.611
-margin_right = 392.289
-margin_bottom = -56.6107
+margin_left = 94.2922
+margin_top = -319.373
+margin_right = 442.292
+margin_bottom = -95.3734
+custom_constants/separation = 22
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Play" type="Button" parent="VBoxContainer"]
-margin_right = 347.0
-margin_bottom = 62.0
+anchor_top = -0.0267857
+anchor_bottom = -0.0267857
+margin_top = 6.0
+margin_right = 348.0
+margin_bottom = 66.0
 theme = ExtResource( 1 )
 text = "Play"
 align = 0
@@ -89,10 +256,21 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Textplay" type="Label" parent="VBoxContainer/Play"]
+margin_left = -0.355362
+margin_top = -0.108887
+margin_right = 149.645
+margin_bottom = 70.8911
+theme = ExtResource( 4 )
+text = "Play"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="HighScore" type="Button" parent="VBoxContainer"]
-margin_top = 66.0
-margin_right = 347.0
-margin_bottom = 128.0
+margin_top = 82.0
+margin_right = 348.0
+margin_bottom = 142.0
 theme = ExtResource( 1 )
 text = "High Score"
 align = 0
@@ -100,16 +278,52 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="TextHighScore" type="Label" parent="VBoxContainer/HighScore"]
+margin_left = -0.346273
+margin_top = -0.144257
+margin_right = 386.654
+margin_bottom = 70.8557
+theme = ExtResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "High Score"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Close" type="Button" parent="VBoxContainer"]
-margin_top = 132.0
-margin_right = 347.0
-margin_bottom = 194.0
+margin_top = 164.0
+margin_right = 348.0
+margin_bottom = 224.0
 theme = ExtResource( 1 )
 text = "Close"
 align = 0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="TextClose" type="Label" parent="VBoxContainer/Close"]
+light_mask = 0
+margin_top = -1.0
+margin_right = 159.0
+margin_bottom = 59.0
+theme = ExtResource( 4 )
+text = "Close"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayButtom" type="AnimationPlayer" parent="VBoxContainer"]
+anims/movFont = SubResource( 3 )
+anims/movFontBack = SubResource( 5 )
+
+[node name="AnimationHightScoreButtom" type="AnimationPlayer" parent="VBoxContainer"]
+anims/movFont = SubResource( 4 )
+anims/movFontBack = SubResource( 6 )
+
+[node name="AnimationScoreButtom" type="AnimationPlayer" parent="VBoxContainer"]
+pause_mode = 1
+anims/movFont = SubResource( 2 )
+anims/movFontBack = SubResource( 7 )
 
 [node name="Panel" type="Panel" parent="."]
 anchor_left = 0.5
@@ -126,7 +340,7 @@ __meta__ = {
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Panel"]
 anims/mov = SubResource( 1 )
 
-[node name="Label" type="Label" parent="Panel"]
+[node name="Title" type="Label" parent="Panel"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -135,7 +349,7 @@ margin_left = -368.0
 margin_top = -29.5
 margin_right = 366.0
 margin_bottom = 41.5
-theme = ExtResource( 4 )
+theme = ExtResource( 6 )
 custom_colors/font_color = Color( 0.211765, 0.419608, 0.478431, 1 )
 custom_colors/font_color_shadow = Color( 0.121569, 0.247059, 0.278431, 1 )
 custom_constants/shadow_offset_x = 0
