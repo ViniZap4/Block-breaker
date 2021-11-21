@@ -397,6 +397,7 @@ light_mask = 1048575
 margin_top = -12.0
 margin_right = 212.0
 margin_bottom = 48.0
+mouse_default_cursor_shape = 2
 theme = ExtResource( 3 )
 text = "Level 1"
 
@@ -484,6 +485,7 @@ anims/movButtonBack = SubResource( 9 )
 margin_left = 252.0
 margin_right = 479.0
 margin_bottom = 60.0
+mouse_default_cursor_shape = 2
 theme = ExtResource( 3 )
 text = "Level 2"
 __meta__ = {
