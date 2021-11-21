@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://components/themes/defaultButtonTheme.tres" type="Theme" id=1]
 [ext_resource path="res://graphics/background.png" type="Texture" id=2]
@@ -6,6 +6,9 @@
 [ext_resource path="res://components/themes/defaultFont.tres" type="Theme" id=4]
 [ext_resource path="res://components/themes/panel.tres" type="Theme" id=5]
 [ext_resource path="res://components/themes/TitleFont.tres" type="Theme" id=6]
+[ext_resource path="res://sounds/arpeggiosG#.wav" type="AudioStream" id=7]
+[ext_resource path="res://sounds/arpeggiosA.wav" type="AudioStream" id=8]
+[ext_resource path="res://sounds/arpeggiosB.wav" type="AudioStream" id=9]
 
 [sub_resource type="Animation" id=3]
 resource_name = "movFont"
@@ -228,27 +231,27 @@ anchor_bottom = 1.0
 texture = ExtResource( 2 )
 axis_stretch_horizontal = 2
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_left = 94.2922
-margin_top = -319.373
-margin_right = 442.292
-margin_bottom = -95.3734
+margin_left = 110.941
+margin_top = -331.266
+margin_right = 458.941
+margin_bottom = -107.266
+grow_horizontal = 0
 custom_constants/separation = 22
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Play" type="Button" parent="VBoxContainer"]
-anchor_top = -0.0267857
-anchor_bottom = -0.0267857
-margin_top = 6.0
 margin_right = 348.0
-margin_bottom = 66.0
+margin_bottom = 60.0
+mouse_default_cursor_shape = 2
 theme = ExtResource( 1 )
 text = "Play"
 align = 0
@@ -267,10 +270,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="VBoxContainer/Play"]
+stream = ExtResource( 8 )
+
 [node name="HighScore" type="Button" parent="VBoxContainer"]
 margin_top = 82.0
 margin_right = 348.0
 margin_bottom = 142.0
+mouse_default_cursor_shape = 2
 theme = ExtResource( 1 )
 text = "High Score"
 align = 0
@@ -290,10 +297,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="VBoxContainer/HighScore"]
+stream = ExtResource( 9 )
+
 [node name="Close" type="Button" parent="VBoxContainer"]
 margin_top = 164.0
 margin_right = 348.0
 margin_bottom = 224.0
+mouse_default_cursor_shape = 2
 theme = ExtResource( 1 )
 text = "Close"
 align = 0
@@ -311,6 +322,9 @@ text = "Close"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="VBoxContainer/Close"]
+stream = ExtResource( 7 )
 
 [node name="AnimationPlayButtom" type="AnimationPlayer" parent="VBoxContainer"]
 anims/movFont = SubResource( 3 )
@@ -358,3 +372,7 @@ text = "Block Breaker game"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="VBoxContainer/HighScore" to="." method="_on_HighScore_pressed"]
+[connection signal="pressed" from="VBoxContainer/Close" to="." method="_on_Close_pressed"]
