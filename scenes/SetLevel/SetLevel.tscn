@@ -12,6 +12,7 @@
 [ext_resource path="res://graphics/background.png" type="Texture" id=10]
 [ext_resource path="res://components/DefaultDinamicFont.tres" type="DynamicFont" id=11]
 [ext_resource path="res://sounds/arpeggiosA.wav" type="AudioStream" id=12]
+[ext_resource path="res://graphics/textures/BehindPanel.png" type="Texture" id=13]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.164706, 0.188235, 0.219608, 1 )
@@ -56,17 +57,6 @@ tracks/2/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 0, -17 ) ]
 }
 
-[sub_resource type="StyleBoxFlat" id=8]
-bg_color = Color( 0, 0.227451, 0.294118, 1 )
-corner_radius_top_left = 6
-corner_radius_top_right = 6
-corner_radius_bottom_right = 6
-corner_radius_bottom_left = 6
-expand_margin_left = 10.0
-expand_margin_right = 5.0
-expand_margin_top = 5.0
-expand_margin_bottom = 5.0
-
 [sub_resource type="Animation" id=7]
 resource_name = "movButton"
 step = 0.01
@@ -95,7 +85,7 @@ tracks/1/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 0, -12 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("back:rect_position")
+tracks/2/path = NodePath("behind:rect_position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -104,7 +94,7 @@ tracks/2/keys = {
 "times": PoolRealArray( 0, 0.35 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( 0, 9 ) ]
+"values": [ Vector2( -10.439, 0 ), Vector2( -10.439, 9 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("panel:rect_position")
@@ -147,7 +137,7 @@ tracks/1/keys = {
 "values": [ Vector2( 0, -12 ), Vector2( 0, 0 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("back:rect_position")
+tracks/2/path = NodePath("behind:rect_position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -156,7 +146,7 @@ tracks/2/keys = {
 "times": PoolRealArray( 0, 0.35 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 9 ), Vector2( 0, 0 ) ]
+"values": [ Vector2( -10.357, 9 ), Vector2( -10.439, 0 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("panel:rect_position")
@@ -199,28 +189,28 @@ tracks/1/keys = {
 "values": [ Vector2( 252, 0 ), Vector2( 252, -12 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("back:rect_position")
+tracks/2/path = NodePath("panel:rect_position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.35 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0.35, 0.6, 0.75, 0.85, 0.92, 0.96, 0.99, 1 ),
+"transitions": PoolRealArray( 1.36604, 0.615572, 1.7411, 0.615572, 1.36604, 0.732043, 1.36604, 0.732043 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( 0, 9 ) ]
+"values": [ Vector2( 0, -500 ), Vector2( 0, 85 ), Vector2( 0, -60 ), Vector2( 0, 85 ), Vector2( 0, 40 ), Vector2( 0, 85 ), Vector2( 0, 80 ), Vector2( 0, 85 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("panel:rect_position")
+tracks/3/path = NodePath("behind:rect_position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0.35, 0.6, 0.75, 0.85, 0.92, 0.96, 0.99, 1 ),
-"transitions": PoolRealArray( 1.36604, 0.615572, 1.7411, 0.615572, 1.36604, 0.732043, 1.36604, 0.732043 ),
+"times": PoolRealArray( 0, 0.35 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, -500 ), Vector2( 0, 85 ), Vector2( 0, -60 ), Vector2( 0, 85 ), Vector2( 0, 40 ), Vector2( 0, 85 ), Vector2( 0, 80 ), Vector2( 0, 85 ) ]
+"values": [ Vector2( -10, 0 ), Vector2( -10, 9 ) ]
 }
 
 [sub_resource type="Animation" id=11]
@@ -251,28 +241,28 @@ tracks/1/keys = {
 "values": [ Vector2( 252, -12 ), Vector2( 252, 0 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("back:rect_position")
+tracks/2/path = NodePath("panel:rect_position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.35 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 0.732043 ),
 "update": 0,
-"values": [ Vector2( 0, 9 ), Vector2( 0, 0 ) ]
+"values": [ Vector2( 0, 85 ), Vector2( 0, 500 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("panel:rect_position")
+tracks/3/path = NodePath("behind:rect_position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
 "times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 0.732043 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 85 ), Vector2( 0, 500 ) ]
+"values": [ Vector2( -10, 9 ), Vector2( -10, 0 ) ]
 }
 
 [sub_resource type="Animation" id=5]
@@ -403,8 +393,10 @@ margin_bottom = 60.0
 custom_constants/separation = 40
 
 [node name="level1" type="Button" parent="GridContainer/VBoxContainer/Levls"]
+light_mask = 1048575
+margin_top = -12.0
 margin_right = 212.0
-margin_bottom = 60.0
+margin_bottom = 48.0
 theme = ExtResource( 3 )
 text = "Level 1"
 
@@ -414,6 +406,8 @@ stream = ExtResource( 8 )
 [node name="Label" type="Label" parent="GridContainer/VBoxContainer/Levls/level1"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_top = -6.0
+margin_bottom = -6.0
 theme = ExtResource( 4 )
 text = "Level 1"
 align = 1
@@ -422,25 +416,26 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="back" type="Panel" parent="GridContainer/VBoxContainer/Levls/level1"]
+[node name="behind" type="NinePatchRect" parent="GridContainer/VBoxContainer/Levls/level1"]
 show_behind_parent = true
-light_mask = 32
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_bottom = 0.000289917
-custom_styles/panel = SubResource( 8 )
+margin_left = -10.3566
+margin_top = 6.70285
+margin_right = -15.3566
+margin_bottom = 6.70285
+rect_scale = Vector2( 1.09682, 1.08143 )
+texture = ExtResource( 13 )
 __meta__ = {
-"_edit_use_anchors_": true
+"_edit_use_anchors_": false
 }
 
 [node name="panel" type="Panel" parent="GridContainer/VBoxContainer/Levls/level1"]
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 0.445435
-margin_top = 440.0
-margin_right = 0.445435
-margin_bottom = 597.0
+margin_top = 25.0
+margin_bottom = 182.0
 custom_styles/panel = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -450,8 +445,9 @@ __meta__ = {
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -106.0
-margin_right = 98.0
-margin_bottom = 129.0
+margin_top = 6.72717
+margin_right = 98.0001
+margin_bottom = 135.727
 texture = ExtResource( 10 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -462,16 +458,19 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -69.7012
-margin_top = -21.6913
-margin_right = 285.299
-margin_bottom = 38.3087
+margin_left = -65.9173
+margin_top = -18.7482
+margin_right = 289.083
+margin_bottom = 41.2518
 rect_scale = Vector2( 0.3603, 0.3603 )
 custom_fonts/font = ExtResource( 11 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0.647059, 0.647059, 0.647059, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/line_spacing = 0
 custom_constants/shadow_offset_y = 6
+custom_constants/shadow_as_outline = 0
 text = "iniciar level"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -505,13 +504,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="back" type="Panel" parent="GridContainer/VBoxContainer/Levls/level2"]
+[node name="behind" type="NinePatchRect" parent="GridContainer/VBoxContainer/Levls/level2"]
 show_behind_parent = true
-light_mask = 32
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_bottom = 8.39233e-05
-custom_styles/panel = SubResource( 8 )
+margin_left = -10.0
+margin_right = -16.5
+rect_scale = Vector2( 1.09682, 1.08143 )
+texture = ExtResource( 13 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -520,8 +520,8 @@ __meta__ = {
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 440.0
-margin_bottom = 597.0
+margin_top = -560.0
+margin_bottom = -403.0
 custom_styles/panel = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -531,8 +531,9 @@ __meta__ = {
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -106.0
-margin_right = 98.0
-margin_bottom = 129.0
+margin_top = 6.72717
+margin_right = 98.0001
+margin_bottom = 135.727
 texture = ExtResource( 10 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -543,16 +544,19 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -69.7012
-margin_top = -21.6913
-margin_right = 285.299
-margin_bottom = 38.3087
+margin_left = -61.2922
+margin_top = -19.1686
+margin_right = 293.708
+margin_bottom = 40.8314
 rect_scale = Vector2( 0.3603, 0.3603 )
 custom_fonts/font = ExtResource( 11 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0.647059, 0.647059, 0.647059, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/line_spacing = 0
 custom_constants/shadow_offset_y = 6
+custom_constants/shadow_as_outline = 0
 text = "iniciar level"
 __meta__ = {
 "_edit_use_anchors_": false
