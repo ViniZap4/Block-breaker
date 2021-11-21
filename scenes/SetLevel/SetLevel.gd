@@ -43,7 +43,7 @@ func _process(delta):
 # Back
 
 	if $GridContainer/VBoxContainer/LineOption/Back.is_hovered():
-		if focusAnimate != "Back" and focusAnimate == "none" :
+		if focusAnimate == "none" :
 			$GridContainer/VBoxContainer/LineOption/AnimationBackButtom.current_animation = "movFont"
 			$GridContainer/VBoxContainer/LineOption/Back/AudioStreamPlayer.play()
 			focusAnimate = "Back"
@@ -52,6 +52,8 @@ func _process(delta):
 		if focusAnimate == "Back" :
 			$GridContainer/VBoxContainer/LineOption/AnimationBackButtom.current_animation = "movFontBack"
 			focusAnimate = "none"
+
+
 
 
 func _on_Back_pressed():
