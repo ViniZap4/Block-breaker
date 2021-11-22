@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://graphics/Block1.png" type="Texture" id=1]
+[ext_resource path="res://graphics/Block2.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 13.3817, 6.44634 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 43.9218, 10.0665 )
+
+[node name="StaticBody2D" type="Node2D"]
+
+[node name="Block1" type="StaticBody2D" parent="."]
+position = Vector2( 58.9148, 26.4518 )
+scale = Vector2( 3.3811, 2.5378 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Block1" type="Sprite" parent="Block1"]
+position = Vector2( -182.719, -49.0091 )
+scale = Vector2( 1.08803, 1.15638 )
+texture = ExtResource( 1 )
+offset = Vector2( 167.936, 42.3816 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Block1"]
+shape = SubResource( 1 )
+
+[node name="Block2" type="StaticBody2D" parent="."]
+position = Vector2( 60.2378, 62.9961 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Block2" type="Sprite" parent="Block2"]
+scale = Vector2( 3.71004, 2.79477 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Block2"]
+shape = SubResource( 2 )
