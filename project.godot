@@ -10,7 +10,6 @@ config_version=4
 
 _global_script_classes=[  ]
 _global_script_class_icons={
-
 }
 
 [application]
@@ -20,6 +19,8 @@ run/main_scene="res://scenes/MainMenu/MainMenu.tscn"
 
 [display]
 
+window/size/width=1330
+window/size/height=720
 window/stretch/mode="viewport"
 window/stretch/aspect="keep"
 
