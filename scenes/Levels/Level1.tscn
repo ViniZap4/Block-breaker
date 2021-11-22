@@ -1,26 +1,24 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://scenes/Levels/Scripts/Platform.gd" type="Script" id=1]
-[ext_resource path="res://graphics/Platform (2).png" type="Texture" id=2]
+[ext_resource path="res://components/Scenes/Platform.tscn" type="PackedScene" id=1]
+[ext_resource path="res://components/Scenes/Frontier.tscn" type="PackedScene" id=2]
 [ext_resource path="res://graphics/BackgroundLevel1.PNG" type="Texture" id=3]
-[ext_resource path="res://scenes/Levels/Scripts/Bola.gd" type="Script" id=4]
-[ext_resource path="res://graphics/particle.png" type="Texture" id=5]
+[ext_resource path="res://components/Scenes/Ball.tscn" type="PackedScene" id=4]
 [ext_resource path="res://components/Scenes/Bloco.tscn" type="PackedScene" id=6]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 95.6546, 10 )
-
-[sub_resource type="CircleShape2D" id=2]
-radius = 18.0821
 
 [node name="Level1" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = -0.140308
+margin_top = 0.038147
+margin_right = -0.140259
+margin_bottom = -9.96185
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="BackgroundLevel1" type="NinePatchRect" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 3 )
@@ -28,39 +26,18 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Platform" type="KinematicBody2D" parent="."]
-position = Vector2( 669.789, 651.643 )
-script = ExtResource( 1 )
+[node name="Platform" parent="." instance=ExtResource( 1 )]
 
-[node name="Platform (2)" type="Sprite" parent="Platform"]
-scale = Vector2( 6.67605, 6.67605 )
-texture = ExtResource( 2 )
+[node name="Ball" parent="." instance=ExtResource( 4 )]
+position = Vector2( 670.786, 564.218 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform"]
-position = Vector2( 0, -2.83154 )
-shape = SubResource( 1 )
-
-[node name="Bola" type="KinematicBody2D" parent="."]
-position = Vector2( 670.786, 564.885 )
-script = ExtResource( 4 )
-
-[node name="particle" type="Sprite" parent="Bola"]
-scale = Vector2( 4.38291, 4.6189 )
-texture = ExtResource( 5 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bola"]
-shape = SubResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Frontier" type="StaticBody2D" parent="."]
-position = Vector2( 3.77551, 2.66968 )
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Frontier"]
-polygon = PoolVector2Array( -4.43677, 588.286, -3.86802, -2.88992, 1326.22, -2.66187, 1326.2, 717.268, 1344.81, -20.9547, -36.638, -23.5096 )
+[node name="Frontier" parent="." instance=ExtResource( 2 )]
 
 [node name="Blocos" parent="." instance=ExtResource( 6 )]
+position = Vector2( 167, 112 )
+
+[node name="Blocos2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 334, 113.318 )
+
+[node name="Blocos3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 500.682, 116 )

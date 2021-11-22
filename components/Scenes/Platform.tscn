@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/Levels/Scripts/Platform.gd" type="Script" id=1]
+[ext_resource path="res://graphics/paddle/paddleBlue3.png" type="Texture" id=2]
+
+[sub_resource type="StreamTexture" id=1]
+flags = 4
+load_path = "res://.import/breakout.png-1d009988c14a0c3783082ff4171fedb7.stex"
+
+[sub_resource type="CapsuleShape2D" id=4]
+radius = 19.0414
+height = 196.162
+
+[node name="Platform" type="KinematicBody2D"]
+position = Vector2( 669.789, 651.643 )
+script = ExtResource( 1 )
+
+[node name="Platform (2)" type="Sprite" parent="."]
+position = Vector2( -10.3091, -6.27722 )
+scale = Vector2( 2.40272, 2.40272 )
+texture = ExtResource( 2 )
+normal_map = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -11.0124, -6.50232 )
+rotation = 1.56907
+shape = SubResource( 4 )
