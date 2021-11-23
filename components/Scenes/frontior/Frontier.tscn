@@ -1,0 +1,7 @@
+[gd_scene format=2]
+
+[node name="Frontier" type="StaticBody2D"]
+position = Vector2( 3.77551, 2.66968 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -3.77632, 717.315, -3.86802, -2.88992, 1326.22, -2.66187, 1325.05, 721.579, 1360.1, 721.841, 1376.92, -75.3284, -72.7891, -78.692, -45.8804, 721.841 )

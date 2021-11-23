@@ -1,10 +1,7 @@
 extends KinematicBody2D
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-export var veloc = Vector2(300,-300)
+var veloc = Vector2(400,-400)
 
 
 func _physics_process(delta):

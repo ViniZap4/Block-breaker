@@ -57,7 +57,7 @@ tracks/2/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 0, -17 ) ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=3]
 resource_name = "movButton"
 step = 0.01
 tracks/0/type = "value"
@@ -109,7 +109,7 @@ tracks/3/keys = {
 "values": [ Vector2( 0, -500 ), Vector2( 0, 85 ), Vector2( 0, -60 ), Vector2( 0, 85 ), Vector2( 0, 40 ), Vector2( 0, 85 ), Vector2( 0, 80 ), Vector2( 0, 85 ) ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=4]
 resource_name = "movButtonBack"
 step = 0.05
 tracks/0/type = "value"
@@ -161,7 +161,7 @@ tracks/3/keys = {
 "values": [ Vector2( 0, 85 ), Vector2( 0, 500 ) ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=5]
 resource_name = "movButton"
 step = 0.01
 tracks/0/type = "value"
@@ -213,7 +213,7 @@ tracks/3/keys = {
 "values": [ Vector2( -10, 0 ), Vector2( -10, 9 ) ]
 }
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=6]
 resource_name = "movButtonBack"
 step = 0.05
 tracks/0/type = "value"
@@ -265,7 +265,7 @@ tracks/3/keys = {
 "values": [ Vector2( -10, 9 ), Vector2( -10, 0 ) ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=7]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Back/Back:rect_position")
 tracks/0/interp = 1
@@ -291,8 +291,7 @@ tracks/1/keys = {
 "values": [ Vector2( 167, 0 ), Vector2( 167, -9 ) ]
 }
 
-[sub_resource type="Animation" id=6]
-resource_name = "movFontBack"
+[sub_resource type="Animation" id=8]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Back/Back:rect_position")
 tracks/0/interp = 1
@@ -374,10 +373,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -214.239
-margin_top = -403.354
-margin_right = 228.761
-margin_bottom = -83.3538
+margin_left = -209.749
+margin_top = -392.129
+margin_right = 269.251
+margin_bottom = -72.1292
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -394,9 +393,8 @@ custom_constants/separation = 40
 
 [node name="level1" type="Button" parent="GridContainer/VBoxContainer/Levls"]
 light_mask = 1048575
-margin_top = -12.0
 margin_right = 212.0
-margin_bottom = 48.0
+margin_bottom = 60.0
 mouse_default_cursor_shape = 2
 theme = ExtResource( 3 )
 text = "Level 1"
@@ -435,8 +433,10 @@ __meta__ = {
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 25.0
-margin_bottom = 182.0
+margin_left = 6.4093
+margin_top = -557.845
+margin_right = 6.4093
+margin_bottom = -400.845
 custom_styles/panel = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -478,8 +478,8 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="GridContainer/VBoxContainer/Levls/level1"]
-anims/movButton = SubResource( 7 )
-anims/movButtonBack = SubResource( 9 )
+anims/movButton = SubResource( 3 )
+anims/movButtonBack = SubResource( 4 )
 
 [node name="level2" type="Button" parent="GridContainer/VBoxContainer/Levls"]
 margin_left = 252.0
@@ -565,8 +565,8 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="GridContainer/VBoxContainer/Levls/level2"]
-anims/movButton = SubResource( 10 )
-anims/movButtonBack = SubResource( 11 )
+anims/movButton = SubResource( 5 )
+anims/movButtonBack = SubResource( 6 )
 
 [node name="LineOption" type="HBoxContainer" parent="GridContainer/VBoxContainer"]
 margin_top = 260.0
@@ -606,8 +606,8 @@ stream = ExtResource( 7 )
 
 [node name="AnimationBackButtom" type="AnimationPlayer" parent="GridContainer/VBoxContainer/LineOption"]
 pause_mode = 1
-anims/movFont = SubResource( 5 )
-anims/movFontBack = SubResource( 6 )
+anims/movFont = SubResource( 7 )
+anims/movFontBack = SubResource( 8 )
 
 [connection signal="pressed" from="GridContainer/VBoxContainer/Levls/level1" to="." method="_on_level1_pressed"]
 [connection signal="pressed" from="GridContainer/VBoxContainer/LineOption/Back" to="." method="_on_Back_pressed"]

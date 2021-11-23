@@ -17,6 +17,10 @@ _global_script_class_icons={
 config/name="arknoid"
 run/main_scene="res://scenes/MainMenu/MainMenu.tscn"
 
+[autoload]
+
+Global="*res://components/globals/global.gd"
+
 [display]
 
 window/size/width=1330
