@@ -1,13 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://components/Scenes/Platform/Platform.gd" type="Script" id=1]
 [ext_resource path="res://graphics/paddle/paddleBlue3.png" type="Texture" id=2]
 
 [sub_resource type="StreamTexture" id=1]
 flags = 4
-
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 117.046, 18.6792 )
 
 [node name="Platform" type="KinematicBody2D"]
 position = Vector2( 669.789, 651.643 )
@@ -19,6 +16,5 @@ scale = Vector2( 2.40272, 2.40272 )
 texture = ExtResource( 2 )
 normal_map = SubResource( 1 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 1.29993, 0.584106 )
-shape = SubResource( 2 )
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -118.618, -0.381531, -110.069, -12.0487, -101.609, -18.9654, -0.50061, -21.4852, 104.073, -17.7055, 115.342, -12.0488, 119.547, 0.756897, 117.327, 11.3654, 106.908, 18.2023, -0.50061, 24.1869, -100.979, 20.0922, -112.846, 12.1592 )

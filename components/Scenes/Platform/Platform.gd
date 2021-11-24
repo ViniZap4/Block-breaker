@@ -1,7 +1,8 @@
 extends KinematicBody2D
 
-var veloc = 500
+var veloc = 700
 var dirX = 0
+
 
 func _physics_process(delta):
 	

@@ -1,12 +1,23 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://graphics/block/BlockRed.png" type="Texture" id=1]
 [ext_resource path="res://components/Scenes/block/Block.gd" type="Script" id=2]
+[ext_resource path="res://sounds/brick-hit-1.wav" type="AudioStream" id=3]
 
 [node name="Block1" type="StaticBody2D"]
 position = Vector2( -0.301502, -0.636501 )
 scale = Vector2( 3.3811, 2.5378 )
 script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2( 1, 1 )
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Area2D"]
+rotation = 1.5708
+scale = Vector2( 1.06722, 1.06722 )
+polygon = PoolVector2Array( 5.69748, 17.429, -4.7463, 17.429, -4.70242, 16.3421, -6.94037, 16.3421, -6.89649, 15.2222, -9.30997, 15.1893, -9.22221, -15.1784, -7.02814, -15.2442, -6.94038, -16.3312, -4.61466, -16.3312, -4.5269, -17.4181, 5.74136, -17.4839, 5.78524, -16.2982, 8.06707, -16.3312, 8.19872, -15.2113, 9.16411, -15.2442, 9.33964, 15.2222, 8.15484, 15.1893, 8.15484, 16.2762, 5.74136, 16.3091 )
 
 [node name="Block1" type="Sprite" parent="."]
 position = Vector2( -182.719, -49.0091 )
@@ -16,4 +27,11 @@ offset = Vector2( 167.936, 42.3816 )
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
 rotation = 1.5708
+scale = Vector2( 1, 1 )
 polygon = PoolVector2Array( 5.69748, 17.429, -4.7463, 17.429, -4.70242, 16.3421, -6.94037, 16.3421, -6.89649, 15.2222, -9.30997, 15.1893, -9.22221, -15.1784, -7.02814, -15.2442, -6.94038, -16.3312, -4.61466, -16.3312, -4.5269, -17.4181, 5.74136, -17.4839, 5.78524, -16.2982, 8.06707, -16.3312, 8.19872, -15.2113, 9.16411, -15.2442, 9.33964, 15.2222, 8.15484, 15.1893, 8.15484, 16.2762, 5.74136, 16.3091 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

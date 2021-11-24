@@ -1,21 +1,93 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://components/Scenes/Platform/Platform.tscn" type="PackedScene" id=1]
 [ext_resource path="res://components/Scenes/frontior/Frontier.tscn" type="PackedScene" id=2]
+[ext_resource path="res://graphics/Backgrounds/starts/SkeyStars.png" type="Texture" id=3]
 [ext_resource path="res://components/Scenes/ball/Ball.tscn" type="PackedScene" id=4]
-[ext_resource path="res://graphics/Backgrounds/spaceStar/spaceStar2.png" type="Texture" id=5]
+[ext_resource path="res://components/themes/panel.tres" type="Theme" id=5]
 [ext_resource path="res://components/Scenes/block/Block.tscn" type="PackedScene" id=6]
-[ext_resource path="res://graphics/Backgrounds/spaceStar/spaceStar.png" type="Texture" id=7]
-[ext_resource path="res://graphics/Backgrounds/spaceStar/spaceStar3.png" type="Texture" id=8]
-[ext_resource path="res://graphics/Backgrounds/spaceStar/spaceStar4.png" type="Texture" id=9]
+[ext_resource path="res://components/themes/TitleFont.tres" type="Theme" id=7]
+[ext_resource path="res://scenes/Levels/Level1.gd" type="Script" id=8]
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 520, 520 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 3 )
+region = Rect2( 520, 0, 520, 520 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 3 )
+region = Rect2( 1040, 0, 520, 520 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 3 )
+region = Rect2( 1560, 0, 520, 520 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 520, 520, 520 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 3 )
+region = Rect2( 520, 520, 520, 520 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 3 )
+region = Rect2( 1040, 520, 520, 520 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 3 )
+region = Rect2( 1560, 520, 520, 520 )
+
+[sub_resource type="SpriteFrames" id=9]
 animations = [ {
-"frames": [ ExtResource( 5 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 7 ) ],
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
 "loop": true,
 "name": "default",
-"speed": 3.0
+"speed": 5.0
 } ]
+
+[sub_resource type="Animation" id=10]
+length = 3.0
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.33, 0.55, 0.72, 0.87, 0.91, 0.95, 1, 2.22, 2.66 ),
+"transitions": PoolRealArray( 1, 0.659754, 1.31951, 0.659754, 1.56917, 1, 1.36604, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 438, -101 ), Vector2( 438, 80 ), Vector2( 438, 30 ), Vector2( 438, 80 ), Vector2( 438, 71 ), Vector2( 438, 80 ), Vector2( 438, 78 ), Vector2( 438, 80 ), Vector2( 438, 80 ), Vector2( 438, 750 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Panel/Title:custom_constants/shadow_offset_y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.97, 1.35 ),
+"transitions": PoolRealArray( 0.732043, 1.8025 ),
+"update": 0,
+"values": [ 1, 6 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../Panel/Title:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.97, 1.35 ),
+"transitions": PoolRealArray( 0.707107, 1.23114 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -17 ) ]
+}
 
 [node name="Level1" type="Control"]
 anchor_right = 1.0
@@ -24,35 +96,133 @@ margin_left = -0.140308
 margin_top = 0.038147
 margin_right = -0.140259
 margin_bottom = -9.96185
+script = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 664.915, 407.513 )
-scale = Vector2( 2.66479, 2.66479 )
-frames = SubResource( 1 )
-frame = 3
+position = Vector2( 660.196, 566.864 )
+scale = Vector2( 2.67568, 2.67568 )
+frames = SubResource( 9 )
+frame = 1
 playing = true
 
 [node name="Frontier" parent="." instance=ExtResource( 2 )]
 light_mask = 1023
+scale = Vector2( 0.99603, 0.991966 )
 
 [node name="Platform" parent="." instance=ExtResource( 1 )]
-position = Vector2( 639.011, 623.324 )
+position = Vector2( 648.001, 624.822 )
 collision_layer = 525311
 collision_mask = 525311
-motion/sync_to_physics = true
 
 [node name="Ball" parent="." instance=ExtResource( 4 )]
-position = Vector2( 635.806, 540.955 )
-motion/sync_to_physics = true
+position = Vector2( 645.706, 584.088 )
 
-[node name="Blocos" parent="." instance=ExtResource( 6 )]
+[node name="BlocksArea" type="Node2D" parent="."]
+
+[node name="Blocos" parent="BlocksArea" instance=ExtResource( 6 )]
 position = Vector2( 167, 120 )
 
-[node name="Blocos2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 743.813, 120 )
+[node name="Blocos2" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 295.282, 121.26 )
 
-[node name="Blocos3" parent="." instance=ExtResource( 6 )]
-position = Vector2( 1200.93, 120 )
+[node name="Blocos3" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 421.037, 121.26 )
+
+[node name="Blocos4" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 546.7, 120.778 )
+
+[node name="Blocos5" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 676.954, 120.89 )
+
+[node name="Blocos6" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 807.209, 119.002 )
+
+[node name="Blocos7" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 935.576, 120.89 )
+
+[node name="Blocos8" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 1071.49, 119.002 )
+
+[node name="Blocos9" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 167, 201.173 )
+
+[node name="Blocos10" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 295.282, 202.433 )
+
+[node name="Blocos11" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 421.037, 202.433 )
+
+[node name="Blocos12" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 546.7, 201.951 )
+
+[node name="Blocos13" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 676.954, 202.063 )
+
+[node name="Blocos14" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 807.209, 200.175 )
+
+[node name="Blocos15" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 935.576, 202.063 )
+
+[node name="Blocos16" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 1071.49, 200.175 )
+
+[node name="Blocos17" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 168.888, 282.346 )
+
+[node name="Blocos18" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 297.17, 283.606 )
+
+[node name="Blocos19" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 422.925, 283.606 )
+
+[node name="Blocos20" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 548.587, 283.124 )
+
+[node name="Blocos21" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 678.842, 283.236 )
+
+[node name="Blocos22" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 809.097, 281.349 )
+
+[node name="Blocos23" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 937.464, 283.236 )
+
+[node name="Blocos24" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 1073.38, 281.349 )
+
+[node name="Panel" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -227.0
+margin_top = 750.0
+margin_right = 173.0
+margin_bottom = 853.0
+theme = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Panel"]
+anims/mov = SubResource( 10 )
+
+[node name="Title" type="Label" parent="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -17.0
+margin_bottom = -17.0
+theme = ExtResource( 7 )
+custom_colors/font_color = Color( 0.211765, 0.419608, 0.478431, 1 )
+custom_colors/font_color_shadow = Color( 0.121569, 0.247059, 0.278431, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_offset_y = 6
+text = "Level 1"
+align = 1
+valign = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
