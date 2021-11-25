@@ -13,7 +13,7 @@ var blocksInLevel=0
 var apiKey = ""
 
 var f=File.new()
-f.open('res://apiKey.env',File.READ)
+self.open('res://apiKey.env',File.READ)
 self.apiKey=f.get_line()
 f.close()
 
