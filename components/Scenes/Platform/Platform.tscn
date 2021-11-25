@@ -10,6 +10,13 @@ flags = 4
 position = Vector2( 669.789, 651.643 )
 script = ExtResource( 1 )
 
+[node name="Platform2" type="Sprite" parent="."]
+modulate = Color( 0.584314, 0.584314, 0.584314, 1 )
+position = Vector2( 0.400208, 2.33734 )
+scale = Vector2( 2.40272, 2.40272 )
+texture = ExtResource( 2 )
+normal_map = SubResource( 1 )
+
 [node name="Platform" type="Sprite" parent="."]
 position = Vector2( 0.400177, 0.337341 )
 scale = Vector2( 2.40272, 2.40272 )
@@ -17,4 +24,4 @@ texture = ExtResource( 2 )
 normal_map = SubResource( 1 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( -118.618, -0.381531, -110.069, -12.0487, -101.609, -18.9654, -0.50061, -21.4852, 104.073, -17.7055, 115.342, -12.0488, 119.547, 0.756897, 117.327, 11.3654, 106.908, 18.2023, -0.50061, 24.1869, -100.979, 20.0922, -112.846, 12.1592 )
+polygon = PoolVector2Array( -118.539, 7.35699, -111.539, -11.143, -101.609, -18.9654, -1.039, -22.643, 104.073, -17.7055, 112.711, -10.643, 120.461, 4.60699, 114.961, 11.107, 106.711, 19.857, -0.789001, 20.357, -100.979, 20.0922, -114.289, 11.107 )

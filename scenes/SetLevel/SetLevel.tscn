@@ -534,6 +534,7 @@ __meta__ = {
 position = Vector2( 403.119, -137.156 )
 scale = Vector2( 4.2131, 3.94336 )
 frames = SubResource( 61 )
+frame = 21
 playing = true
 
 [node name="Panel" parent="." instance=ExtResource( 5 )]
@@ -776,4 +777,5 @@ anims/movFont = SubResource( 66 )
 anims/movFontBack = SubResource( 67 )
 
 [connection signal="pressed" from="GridContainer/VBoxContainer/Levls/level1" to="." method="_on_level1_pressed"]
+[connection signal="pressed" from="GridContainer/VBoxContainer/Levls/level2" to="." method="_on_level2_pressed"]
 [connection signal="pressed" from="GridContainer/VBoxContainer/LineOption/Back" to="." method="_on_Back_pressed"]

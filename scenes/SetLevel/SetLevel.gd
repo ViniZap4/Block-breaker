@@ -1,6 +1,6 @@
 extends Control
 
-var focusAnimate
+var focusAnimate = "none"
 
 func _ready():
 	$GridContainer/VBoxContainer/Levls/level1.grab_focus()
@@ -62,4 +62,8 @@ func _on_Back_pressed():
 
 
 func _on_level1_pressed():
-	get_tree().change_scene("res://scenes/Levels/Level1.tscn")
+	get_tree().change_scene("res://scenes/Levels/level1/Level1.tscn")
+
+
+func _on_level2_pressed():
+	get_tree().change_scene("res://scenes/Levels/level2/Level2.tscn")

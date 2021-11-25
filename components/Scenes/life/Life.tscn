@@ -1,0 +1,304 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://graphics/heart/heart.png" type="Texture" id=1]
+[ext_resource path="res://components/Scenes/life/Life.gd" type="Script" id=2]
+[ext_resource path="res://graphics/heart/heartWhite.png" type="Texture" id=3]
+
+[sub_resource type="Animation" id=5]
+resource_name = "heart1"
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("heart1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.45 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 12.103, 0.901 ), Vector2( 12.103, 2.534 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("heart1:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.45 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ), ExtResource( 3 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "heart2"
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("heart2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.45 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.826, 0.901 ), Vector2( 0.826, 2.534 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("heart2:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.45 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ), ExtResource( 3 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "heart3"
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("heart3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.45 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -10.472, 0.901 ), Vector2( -10.472, 2.534 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("heart3:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.45 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ), ExtResource( 3 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "heart1"
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("heart1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.45 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 12.103, 0.901 ), Vector2( 12.103, 2.534 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("heart1:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.45 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ), ExtResource( 3 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "heart2"
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("heart2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.45 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.826, 0.901 ), Vector2( 0.826, 2.534 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("heart2:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.45 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ), ExtResource( 3 ) ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "heart3"
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("heart3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.45 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -10.472, 0.901 ), Vector2( -10.472, 2.534 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("heart3:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.45 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ), ExtResource( 3 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "heart1"
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("heart1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.45 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 12.103, 0.901 ), Vector2( 12.103, 2.534 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("heart1:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.45 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ), ExtResource( 3 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "heart2"
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("heart2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.45 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.826, 0.901 ), Vector2( 0.826, 2.534 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("heart2:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.45 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ), ExtResource( 3 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "heart3"
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("heart3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.45 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -10.472, 0.901 ), Vector2( -10.472, 2.534 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("heart3:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.45 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ), ExtResource( 3 ) ]
+}
+
+[node name="Life" type="Node2D"]
+position = Vector2( 1069.88, 21.2372 )
+scale = Vector2( 4.89839, 4.89839 )
+script = ExtResource( 2 )
+
+[node name="shadow1" type="Sprite" parent="."]
+modulate = Color( 0.619608, 0.619608, 0.619608, 1 )
+position = Vector2( 12.1026, 2.78164 )
+texture = ExtResource( 3 )
+
+[node name="shadow2" type="Sprite" parent="."]
+modulate = Color( 0.619608, 0.619608, 0.619608, 1 )
+position = Vector2( 0.826187, 2.81379 )
+texture = ExtResource( 3 )
+
+[node name="shadow3" type="Sprite" parent="."]
+modulate = Color( 0.619608, 0.619608, 0.619608, 1 )
+position = Vector2( -10.4615, 2.87809 )
+texture = ExtResource( 3 )
+
+[node name="heart1" type="Sprite" parent="."]
+position = Vector2( 12.103, 0.901 )
+texture = ExtResource( 1 )
+
+[node name="heart2" type="Sprite" parent="."]
+position = Vector2( 0.826, 0.901 )
+texture = ExtResource( 1 )
+
+[node name="heart3" type="Sprite" parent="."]
+position = Vector2( -10.472, 0.901 )
+texture = ExtResource( 1 )
+
+[node name="Animation3" type="AnimationPlayer" parent="."]
+anims/heart1 = SubResource( 5 )
+anims/heart2 = SubResource( 6 )
+anims/heart3 = SubResource( 7 )
+
+[node name="Animation2" type="AnimationPlayer" parent="."]
+anims/heart1 = SubResource( 8 )
+anims/heart2 = SubResource( 9 )
+anims/heart3 = SubResource( 10 )
+
+[node name="Animation1" type="AnimationPlayer" parent="."]
+anims/heart1 = SubResource( 4 )
+anims/heart2 = SubResource( 2 )
+anims/heart3 = SubResource( 3 )

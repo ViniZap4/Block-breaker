@@ -1,7 +1,6 @@
-[gd_scene load_steps=79 format=2]
+[gd_scene load_steps=78 format=2]
 
 [ext_resource path="res://components/themes/defaultButtonTheme.tres" type="Theme" id=1]
-[ext_resource path="res://graphics/background.png" type="Texture" id=2]
 [ext_resource path="res://scenes/MainMenu/MainMenu.gd" type="Script" id=3]
 [ext_resource path="res://components/themes/defaultFont.tres" type="Theme" id=4]
 [ext_resource path="res://components/themes/panel.tres" type="Theme" id=5]
@@ -463,23 +462,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="NinePatchRect" type="NinePatchRect" parent="."]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-texture = ExtResource( 2 )
-axis_stretch_horizontal = 2
-__meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": false
-}
-
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 938.191, 496.935 )
 scale = Vector2( 3.76522, 3.76522 )
 frames = SubResource( 61 )
-frame = 29
+frame = 30
 playing = true
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_top = 1.0
