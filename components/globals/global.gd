@@ -12,14 +12,16 @@ var blocksInLevel=0
 
 var apiKey = ""
 
-var f=File.new()
-self.open('res://apiKey.env',File.READ)
-self.apiKey=f.get_line()
-f.close()
 
-SilentWolf.configure({
-	"api_key": self.apiKey,
-	"game_id": "yourGameName",
-	"game_version": "1.0",
-	"log_level": 1 
-})
+func _ready():
+	var file = File.new()
+	file.open('res://apiKey.env', File.READ)
+	self.apiKey=file.get_line()
+	file.close() 
+	
+	SilentWolf.configure({
+		"api_key": self.apiKey,
+		"game_id": "yourGameName",
+		"game_version": "1.0",
+		"log_level": 1 
+	})
