@@ -258,9 +258,10 @@ animations = [ {
 "speed": 10.0
 } ]
 
-[sub_resource type="Animation" id=62]
+[sub_resource type="Animation" id=69]
+resource_name = "movFont"
 tracks/0/type = "value"
-tracks/0/path = NodePath("Play/Textplay:rect_position")
+tracks/0/path = NodePath("Play/Text:rect_position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -286,7 +287,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id=63]
 tracks/0/type = "value"
-tracks/0/path = NodePath("Play/Textplay:rect_position")
+tracks/0/path = NodePath("Play/Text:rect_position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -312,7 +313,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id=64]
 tracks/0/type = "value"
-tracks/0/path = NodePath("HighScore/TextHighScore:rect_position")
+tracks/0/path = NodePath("HighScore/Text:rect_position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -336,9 +337,10 @@ tracks/1/keys = {
 "values": [ Vector2( 0, 82 ), Vector2( 0, 73 ) ]
 }
 
-[sub_resource type="Animation" id=65]
+[sub_resource type="Animation" id=70]
+resource_name = "movFontBack"
 tracks/0/type = "value"
-tracks/0/path = NodePath("HighScore/TextHighScore:rect_position")
+tracks/0/path = NodePath("HighScore/Text:rect_position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -350,7 +352,7 @@ tracks/0/keys = {
 "values": [ Vector2( -0.346273, -6.14426 ), Vector2( -0.346273, -0.144257 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("HighScore:rect_position")
+tracks/1/path = NodePath("./HighScore:rect_position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -364,7 +366,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id=66]
 tracks/0/type = "value"
-tracks/0/path = NodePath("Close/TextClose:rect_position")
+tracks/0/path = NodePath("Close/Text:rect_position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -390,7 +392,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id=67]
 tracks/0/type = "value"
-tracks/0/path = NodePath("Close/TextClose:rect_position")
+tracks/0/path = NodePath("Close/Text:rect_position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -466,7 +468,7 @@ __meta__ = {
 position = Vector2( 938.191, 496.935 )
 scale = Vector2( 3.76522, 3.76522 )
 frames = SubResource( 61 )
-frame = 30
+frame = 8
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -475,10 +477,10 @@ __meta__ = {
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_left = 110.941
-margin_top = -331.266
-margin_right = 458.941
-margin_bottom = -107.266
+margin_left = 51.6567
+margin_top = -369.24
+margin_right = 399.657
+margin_bottom = -145.24
 grow_horizontal = 0
 custom_constants/separation = 22
 __meta__ = {
@@ -496,11 +498,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Textplay" type="Label" parent="VBoxContainer/Play"]
+[node name="Text" type="Label" parent="VBoxContainer/Play"]
 margin_left = -0.355362
-margin_top = -0.108887
+margin_top = -6.10889
 margin_right = 149.645
-margin_bottom = 70.8911
+margin_bottom = 64.8911
 theme = ExtResource( 4 )
 text = "Play"
 __meta__ = {
@@ -522,7 +524,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextHighScore" type="Label" parent="VBoxContainer/HighScore"]
+[node name="Text" type="Label" parent="VBoxContainer/HighScore"]
 margin_left = -0.346273
 margin_top = -0.144257
 margin_right = 386.654
@@ -549,7 +551,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextClose" type="Label" parent="VBoxContainer/Close"]
+[node name="Text" type="Label" parent="VBoxContainer/Close"]
 light_mask = 0
 margin_top = -1.0
 margin_right = 159.0
@@ -564,12 +566,12 @@ __meta__ = {
 stream = ExtResource( 7 )
 
 [node name="AnimationPlayButtom" type="AnimationPlayer" parent="VBoxContainer"]
-anims/movFont = SubResource( 62 )
+anims/movFont = SubResource( 69 )
 anims/movFontBack = SubResource( 63 )
 
 [node name="AnimationHightScoreButtom" type="AnimationPlayer" parent="VBoxContainer"]
 anims/movFont = SubResource( 64 )
-anims/movFontBack = SubResource( 65 )
+anims/movFontBack = SubResource( 70 )
 
 [node name="AnimationScoreButtom" type="AnimationPlayer" parent="VBoxContainer"]
 pause_mode = 1

@@ -3,7 +3,8 @@ extends Control
 
 
 func _ready():
-	 $Panel/AnimationPlayer.current_animation = "mov"
+	$Panel/AnimationPlayer.current_animation = "mov"
+	Global.state = "playState"
 
 func _process(delta):
 	if Global.blocksInLevel == 0:

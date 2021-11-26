@@ -3,6 +3,7 @@ extends Control
 var focusAnimate = "none"
 
 func _ready():
+	Global.state = "setLevelState"
 	$GridContainer/VBoxContainer/Levls/level1.grab_focus()
 	$Panel/AnimationPlayer.current_animation = "mov"
 	$GridContainer/VBoxContainer/Levls/level1/AnimationPlayer.current_animation = "movButton"

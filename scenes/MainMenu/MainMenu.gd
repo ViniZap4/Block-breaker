@@ -3,6 +3,7 @@ extends Control
 var focusAnimate
 
 func _ready():
+	Global.state = "mainMenuState"
 	$VBoxContainer/Play.grab_focus()
 	$Panel/AnimationPlayer.current_animation = "mov"
 	$VBoxContainer/AnimationPlayButtom.current_animation = "movFont"

@@ -1,17 +1,18 @@
 extends Node
 
-
+# display
 var width=1330
 var height=720
 
-var score=0
 
+var score=0
 var life = 3
 
 var blocksInLevel=0
 
 var apiKey = ""
 
+var state = ""
 
 func _ready():
 	var file = File.new()
@@ -25,3 +26,4 @@ func _ready():
 		"game_version": "1.0",
 		"log_level": 1 
 	})
+
