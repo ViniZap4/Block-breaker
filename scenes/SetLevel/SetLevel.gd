@@ -54,13 +54,10 @@ func _process(delta):
 			$GridContainer/VBoxContainer/LineOption/AnimationBackButtom.current_animation = "movFontBack"
 			focusAnimate = "none"
 
-
-
-
 func _on_Back_pressed():
 	get_tree().change_scene("res://scenes/MainMenu/MainMenu.tscn")
 
-
+ 
 
 func _on_level1_pressed():
 	get_tree().change_scene("res://scenes/Levels/level1/Level1.tscn")

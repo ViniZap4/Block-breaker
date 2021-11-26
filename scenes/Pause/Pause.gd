@@ -4,10 +4,9 @@ var focusAnimate = ""
 var Animated = false
 
 func _ready():
-	pass
+	$Pause/AnimationPlayer.current_animation = "init"
 
 func _process(delta):
-	print(Global.state)
 	
 	#control pause state
 	if  Input.is_action_just_pressed("pause") :
@@ -76,6 +75,7 @@ func _process(delta):
 func _on_Resume_pressed():
 	$Title/AnimationPlayer.current_animation = "back"
 	$Panel/AnimationPlayer.current_animation = "back"
+	$Pause/AnimationPlayer.current_animation = "init"
 	
 	Animated = false
 	get_tree().paused = false
@@ -86,7 +86,7 @@ func _on_Pause_pressed():
 	if !get_tree().paused: 
 		$Title/AnimationPlayer.current_animation = "mov"
 		$Panel/AnimationPlayer.current_animation = "mov"
-		
+		$Pause/AnimationPlayer.current_animation = "back"
 		get_tree().paused = true
 
 		$Panel/VBoxContainer/Resume.grab_focus()
@@ -107,3 +107,12 @@ func _on_MainMenu_pressed():
 	get_tree().paused = false
 	get_tree().change_scene("res://scenes/MainMenu/MainMenu.tscn")
 
+
+
+func _on_Pause_mouse_entered():
+	$Pause/AnimationPlayer.current_animation = "movButton"
+
+
+func _on_Pause_mouse_exited():
+	if !get_tree().paused: 
+		$Pause/AnimationPlayer.current_animation  = "movButtonBack"

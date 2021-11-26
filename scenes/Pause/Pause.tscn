@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://components/themes/defaultFont.tres" type="Theme" id=1]
 [ext_resource path="res://components/themes/panel.tres" type="Theme" id=2]
@@ -11,7 +11,7 @@
 [ext_resource path="res://sounds/arpeggiosG#.wav" type="AudioStream" id=9]
 [ext_resource path="res://components/animations/mov.buttonBack.tres" type="Animation" id=10]
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=1]
 resource_name = "back"
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:rect_position")
@@ -26,7 +26,7 @@ tracks/0/keys = {
 "values": [ Vector2( 438.5, 48 ), Vector2( 438.5, 750 ) ]
 }
 
-[sub_resource type="Animation" id=1]
+[sub_resource type="Animation" id=2]
 length = 2.4
 step = 0.01
 tracks/0/type = "value"
@@ -36,7 +36,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 1, 1.34, 1.56, 1.73, 1.88, 1.92, 1.96, 2.01 ),
+"times": PoolRealArray( 0.56, 0.9, 1.12, 1.29, 1.44, 1.48, 1.52, 1.57 ),
 "transitions": PoolRealArray( 1, 0.659754, 1.31951, 0.659754, 1.56917, 1, 1.36604, 1 ),
 "update": 0,
 "values": [ Vector2( 438.5, -115 ), Vector2( 438.5, 48 ), Vector2( 438.5, 20 ), Vector2( 438.5, 48 ), Vector2( 438.5, 40 ), Vector2( 438.5, 48 ), Vector2( 438.5, 43 ), Vector2( 438.5, 48 ) ]
@@ -48,7 +48,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 1.98, 2.36 ),
+"times": PoolRealArray( 1.54, 1.92 ),
 "transitions": PoolRealArray( 0.732043, 1.8025 ),
 "update": 0,
 "values": [ 1, 6 ]
@@ -60,13 +60,13 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 1.98, 2.36 ),
+"times": PoolRealArray( 1.54, 1.92 ),
 "transitions": PoolRealArray( 0.707107, 1.23114 ),
 "update": 0,
 "values": [ Vector2( 0, 0 ), Vector2( 0, -17 ) ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=3]
 resource_name = "back"
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:rect_position")
@@ -81,7 +81,7 @@ tracks/0/keys = {
 "values": [ Vector2( 438.5, 176 ), Vector2( 438.5, 750 ) ]
 }
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=4]
 length = 2.0
 step = 0.01
 tracks/0/type = "value"
@@ -95,59 +95,6 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1, 0.659754, 1.31951, 0.659754, 1.56917, 1, 1.36604, 1 ),
 "update": 0,
 "values": [ Vector2( 438.5, -115 ), Vector2( 438.5, -504 ), Vector2( 438.5, 176 ), Vector2( 438.5, 146 ), Vector2( 438.5, 176 ), Vector2( 438.5, 166 ), Vector2( 438.5, 176 ), Vector2( 438.5, 170 ), Vector2( 438.5, 176 ) ]
-}
-
-[sub_resource type="Animation" id=3]
-tracks/0/type = "value"
-tracks/0/path = NodePath("Text:rect_position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( -0.355362, -0.108887 ), Vector2( -0.355362, -6.10889 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath(".:rect_position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.4 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 155 ), Vector2( 0, 146 ) ]
-}
-
-[sub_resource type="Animation" id=4]
-resource_name = "movButtonBack"
-tracks/0/type = "value"
-tracks/0/path = NodePath("Text:rect_position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( -0.346273, -6.14426 ), Vector2( -0.346273, -0.144257 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath(".:rect_position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.4 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 146 ), Vector2( 0, 155 ) ]
 }
 
 [sub_resource type="Animation" id=5]
@@ -173,11 +120,10 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.4 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 269 ), Vector2( 0, 260 ) ]
+"values": [ Vector2( 0, 155 ), Vector2( 0, 146 ) ]
 }
 
 [sub_resource type="Animation" id=6]
-resource_name = "movButtonBack"
 tracks/0/type = "value"
 tracks/0/path = NodePath("Text:rect_position")
 tracks/0/interp = 1
@@ -200,7 +146,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.4 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 260 ), Vector2( 0, 269 ) ]
+"values": [ Vector2( 0, 146 ), Vector2( 0, 155 ) ]
 }
 
 [sub_resource type="Animation" id=7]
@@ -226,11 +172,62 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.4 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 383 ), Vector2( 0, 374 ) ]
+"values": [ Vector2( 0, 269 ), Vector2( 0, 260 ) ]
 }
 
 [sub_resource type="Animation" id=8]
-resource_name = "movButtonBack"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Text:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -0.346273, -6.14426 ), Vector2( -0.346273, -0.144257 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 260 ), Vector2( 0, 269 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Text:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -0.355362, -0.108887 ), Vector2( -0.355362, -6.10889 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 383 ), Vector2( 0, 374 ) ]
+}
+
+[sub_resource type="Animation" id=10]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Text:rect_position")
 tracks/0/interp = 1
@@ -256,6 +253,48 @@ tracks/1/keys = {
 "values": [ Vector2( 0, 374 ), Vector2( 0, 383 ) ]
 }
 
+[sub_resource type="Animation" id=13]
+resource_name = "back"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.52 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 8.819, 7.59 ), Vector2( 8.819, -58.41 ) ]
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "init"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 8.819, -58.41 ), Vector2( 8.819, 7.59 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Text:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.936, -0.144 ) ]
+}
+
 [sub_resource type="Animation" id=11]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Text:rect_position")
@@ -267,7 +306,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.3 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( -0.355362, -0.108887 ), Vector2( -0.355362, -6.10889 ) ]
+"values": [ Vector2( 0.936, -0.109 ), Vector2( 0.936, -6.109 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath(".:rect_position")
@@ -279,7 +318,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.4 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 12 ), Vector2( 0, 3 ) ]
+"values": [ Vector2( 8.819, 7.59 ), Vector2( 8.819, 3.59 ) ]
 }
 
 [sub_resource type="Animation" id=12]
@@ -294,7 +333,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.3 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( -0.346273, -6.14426 ), Vector2( -0.346273, -0.144257 ) ]
+"values": [ Vector2( 0.936, -6.144 ), Vector2( 0.936, -0.144 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath(".:rect_position")
@@ -306,7 +345,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.4 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 3 ), Vector2( 0, 12 ) ]
+"values": [ Vector2( 8.819, 3.59 ), Vector2( 8.819, 7.59 ) ]
 }
 
 [node name="Pause" type="Control"]
@@ -322,17 +361,17 @@ __meta__ = {
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -226.5
-margin_top = -115.0
+margin_top = -110.206
 margin_right = 226.5
-margin_bottom = -11.9998
+margin_bottom = -7.2057
 theme = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Title"]
-anims/back = SubResource( 9 )
-anims/mov = SubResource( 1 )
+anims/back = SubResource( 1 )
+anims/mov = SubResource( 2 )
 
 [node name="Title" type="Label" parent="Title"]
 anchor_right = 1.0
@@ -340,8 +379,6 @@ anchor_bottom = 1.0
 margin_top = -8.12412
 margin_bottom = -8.12412
 theme = ExtResource( 3 )
-custom_colors/font_color = Color( 0.211765, 0.419608, 0.478431, 1 )
-custom_colors/font_color_shadow = Color( 0.121569, 0.247059, 0.278431, 1 )
 custom_constants/shadow_offset_x = 0
 custom_constants/shadow_offset_y = 3
 text = "Pause"
@@ -367,8 +404,8 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Panel"]
-anims/back = SubResource( 10 )
-anims/mov = SubResource( 2 )
+anims/back = SubResource( 3 )
+anims/mov = SubResource( 4 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
 anchor_right = 1.0
@@ -383,6 +420,7 @@ __meta__ = {
 margin_top = 41.0
 margin_right = 453.0
 margin_bottom = 101.0
+mouse_default_cursor_shape = 2
 theme = ExtResource( 4 )
 text = "Resume"
 __meta__ = {
@@ -414,6 +452,7 @@ stream = ExtResource( 7 )
 margin_top = 155.0
 margin_right = 453.0
 margin_bottom = 215.0
+mouse_default_cursor_shape = 2
 theme = ExtResource( 4 )
 text = "Set Level"
 
@@ -432,8 +471,8 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Panel/VBoxContainer/setLevel"]
-anims/movButton = SubResource( 3 )
-anims/movButtonBack = SubResource( 4 )
+anims/movButton = SubResource( 5 )
+anims/movButtonBack = SubResource( 6 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Panel/VBoxContainer/setLevel"]
 stream = ExtResource( 8 )
@@ -442,6 +481,7 @@ stream = ExtResource( 8 )
 margin_top = 269.0
 margin_right = 453.0
 margin_bottom = 329.0
+mouse_default_cursor_shape = 2
 theme = ExtResource( 4 )
 text = "Main Menu"
 __meta__ = {
@@ -449,8 +489,8 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Panel/VBoxContainer/MainMenu"]
-anims/movButton = SubResource( 5 )
-anims/movButtonBack = SubResource( 6 )
+anims/movButton = SubResource( 7 )
+anims/movButtonBack = SubResource( 8 )
 
 [node name="Text" type="Label" parent="Panel/VBoxContainer/MainMenu"]
 anchor_right = 1.0
@@ -473,6 +513,7 @@ stream = ExtResource( 9 )
 margin_top = 383.0
 margin_right = 453.0
 margin_bottom = 443.0
+mouse_default_cursor_shape = 2
 theme = ExtResource( 4 )
 text = "Exit Game"
 __meta__ = {
@@ -494,16 +535,19 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Panel/VBoxContainer/exit"]
-anims/movButton = SubResource( 7 )
-anims/movButtonBack = SubResource( 8 )
+anims/movButton = SubResource( 9 )
+anims/movButtonBack = SubResource( 10 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Panel/VBoxContainer/exit"]
 stream = ExtResource( 9 )
 
 [node name="Pause" type="Button" parent="."]
-margin_top = 12.0
-margin_right = 67.0
-margin_bottom = 72.0
+margin_left = 8.819
+margin_top = 7.59
+margin_right = 50.819
+margin_bottom = 67.59
+rect_scale = Vector2( 1.22863, 0.732825 )
+mouse_default_cursor_shape = 2
 theme = ExtResource( 4 )
 text = "||"
 __meta__ = {
@@ -513,10 +557,10 @@ __meta__ = {
 [node name="Text" type="Label" parent="Pause"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -0.355362
-margin_top = -0.108887
-margin_right = -0.355377
-margin_bottom = -0.108887
+margin_left = 0.936
+margin_top = -0.144
+margin_right = 0.935986
+margin_bottom = -0.144001
 theme = ExtResource( 1 )
 text = "||"
 align = 1
@@ -525,6 +569,8 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Pause"]
+anims/back = SubResource( 13 )
+anims/init = SubResource( 14 )
 anims/movButton = SubResource( 11 )
 anims/movButtonBack = SubResource( 12 )
 
@@ -534,4 +580,6 @@ stream = ExtResource( 7 )
 [connection signal="pressed" from="Panel/VBoxContainer/Resume" to="." method="_on_Resume_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/setLevel" to="." method="_on_setLevel_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/MainMenu" to="." method="_on_MainMenu_pressed"]
+[connection signal="mouse_entered" from="Pause" to="." method="_on_Pause_mouse_entered"]
+[connection signal="mouse_exited" from="Pause" to="." method="_on_Pause_mouse_exited"]
 [connection signal="pressed" from="Pause" to="." method="_on_Pause_pressed"]

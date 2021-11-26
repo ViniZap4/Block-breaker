@@ -5,13 +5,13 @@
 [ext_resource path="res://components/themes/LevelButtonTheme.tres" type="Theme" id=3]
 [ext_resource path="res://components/themes/defaultFont.tres" type="Theme" id=4]
 [ext_resource path="res://components/Scenes/PanelTitleStatic/PanelTitleStatic.tscn" type="PackedScene" id=5]
+[ext_resource path="res://graphics/textures/BehindPanel2.png" type="Texture" id=6]
 [ext_resource path="res://sounds/arpeggiosG#.wav" type="AudioStream" id=7]
 [ext_resource path="res://sounds/arpeggiosB.wav" type="AudioStream" id=8]
 [ext_resource path="res://components/styles/styleboxflat.tres" type="StyleBox" id=9]
 [ext_resource path="res://graphics/background.png" type="Texture" id=10]
 [ext_resource path="res://components/DefaultDinamicFont.tres" type="DynamicFont" id=11]
 [ext_resource path="res://sounds/arpeggiosA.wav" type="AudioStream" id=12]
-[ext_resource path="res://graphics/textures/BehindPanel.png" type="Texture" id=13]
 [ext_resource path="res://graphics/Backgrounds/orbitspace/orbitSpace.png" type="Texture" id=14]
 
 [sub_resource type="AtlasTexture" id=1]
@@ -534,7 +534,7 @@ __meta__ = {
 position = Vector2( 403.119, -137.156 )
 scale = Vector2( 4.2131, 3.94336 )
 frames = SubResource( 61 )
-frame = 31
+frame = 45
 playing = true
 
 [node name="Panel" parent="." instance=ExtResource( 5 )]
@@ -591,7 +591,8 @@ anchor_bottom = 1.0
 margin_left = -10.439
 margin_right = -15.439
 rect_scale = Vector2( 1.09682, 1.08143 )
-texture = ExtResource( 13 )
+texture = ExtResource( 6 )
+region_rect = Rect2( 1012.25, 13.25, 0, 0 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -680,7 +681,7 @@ anchor_bottom = 1.0
 margin_left = -10.0
 margin_right = -16.5
 rect_scale = Vector2( 1.09682, 1.08143 )
-texture = ExtResource( 13 )
+texture = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
