@@ -1,9 +1,22 @@
-[gd_resource type="Theme" load_steps=4 format=2]
+[gd_resource type="Theme" load_steps=5 format=2]
 
 [ext_resource path="res://components/DefaultDinamicFont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://components/styles/inputStyle.tres" type="StyleBox" id=2]
 
 [sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.286275, 0.129412, 0.882353, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 14.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+shadow_color = Color( 0.286275, 0.129412, 0.882353, 0.619608 )
+shadow_size = 8
+shadow_offset = Vector2( 2, 2 )
+
+[sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0, 0.203922, 0.768627, 1 )
 corner_radius_top_left = 12
 corner_radius_top_right = 12
@@ -956,10 +969,10 @@ LineEdit/colors/clear_button_color_pressed = Color( 0, 0, 0, 1 )
 LineEdit/colors/cursor_color = Color( 1, 1, 1, 1 )
 LineEdit/colors/font_color = Color( 1, 1, 1, 1 )
 LineEdit/colors/font_color_selected = Color( 0.996078, 0.45098, 0.980392, 1 )
-LineEdit/colors/read_only = Color( 0, 0, 0, 1 )
-LineEdit/colors/selection_color = Color( 0, 0, 0, 1 )
+LineEdit/colors/read_only = Color( 1, 1, 1, 1 )
+LineEdit/colors/selection_color = Color( 1, 1, 1, 1 )
 LineEdit/icons/clear = null
-LineEdit/styles/focus = ExtResource( 2 )
+LineEdit/styles/focus = SubResource( 1 )
 LineEdit/styles/normal = ExtResource( 2 )
 LineEdit/styles/read_only = null
 LinkButton/colors/font_color = Color( 0, 0, 0, 1 )
@@ -992,7 +1005,7 @@ OptionButton/styles/focus = null
 OptionButton/styles/hover = null
 OptionButton/styles/normal = null
 OptionButton/styles/pressed = null
-Panel/styles/panel = SubResource( 1 )
+Panel/styles/panel = SubResource( 2 )
 PanelContainer/styles/panel = null
 PopupDialog/styles/panel = null
 PopupMenu/colors/font_color = Color( 0, 0, 0, 1 )

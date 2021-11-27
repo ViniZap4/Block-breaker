@@ -10,6 +10,9 @@ func _ready():
 	$GridContainer/VBoxContainer/Levls/level1/AudioStreamPlayer.play()
 	focusAnimate = "Back"
 
+	# desable panel button focus
+	$GridContainer/VBoxContainer/Levls/level1/panel.focus_mode = FOCUS_NONE
+	$GridContainer/VBoxContainer/Levls/level2/panel.focus_mode = FOCUS_NONE
 
 func _process(delta):
 

@@ -4,15 +4,20 @@ extends Node
 var width=1330
 var height=720
 
+var scoreId = 0
 
 var score=0
 var life = 3
 
 var blocksInLevel=0
 
-var apiKey = ""
 
 var state = ""
+
+var NameGame = "VPBreakout"
+var apiKey = ""
+var version =  "1.0.0"
+
 
 func _ready():
 	var file = File.new()
@@ -22,8 +27,8 @@ func _ready():
 	
 	SilentWolf.configure({
 		"api_key": self.apiKey,
-		"game_id": "yourGameName",
-		"game_version": "1.0",
+		"game_id": NameGame,
+		"game_version": version,
 		"log_level": 1 
 	})
 

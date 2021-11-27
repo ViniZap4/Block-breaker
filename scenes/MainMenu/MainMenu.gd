@@ -10,6 +10,8 @@ func _ready():
 	$VBoxContainer/Play/AudioStreamPlayer.play()
 	focusAnimate = "play"
 
+
+
 func _process(delta):
 
 # Play

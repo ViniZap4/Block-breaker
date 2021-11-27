@@ -16,10 +16,7 @@ func _process(delta):
 	if temp >= 0.3 and animation == "pop":
 		$AnimationPlayer.current_animation = "normal"
 		animation = "none"	
-		
-	print($AnimationPlayer.current_animation)
-	print(temp)
-	
+
 	if tempScore != Global.score:
 		tempScore =  Global.score
 		$val.text = String(tempScore) 

@@ -4,11 +4,21 @@ extends Node2D
 const ScoreItem = preload("ScoreItem.tscn")
 const SWLogger = preload("../utils/SWLogger.gd")
 
+var focusAnimate = "none"
 var list_index = 0
 # Replace the leaderboard name if you're not using the default leaderboard
 var ld_name = "main"
 
 func _ready():
+	$Title/AnimationPlayer.current_animation = "mov" 
+
+	Global.state = "HighScoreState"
+	$Board/CloseButtonContainer/CloseButton.grab_focus()
+
+	$Board/CloseButtonContainer/CloseButton/AnimationBackButtom.current_animation = "movFont"
+	$Board/CloseButtonContainer/CloseButton/AudioStreamPlayer.play()
+	focusAnimate = "Back"
+	
 	print("SilentWolf.Scores.leaderboards: " + str(SilentWolf.Scores.leaderboards))
 	print("SilentWolf.Scores.ldboard_config: " + str(SilentWolf.Scores.ldboard_config))
 	#var scores = SilentWolf.Scores.scores
@@ -26,6 +36,19 @@ func _ready():
 		hide_message()
 		render_board(SilentWolf.Scores.scores, local_scores)
 		
+func _process(delta):
+# Back
+
+	if $Board/CloseButtonContainer/CloseButton.is_hovered():
+		if focusAnimate == "none" :
+			$Board/CloseButtonContainer/CloseButton/AnimationBackButtom.current_animation = "movFont"
+			$Board/CloseButtonContainer/CloseButton/AudioStreamPlayer.play()
+			focusAnimate = "Back"
+
+	else:
+		if focusAnimate == "Back" :
+			$Board/CloseButtonContainer/CloseButton/AnimationBackButtom.current_animation = "movFontBack"
+			focusAnimate = "none"
 
 
 func render_board(scores, local_scores):
@@ -38,6 +61,9 @@ func render_board(scores, local_scores):
 		if !scores:
 			add_no_scores_message()
 	if !all_scores:
+		for score in scores:
+			add_item(score.player_name, str(int(score.score)))
+	else:
 		for score in all_scores:
 			add_item(score.player_name, str(int(score.score)))
 

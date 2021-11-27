@@ -1,6 +1,6 @@
 extends Node
 
-const version = "0.6.9"
+const version = "0.6.10"
 
 onready var Auth = Node.new()
 onready var Scores = Node.new()
@@ -23,7 +23,7 @@ var config = {
 }
 
 var scores_config = {
-	"open_scene_on_close": "res://scenes/Splash.tscn"
+	"open_scene_on_close": "res://scenes/MainMenu/MainMenu.tscn"
 }
 
 var auth_config = {

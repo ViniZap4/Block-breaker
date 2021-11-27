@@ -262,7 +262,7 @@ animations = [ {
 "speed": 10.0
 } ]
 
-[sub_resource type="Animation" id=68]
+[sub_resource type="Animation" id=62]
 length = 2.0
 step = 0.01
 tracks/0/type = "value"
@@ -302,7 +302,7 @@ tracks/2/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 0, -17 ) ]
 }
 
-[sub_resource type="Animation" id=62]
+[sub_resource type="Animation" id=63]
 step = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath("Label:rect_position")
@@ -353,7 +353,7 @@ tracks/3/keys = {
 "values": [ Vector2( 0, -500 ), Vector2( 0, 85 ), Vector2( 0, -60 ), Vector2( 0, 85 ), Vector2( 0, 40 ), Vector2( 0, 85 ), Vector2( 0, 80 ), Vector2( 0, 85 ) ]
 }
 
-[sub_resource type="Animation" id=63]
+[sub_resource type="Animation" id=64]
 step = 0.05
 tracks/0/type = "value"
 tracks/0/path = NodePath("Label:rect_position")
@@ -404,7 +404,7 @@ tracks/3/keys = {
 "values": [ Vector2( 0, 85 ), Vector2( 0, 500 ) ]
 }
 
-[sub_resource type="Animation" id=64]
+[sub_resource type="Animation" id=65]
 step = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath("Label:rect_position")
@@ -455,7 +455,7 @@ tracks/3/keys = {
 "values": [ Vector2( -10, 0 ), Vector2( -10, 9 ) ]
 }
 
-[sub_resource type="Animation" id=65]
+[sub_resource type="Animation" id=66]
 step = 0.05
 tracks/0/type = "value"
 tracks/0/path = NodePath("Label:rect_position")
@@ -506,7 +506,7 @@ tracks/3/keys = {
 "values": [ Vector2( -10, 9 ), Vector2( -10, 0 ) ]
 }
 
-[sub_resource type="Animation" id=69]
+[sub_resource type="Animation" id=67]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Text:rect_position")
 tracks/0/interp = 1
@@ -532,7 +532,7 @@ tracks/1/keys = {
 "values": [ Vector2( 235, 0 ), Vector2( 235, -9 ) ]
 }
 
-[sub_resource type="Animation" id=70]
+[sub_resource type="Animation" id=68]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Text:rect_position")
 tracks/0/interp = 1
@@ -558,7 +558,7 @@ tracks/1/keys = {
 "values": [ Vector2( 235, -9 ), Vector2( 235, 0 ) ]
 }
 
-[sub_resource type="Animation" id=66]
+[sub_resource type="Animation" id=69]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Back/Back:rect_position")
 tracks/0/interp = 1
@@ -584,7 +584,7 @@ tracks/1/keys = {
 "values": [ Vector2( 167, 0 ), Vector2( 167, -9 ) ]
 }
 
-[sub_resource type="Animation" id=67]
+[sub_resource type="Animation" id=70]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Back/Back:rect_position")
 tracks/0/interp = 1
@@ -626,32 +626,32 @@ __meta__ = {
 position = Vector2( 403.119, -137.156 )
 scale = Vector2( 4.2131, 3.94336 )
 frames = SubResource( 61 )
-frame = 22
+frame = 31
 playing = true
 
 [node name="Panel" type="Panel" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -60.0
-margin_top = -112.636
+margin_top = 70.0
 margin_right = 340.0
-margin_bottom = -9.63638
+margin_bottom = 173.0
 theme = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Panel"]
-anims/mov = SubResource( 68 )
+anims/mov = SubResource( 62 )
 
 [node name="Title" type="Label" parent="Panel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = -17.0
-margin_bottom = -17.0
+margin_top = -14.0552
+margin_bottom = -14.0552
 theme = ExtResource( 5 )
 custom_constants/shadow_offset_x = 0
-custom_constants/shadow_offset_y = 6
+custom_constants/shadow_offset_y = 5
 text = "Set Level"
 align = 1
 valign = 2
@@ -767,8 +767,8 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="GridContainer/VBoxContainer/Levls/level1"]
-anims/movButton = SubResource( 62 )
-anims/movButtonBack = SubResource( 63 )
+anims/movButton = SubResource( 63 )
+anims/movButtonBack = SubResource( 64 )
 
 [node name="level2" type="Button" parent="GridContainer/VBoxContainer/Levls"]
 margin_left = 252.0
@@ -851,8 +851,8 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="GridContainer/VBoxContainer/Levls/level2"]
-anims/movButton = SubResource( 64 )
-anims/movButtonBack = SubResource( 65 )
+anims/movButton = SubResource( 65 )
+anims/movButtonBack = SubResource( 66 )
 
 [node name="LineOption" type="HBoxContainer" parent="GridContainer/VBoxContainer"]
 margin_top = 350.0
@@ -886,16 +886,16 @@ __meta__ = {
 
 [node name="AnimationBackButtom" type="AnimationPlayer" parent="GridContainer/VBoxContainer/LineOption/Back"]
 pause_mode = 1
-anims/movFont = SubResource( 69 )
-anims/movFontBack = SubResource( 70 )
+anims/movFont = SubResource( 67 )
+anims/movFontBack = SubResource( 68 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="GridContainer/VBoxContainer/LineOption/Back"]
 stream = ExtResource( 13 )
 
 [node name="AnimationBackButtom" type="AnimationPlayer" parent="GridContainer/VBoxContainer/LineOption"]
 pause_mode = 1
-anims/movFont = SubResource( 66 )
-anims/movFontBack = SubResource( 67 )
+anims/movFont = SubResource( 69 )
+anims/movFontBack = SubResource( 70 )
 
 [connection signal="pressed" from="GridContainer/VBoxContainer/Levls/level1" to="." method="_on_level1_pressed"]
 [connection signal="pressed" from="GridContainer/VBoxContainer/Levls/level1/panel" to="." method="_on_level1_pressed"]

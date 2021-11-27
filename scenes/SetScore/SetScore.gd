@@ -5,8 +5,8 @@ var focusAnimate = "none"
 func _ready():
 	$Panel/AnimationPlayer.current_animation = "mov"
 	$Title/AnimationPlayer.current_animation = "mov"
-	$Panel/VBoxContainer/Label.text = "Score: " + String(Global.score)
-	
+	$Panel/VBoxContainer/Label.text = "your Score: " + String(Global.score)
+	Global.state = "setScoreState"
 	$Panel/VBoxContainer/input/LineEdit.grab_focus()
 
 	#$Panel/AnimationPlayer.current_animation = "mov"
@@ -27,3 +27,13 @@ func _process(delta):
 			$Panel/VBoxContainer/button/Send/AnimationPlayer.current_animation = "movFontBack"
 			focusAnimate = "none"
 
+
+
+func _on_Send_pressed():
+	if $Panel/VBoxContainer/input/LineEdit.text!='':
+		SilentWolf.Scores.persist_score($Panel/VBoxContainer/input/LineEdit.text, Global.score)
+		SilentWolf.Scores.get_high_scores()
+		Global.life = 3
+		Global.score = 0
+		get_tree().change_scene("res://scenes/HighScore/HighScore.tscn")
+		

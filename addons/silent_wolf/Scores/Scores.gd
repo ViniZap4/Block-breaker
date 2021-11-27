@@ -226,7 +226,7 @@ func _on_GetHighScores_request_completed(result, response_code, headers, body):
 	#print("client status: " + str(HighScores.get_http_client_status()))
 	#HighScores.queue_free()
 	SilentWolf.free_request(wrHighScores, HighScores)
-	SWLogger.debug("response headers: " + str(response_code))
+	SWLogger.debug("response code: " + str(response_code))
 	SWLogger.debug("response headers: " + str(headers))
 	SWLogger.debug("response body: " + str(body.get_string_from_utf8()))
 	
@@ -396,8 +396,8 @@ func send_post_request(http_node, request_url, payload):
 		SWLogger.debug("send_post_request to_be_hashed: " + str(to_be_hashed))
 		var hashed = SWHashing.hash_values(to_be_hashed)
 		SWLogger.debug("send_post_request hashed: " + str(hashed))
-		headers.append("X-SW-Act-Tmst: " + str(timestamp))
-		headers.append("X-SW-Act-Dig: " + hashed)
+		headers.append("x-sw-act-tmst: " + str(timestamp))
+		headers.append("x-sw-act-dig: " + hashed)
 	var use_ssl = true
 	if !http_node.is_inside_tree():
 		yield(get_tree().create_timer(0.01), "timeout")

@@ -253,7 +253,7 @@ tracks/1/keys = {
 "values": [ Vector2( 0, 374 ), Vector2( 0, 383 ) ]
 }
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=11]
 resource_name = "back"
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:rect_position")
@@ -268,7 +268,7 @@ tracks/0/keys = {
 "values": [ Vector2( 8.819, 7.59 ), Vector2( 8.819, -58.41 ) ]
 }
 
-[sub_resource type="Animation" id=14]
+[sub_resource type="Animation" id=12]
 resource_name = "init"
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:rect_position")
@@ -295,7 +295,7 @@ tracks/1/keys = {
 "values": [ Vector2( 0.936, -0.144 ) ]
 }
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=13]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Text:rect_position")
 tracks/0/interp = 1
@@ -321,8 +321,7 @@ tracks/1/keys = {
 "values": [ Vector2( 8.819, 7.59 ), Vector2( 8.819, 3.59 ) ]
 }
 
-[sub_resource type="Animation" id=12]
-resource_name = "movButtonBack"
+[sub_resource type="Animation" id=14]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Text:rect_position")
 tracks/0/interp = 1
@@ -569,10 +568,10 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Pause"]
-anims/back = SubResource( 13 )
-anims/init = SubResource( 14 )
-anims/movButton = SubResource( 11 )
-anims/movButtonBack = SubResource( 12 )
+anims/back = SubResource( 11 )
+anims/init = SubResource( 12 )
+anims/movButton = SubResource( 13 )
+anims/movButtonBack = SubResource( 14 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Pause"]
 stream = ExtResource( 7 )
