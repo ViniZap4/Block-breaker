@@ -626,16 +626,16 @@ __meta__ = {
 position = Vector2( 403.119, -137.156 )
 scale = Vector2( 4.2131, 3.94336 )
 frames = SubResource( 61 )
-frame = 31
+frame = 44
 playing = true
 
 [node name="Panel" type="Panel" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -60.0
-margin_top = 70.0
+margin_top = -112.636
 margin_right = 340.0
-margin_bottom = 173.0
+margin_bottom = -9.63638
 theme = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false

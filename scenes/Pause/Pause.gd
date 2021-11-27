@@ -100,18 +100,19 @@ func _on_Pause_pressed():
 
 func _on_setLevel_pressed():
 	get_tree().paused = false
+	Global.blocksInLevel = 0
 	get_tree().change_scene("res://scenes/SetLevel/SetLevel.tscn")
 
 
 func _on_MainMenu_pressed():
 	get_tree().paused = false
+	Global.blocksInLevel = 0
 	get_tree().change_scene("res://scenes/MainMenu/MainMenu.tscn")
 
 
 
 func _on_Pause_mouse_entered():
 	$Pause/AnimationPlayer.current_animation = "movButton"
-
 
 func _on_Pause_mouse_exited():
 	if !get_tree().paused: 
