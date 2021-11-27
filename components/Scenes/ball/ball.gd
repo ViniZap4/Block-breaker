@@ -28,6 +28,6 @@ func _on_Limit_body_entered(body):
 		veloc = Vector2(velocity,-velocity)
 		get_parent().get_node("lifeLess/AnimationPlayer").current_animation = "mov"
 		if Global.life == 0:
-			get_parent().get_node("lifeLess/Title").text = "Game Over! \n" + String(Global.life) + " vidas"
+			get_parent().get_node("lifeLess/Title").text = "Game Over! \n" + String(Global.life) + " Life"
 		else:
-			get_parent().get_node("lifeLess/Title").text = "Cuidado! \n mais " + String(Global.life) + " vidas"
+			get_parent().get_node("lifeLess/Title").text = "WOW! \n only " + String(Global.life) + " Life"

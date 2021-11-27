@@ -1,0 +1,94 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://components/themes/defaultButtonTheme.tres" type="Theme" id=1]
+[ext_resource path="res://components/themes/defaultFont.tres" type="Theme" id=2]
+[ext_resource path="res://sounds/arpeggiosG#.wav" type="AudioStream" id=3]
+
+[sub_resource type="Animation" id=64]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Text:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -1 ), Vector2( 0, -6 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 235, 0 ), Vector2( 235, -9 ) ]
+}
+
+[sub_resource type="Animation" id=65]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Text:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -6 ), Vector2( 0, -1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 235, -9 ), Vector2( 235, 0 ) ]
+}
+
+[node name="Back" type="Button"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -72.0
+margin_top = -98.0
+margin_right = 72.0
+margin_bottom = -38.0
+mouse_default_cursor_shape = 2
+theme = ExtResource( 1 )
+text = "Back"
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Back" type="Label" parent="."]
+light_mask = 0
+margin_top = -1.0
+margin_right = 159.0
+margin_bottom = 119.0
+theme = ExtResource( 2 )
+text = "Back
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationBackButtom" type="AnimationPlayer" parent="."]
+pause_mode = 1
+anims/movFont = SubResource( 64 )
+anims/movFontBack = SubResource( 65 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )

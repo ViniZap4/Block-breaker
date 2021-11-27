@@ -163,6 +163,7 @@ __meta__ = {
 position = Vector2( 660.196, 566.864 )
 scale = Vector2( 2.67568, 2.67568 )
 frames = SubResource( 9 )
+frame = 4
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -289,5 +290,9 @@ __meta__ = {
 
 [node name="Pause" parent="." instance=ExtResource( 11 )]
 light_mask = 31
+margin_left = 0.19873
+margin_top = 0.0331039
+margin_right = 0.19873
+margin_bottom = 0.0330811
 
 [connection signal="body_entered" from="Limit" to="Ball" method="_on_Limit_body_entered"]

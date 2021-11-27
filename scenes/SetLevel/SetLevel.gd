@@ -39,7 +39,8 @@ func _process(delta):
 			$GridContainer/VBoxContainer/Levls/level2/AnimationPlayer.current_animation  = "movButtonBack"
 			focusAnimate = "none"
 
-
+# x 593
+# y 622
 
 # Back
 
