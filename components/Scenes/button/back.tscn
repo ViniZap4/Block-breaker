@@ -4,7 +4,7 @@
 [ext_resource path="res://components/themes/defaultFont.tres" type="Theme" id=2]
 [ext_resource path="res://sounds/arpeggiosG#.wav" type="AudioStream" id=3]
 
-[sub_resource type="Animation" id=64]
+[sub_resource type="Animation" id=69]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Text:rect_position")
 tracks/0/interp = 1
@@ -30,7 +30,7 @@ tracks/1/keys = {
 "values": [ Vector2( 235, 0 ), Vector2( 235, -9 ) ]
 }
 
-[sub_resource type="Animation" id=65]
+[sub_resource type="Animation" id=70]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Text:rect_position")
 tracks/0/interp = 1
@@ -87,8 +87,8 @@ __meta__ = {
 
 [node name="AnimationBackButtom" type="AnimationPlayer" parent="."]
 pause_mode = 1
-anims/movFont = SubResource( 64 )
-anims/movFontBack = SubResource( 65 )
+anims/movFont = SubResource( 69 )
+anims/movFontBack = SubResource( 70 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )

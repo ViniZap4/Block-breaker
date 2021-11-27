@@ -312,7 +312,7 @@ tracks/0/keys = {
 "values": [ Vector2( 354, -331 ), Vector2( 354, 197 ), Vector2( 354, 147 ), Vector2( 354, 197 ), Vector2( 354, 157 ), Vector2( 354, 197 ), Vector2( 354, 177 ), Vector2( 354, 197 ) ]
 }
 
-[sub_resource type="Animation" id=64]
+[sub_resource type="Animation" id=69]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Text:rect_position")
 tracks/0/interp = 1
@@ -338,7 +338,7 @@ tracks/1/keys = {
 "values": [ Vector2( 235, 0 ), Vector2( 235, -9 ) ]
 }
 
-[sub_resource type="Animation" id=65]
+[sub_resource type="Animation" id=70]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Text:rect_position")
 tracks/0/interp = 1
@@ -376,7 +376,7 @@ __meta__ = {
 position = Vector2( 221.121, 941.255 )
 scale = Vector2( 4.51535, 4.51535 )
 frames = SubResource( 62 )
-frame = 27
+frame = 28
 playing = true
 flip_h = true
 
@@ -496,8 +496,8 @@ __meta__ = {
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Panel/VBoxContainer/button/Send"]
 pause_mode = 1
-anims/movFont = SubResource( 64 )
-anims/movFontBack = SubResource( 65 )
+anims/movFont = SubResource( 69 )
+anims/movFontBack = SubResource( 70 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Panel/VBoxContainer/button/Send"]
 stream = ExtResource( 7 )
