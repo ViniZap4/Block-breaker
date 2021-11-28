@@ -16,11 +16,18 @@ func _physics_process(delta):
 		var collision = move_and_collide(veloc*delta)
 		
 		if collision:
-			$AudioStreamPlayer.play()
-			#print(collision.collider.name)
+
+			print(collision.collider.name)
 			veloc = veloc.bounce(collision.normal)
-
-
+			if collision.collider.name == "Frontier":
+				$AudioStreamPlayerFrontier.play() 
+				get_tree().call_group("camera", "shake", 1)
+			elif collision.collider.name == "Platform":
+				$AudioStreamPlayerPlatform.play() 
+				get_tree().call_group("camera", "shake", 0.5)
+			else:
+				$AudioStreamPlayerBLock.play() 
+				
 func _on_Limit_body_entered(body):
 	if body.name == "Ball":
 		initTimer = 0
@@ -28,6 +35,6 @@ func _on_Limit_body_entered(body):
 		veloc = Vector2(velocity,-velocity)
 		get_parent().get_node("lifeLess/AnimationPlayer").current_animation = "mov"
 		if Global.life == 0:
-			get_parent().get_node("lifeLess/Title").text = "Game Over! \n" + String(Global.life) + " Life"
+			get_parent().get_node("lifeLess/Title").text = "Game Over!"
 		else:
-			get_parent().get_node("lifeLess/Title").text = "WOW! \n only " + String(Global.life) + " Life"
+			get_parent().get_node("lifeLess/Title").text =  "only " + String(Global.life) + " Life"

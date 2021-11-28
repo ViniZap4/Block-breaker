@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/select.wav-bceeb6846ca3863c8ad7278557d7416b.sample"
+path="res://.import/plataformHit.wav-807f42e99f0a4d4ba3e23f6078d52123.sample"
 
 [deps]
 
-source_file="res://sounds/select.wav"
-dest_files=[ "res://.import/select.wav-bceeb6846ca3863c8ad7278557d7416b.sample" ]
+source_file="res://sounds/plataformHit.wav"
+dest_files=[ "res://.import/plataformHit.wav-807f42e99f0a4d4ba3e23f6078d52123.sample" ]
 
 [params]
 

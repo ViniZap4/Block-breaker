@@ -1,16 +1,22 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://components/Scenes/Platform/Platform.tscn" type="PackedScene" id=1]
 [ext_resource path="res://components/Scenes/frontior/Frontier.tscn" type="PackedScene" id=2]
 [ext_resource path="res://graphics/Backgrounds/starts/SkeyStars.png" type="Texture" id=3]
 [ext_resource path="res://components/Scenes/ball/Ball.tscn" type="PackedScene" id=4]
 [ext_resource path="res://components/themes/panel.tres" type="Theme" id=5]
-[ext_resource path="res://components/Scenes/block/BlockRed/BlockBlue.tscn" type="PackedScene" id=6]
+[ext_resource path="res://components/Scenes/block/BlockBlue/BlockBlue.tscn" type="PackedScene" id=6]
 [ext_resource path="res://components/themes/TitleFont.tres" type="Theme" id=7]
 [ext_resource path="res://scenes/Levels/level1/Level1.gd" type="Script" id=8]
 [ext_resource path="res://components/Scenes/score/score.tscn" type="PackedScene" id=9]
 [ext_resource path="res://components/Scenes/life/Life.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scenes/Pause/Pause.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/Levels/level1/BlocksArea.gd" type="Script" id=12]
+[ext_resource path="res://sounds/victory.wav" type="AudioStream" id=13]
+[ext_resource path="res://components/Scenes/block/BlockOrange/BlockOrange.tscn" type="PackedScene" id=14]
+[ext_resource path="res://components/Scenes/block/BlockRed/BlockRed.tscn" type="PackedScene" id=15]
+[ext_resource path="res://components/Scenes/block/BlockGray/BlockGray.tscn" type="PackedScene" id=16]
+[ext_resource path="res://components/Scenes/camera/Camera2D.tscn" type="PackedScene" id=17]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 3 )
@@ -160,10 +166,10 @@ __meta__ = {
 }
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 660.196, 220.864 )
-scale = Vector2( 2.67568, 2.67568 )
+position = Vector2( 662.443, 566.864 )
+scale = Vector2( 2.73043, 2.67568 )
 frames = SubResource( 9 )
-frame = 1
+frame = 7
 playing = true
 
 [node name="Limit" type="Area2D" parent="."]
@@ -184,23 +190,94 @@ collision_mask = 525311
 
 [node name="Ball" parent="." instance=ExtResource( 4 )]
 position = Vector2( 645.706, 581.71 )
+scale = Vector2( 0.654628, 0.654628 )
 
 [node name="BlocksArea" type="Node2D" parent="."]
+script = ExtResource( 12 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Blocos2" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 295.282, 121.26 )
+[node name="BlockOrange" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 649.081, 131.797 )
 
-[node name="Blocos4" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 546.7, 120.778 )
+[node name="BlockOrange2" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 1136.12, 131.797 )
 
-[node name="Blocos6" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 807.209, 119.002 )
+[node name="BlockRed" parent="BlocksArea" instance=ExtResource( 15 )]
+position = Vector2( 286.744, 131.797 )
 
-[node name="Blocos8" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 1071.49, 119.002 )
+[node name="BlockRed2" parent="BlocksArea" instance=ExtResource( 15 )]
+position = Vector2( 409.523, 131.797 )
+
+[node name="BlockRed3" parent="BlocksArea" instance=ExtResource( 15 )]
+position = Vector2( 529.744, 131.797 )
+
+[node name="BlockRed4" parent="BlocksArea" instance=ExtResource( 15 )]
+position = Vector2( 768.744, 131.797 )
+
+[node name="BlockRed5" parent="BlocksArea" instance=ExtResource( 15 )]
+position = Vector2( 891.523, 131.797 )
+
+[node name="BlockRed6" parent="BlocksArea" instance=ExtResource( 15 )]
+position = Vector2( 1012.74, 131.797 )
+
+[node name="BlockRed7" parent="BlocksArea" instance=ExtResource( 15 )]
+position = Vector2( 164.744, 181.797 )
+
+[node name="BlockRed8" parent="BlocksArea" instance=ExtResource( 15 )]
+position = Vector2( 409.744, 181.797 )
+
+[node name="BlockRed9" parent="BlocksArea" instance=ExtResource( 15 )]
+position = Vector2( 650.744, 181.797 )
+
+[node name="BlockRed10" parent="BlocksArea" instance=ExtResource( 15 )]
+position = Vector2( 890.744, 181.797 )
+
+[node name="BlockRed11" parent="BlocksArea" instance=ExtResource( 15 )]
+position = Vector2( 1135.74, 181.797 )
+
+[node name="BlockOrange3" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 162.012, 131.797 )
+
+[node name="BlockGray" parent="BlocksArea" instance=ExtResource( 16 )]
+position = Vector2( 288.967, 181.838 )
+
+[node name="BlockGray2" parent="BlocksArea" instance=ExtResource( 16 )]
+position = Vector2( 530.967, 181.838 )
+
+[node name="BlockGray3" parent="BlocksArea" instance=ExtResource( 16 )]
+position = Vector2( 768.967, 181.838 )
+
+[node name="BlockGray4" parent="BlocksArea" instance=ExtResource( 16 )]
+position = Vector2( 1013.97, 181.838 )
+
+[node name="BlockGray5" parent="BlocksArea" instance=ExtResource( 16 )]
+position = Vector2( 167.967, 231.838 )
+
+[node name="BlockGray6" parent="BlocksArea" instance=ExtResource( 16 )]
+position = Vector2( 409.967, 231.838 )
+
+[node name="BlockGray7" parent="BlocksArea" instance=ExtResource( 16 )]
+position = Vector2( 649.967, 231.838 )
+
+[node name="BlockGray8" parent="BlocksArea" instance=ExtResource( 16 )]
+position = Vector2( 892.967, 231.838 )
+
+[node name="Block1" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 288.387, 232.347 )
+
+[node name="Block2" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 530.387, 232.347 )
+
+[node name="Block3" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 770.387, 232.347 )
+
+[node name="Block4" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 1014.39, 232.347 )
+
+[node name="BlockGray9" parent="BlocksArea" instance=ExtResource( 16 )]
+position = Vector2( 1135.97, 231.838 )
 
 [node name="Panel" type="Panel" parent="."]
 anchor_left = 0.5
@@ -244,9 +321,10 @@ anchor_right = 0.5
 margin_left = -258.0
 margin_top = -282.0
 margin_right = 263.0
-margin_bottom = -118.0
+margin_bottom = -182.0
 theme = ExtResource( 5 )
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -261,8 +339,7 @@ margin_bottom = -17.0
 theme = ExtResource( 7 )
 custom_constants/shadow_offset_x = 0
 custom_constants/shadow_offset_y = 6
-text = "Cuidado 
-mais 0 vidas"
+text = "only 0 Life"
 align = 1
 valign = 2
 __meta__ = {
@@ -271,5 +348,15 @@ __meta__ = {
 }
 
 [node name="Pause" parent="." instance=ExtResource( 11 )]
+light_mask = 31
+margin_left = 0.19873
+margin_top = 0.0331039
+margin_right = 0.19873
+margin_bottom = 0.0330811
+
+[node name="Camera2D" parent="." instance=ExtResource( 17 )]
+
+[node name="victory" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
 
 [connection signal="body_entered" from="Limit" to="Ball" method="_on_Limit_body_entered"]

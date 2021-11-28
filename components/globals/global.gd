@@ -17,6 +17,11 @@ var NameGame = "VPBreakout"
 var apiKey = ""
 var version =  "1.0.0"
 
+var blockInstance
+var particleInstance
+
+var instanceControl = false
+
 func _ready():
 	var file = File.new()
 	file.open('res://apiKey.env', File.READ)

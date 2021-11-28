@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://components/Scenes/ball/ball.gd" type="Script" id=1]
 [ext_resource path="res://graphics/ball/BallBlue.png" type="Texture" id=2]
 [ext_resource path="res://sounds/brick-hit-1.wav" type="AudioStream" id=3]
+[ext_resource path="res://sounds/plataformHit.wav" type="AudioStream" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 18.7088
@@ -22,5 +23,14 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayerPlatform" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="AudioStreamPlayerFrontier" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+pitch_scale = 0.37
+
+[node name="AudioStreamPlayerBLock" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
+pitch_scale = 0.96
+mix_target = 2
