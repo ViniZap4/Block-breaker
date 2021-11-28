@@ -80,20 +80,26 @@ func _on_Resume_pressed():
 	Animated = false
 	get_tree().paused = false
 	focusAnimate = "none"
-	Global.state = "PauseState"
+	Global.state = "playState"
 
 func _on_Pause_pressed():
 	if !get_tree().paused: 
+
 		$Title/AnimationPlayer.current_animation = "mov"
 		$Panel/AnimationPlayer.current_animation = "mov"
 		$Pause/AnimationPlayer.current_animation = "back"
-		get_tree().paused = true
+
 
 		$Panel/VBoxContainer/Resume.grab_focus()
-		Global.state = "playState"
+
 		
-		Animated = false
+
 		focusAnimate = "resume"
+		get_tree().paused = true
+		Global.state = "PauseState"
+		Animated = false
+
+
 	else:
 		_on_Resume_pressed() 
 
@@ -117,3 +123,8 @@ func _on_Pause_mouse_entered():
 func _on_Pause_mouse_exited():
 	if !get_tree().paused: 
 		$Pause/AnimationPlayer.current_animation  = "movButtonBack"
+
+
+func _on_exit_pressed():
+		get_tree().quit()
+

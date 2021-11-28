@@ -542,9 +542,9 @@ stream = ExtResource( 9 )
 
 [node name="Pause" type="Button" parent="."]
 margin_left = 8.819
-margin_top = 7.59
+margin_top = -58.41
 margin_right = 50.819
-margin_bottom = 67.59
+margin_bottom = 1.59
 rect_scale = Vector2( 1.22863, 0.732825 )
 mouse_default_cursor_shape = 2
 theme = ExtResource( 4 )
@@ -579,6 +579,7 @@ stream = ExtResource( 7 )
 [connection signal="pressed" from="Panel/VBoxContainer/Resume" to="." method="_on_Resume_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/setLevel" to="." method="_on_setLevel_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/MainMenu" to="." method="_on_MainMenu_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/exit" to="." method="_on_exit_pressed"]
 [connection signal="mouse_entered" from="Pause" to="." method="_on_Pause_mouse_entered"]
 [connection signal="mouse_exited" from="Pause" to="." method="_on_Pause_mouse_exited"]
 [connection signal="pressed" from="Pause" to="." method="_on_Pause_pressed"]

@@ -22,6 +22,9 @@ var particleInstance
 
 var instanceControl = false
 
+var input = ""
+var kayboard = false
+
 func _ready():
 	var file = File.new()
 	file.open('res://apiKey.env', File.READ)

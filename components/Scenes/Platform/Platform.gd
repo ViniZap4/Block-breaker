@@ -6,9 +6,9 @@ var dirX = 0
 
 func _physics_process(delta):
 	
-	if Input.is_action_pressed("ui_left"):
+	if Input.is_action_pressed("ui_left") or Global.input == "Left":
 		dirX = -1
-	elif Input.is_action_pressed("ui_right"):
+	elif Input.is_action_pressed("ui_right") or Global.input == "Right":
 		dirX = 1
 	else:
 		dirX =0
