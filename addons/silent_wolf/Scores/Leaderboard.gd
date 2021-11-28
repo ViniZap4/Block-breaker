@@ -38,7 +38,7 @@ func _ready():
 		
 func _process(delta):
 # Back
-
+	pass
 	if $Board/CloseButtonContainer/CloseButton.is_hovered():
 		if focusAnimate == "none" :
 			$Board/CloseButtonContainer/CloseButton/AnimationBackButtom.current_animation = "movFont"
@@ -114,7 +114,7 @@ func add_item(player_name, score):
 	item.get_node("PlayerName").text = str(list_index) + str(". ") + player_name
 	item.get_node("Score").text = score
 	item.margin_top = list_index * 100
-	$"Board/HighScores/ScoreItemContainer".add_child(item)
+	$"Board/HighScores/CenterContainer/ScoreItemContainer".add_child(item)
 
 
 func add_no_scores_message():
@@ -136,7 +136,7 @@ func hide_message():
 
 
 func clear_leaderboard():
-	var score_item_container = $"Board/HighScores/ScoreItemContainer"
+	var score_item_container = $"Board/HighScores/CenterContainer/ScoreItemContainer"
 	if score_item_container.get_child_count() > 0:
 		var children = score_item_container.get_children()
 		for c in children:

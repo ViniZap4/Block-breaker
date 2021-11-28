@@ -2,7 +2,7 @@ extends Node
 
 # display
 var width=1330
-var height=720
+var height=489
 
 var scoreId = 0
 
