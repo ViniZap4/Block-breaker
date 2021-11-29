@@ -20,13 +20,12 @@ func _ready():
 
 
 func _on_fullScreen_pressed():
-	OS.window_fullscreen = !OS.window_fullscreen
-	
-	if OS.window_fullscreen:
+
+	if !OS.window_fullscreen:
 		$fullScreen.hide()
 		$NormalScreen.show()
 	else:
 		$fullScreen.show()
 		$NormalScreen.hide()
-	
-
+		
+	OS.window_fullscreen = !OS.window_fullscreen
