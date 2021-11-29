@@ -37,4 +37,4 @@ func _ready():
 		"game_version": version,
 		"log_level": 1 
 	})
-
+	

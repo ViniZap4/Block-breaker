@@ -51,10 +51,12 @@ func _process(delta):
 			$VBoxContainer/Close/AudioStreamPlayer.play()
 			focusAnimate = "close"
 
+
 	else:
 		if focusAnimate == "close" :
 			$VBoxContainer/AnimationScoreButtom.current_animation = "movFontBack"
 			focusAnimate = "none"
+
 
 
 

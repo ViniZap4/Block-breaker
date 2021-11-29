@@ -5,12 +5,13 @@
 [ext_resource path="res://components/themes/panel.tres" type="Theme" id=3]
 
 [node name="ScoreItem" type="Panel"]
-margin_top = -112.636
-margin_right = 782.0
-margin_bottom = -36.636
+margin_top = -113.0
+margin_right = 1094.0
+margin_bottom = -37.0
 grow_horizontal = 0
 grow_vertical = 0
 rect_min_size = Vector2( 782, 76 )
+rect_scale = Vector2( 0.847305, 0.847305 )
 theme = ExtResource( 3 )
 script = ExtResource( 2 )
 __meta__ = {
@@ -18,10 +19,10 @@ __meta__ = {
 }
 
 [node name="PlayerName" type="RichTextLabel" parent="."]
-margin_left = 10.5
-margin_top = 9.5
-margin_right = 577.5
-margin_bottom = 75.5
+margin_left = 13.0
+margin_top = 6.0
+margin_right = 547.0
+margin_bottom = 70.0
 theme = ExtResource( 1 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
@@ -30,26 +31,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Score2" type="Label" parent="."]
-margin_left = 457.633
-margin_top = 7.80927
-margin_right = 646.633
-margin_bottom = 67.8093
-theme = ExtResource( 1 )
-text = "score:"
-align = 2
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Score" type="Label" parent="."]
-margin_left = 688.932
-margin_top = 8.89519
-margin_right = 773.932
-margin_bottom = 68.8952
+margin_left = 569.0
+margin_top = 9.0
+margin_right = 1089.0
+margin_bottom = 69.0
 theme = ExtResource( 1 )
-text = "13"
+text = "Score: 13"
 align = 2
 valign = 1
 __meta__ = {

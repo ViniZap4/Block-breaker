@@ -35,5 +35,6 @@ func _on_Send_pressed():
 		SilentWolf.Scores.get_high_scores()
 		Global.life = 3
 		Global.score = 0
+		Global.blocksInLevel = 0
 		get_tree().change_scene("res://scenes/HighScore/HighScore.tscn")
 		
