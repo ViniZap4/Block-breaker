@@ -1,6 +1,7 @@
-[gd_scene load_steps=78 format=2]
+[gd_scene load_steps=79 format=2]
 
 [ext_resource path="res://components/themes/defaultButtonTheme.tres" type="Theme" id=1]
+[ext_resource path="res://components/fullScreen/fullScreen.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/MainMenu/MainMenu.gd" type="Script" id=3]
 [ext_resource path="res://components/themes/defaultFont.tres" type="Theme" id=4]
 [ext_resource path="res://components/themes/panel.tres" type="Theme" id=5]
@@ -468,11 +469,17 @@ __meta__ = {
 position = Vector2( 938.191, 496.935 )
 scale = Vector2( 3.76522, 3.76522 )
 frames = SubResource( 61 )
-frame = 4
+frame = 38
 playing = true
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="fullScreen" parent="." instance=ExtResource( 2 )]
+margin_left = 1240.0
+margin_top = 22.0
+margin_right = 1295.0
+margin_bottom = 75.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_top = 1.0

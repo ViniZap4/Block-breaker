@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://components/fullScreen/fullScreen.gd" type="Script" id=1]
+[ext_resource path="res://graphics/icon/FfullScreen.png" type="Texture" id=2]
+[ext_resource path="res://graphics/icon/FnormalScreen.png" type="Texture" id=3]
+
+[node name="fullScreen" type="Button"]
+margin_right = 55.0
+margin_bottom = 53.0
+rect_scale = Vector2( 0.925643, 0.925643 )
+flat = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="fullScreen" type="Sprite" parent="."]
+position = Vector2( 27.6376, 26.4209 )
+scale = Vector2( 0.511055, 0.511055 )
+texture = ExtResource( 2 )
+
+[node name="NormalScreen" type="Sprite" parent="."]
+visible = false
+position = Vector2( 27.638, 26.421 )
+scale = Vector2( 0.511, 0.511 )
+texture = ExtResource( 3 )
+
+[connection signal="pressed" from="." to="." method="_on_fullScreen_pressed"]

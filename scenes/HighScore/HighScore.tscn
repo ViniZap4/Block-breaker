@@ -1,7 +1,8 @@
-[gd_scene load_steps=73 format=2]
+[gd_scene load_steps=74 format=2]
 
 [ext_resource path="res://addons/silent_wolf/Scores/Leaderboard.gd" type="Script" id=1]
 [ext_resource path="res://components/themes/panel.tres" type="Theme" id=2]
+[ext_resource path="res://components/fullScreen/fullScreen.tscn" type="PackedScene" id=3]
 [ext_resource path="res://components/themes/TitleFont.tres" type="Theme" id=4]
 [ext_resource path="res://components/themes/defaultFont.tres" type="Theme" id=5]
 [ext_resource path="res://components/themes/defaultButtonTheme.tres" type="Theme" id=6]
@@ -783,8 +784,14 @@ script = ExtResource( 1 )
 position = Vector2( 923.2, 812.101 )
 scale = Vector2( 3.73051, 3.73051 )
 frames = SubResource( 124 )
-frame = 46
+frame = 8
 playing = true
+
+[node name="fullScreen" parent="." instance=ExtResource( 3 )]
+margin_left = 1240.0
+margin_top = 22.0
+margin_right = 1295.0
+margin_bottom = 75.0
 
 [node name="Title" type="Panel" parent="."]
 anchor_left = 0.5

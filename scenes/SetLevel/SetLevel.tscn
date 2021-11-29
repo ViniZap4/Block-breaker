@@ -1,4 +1,4 @@
-[gd_scene load_steps=84 format=2]
+[gd_scene load_steps=85 format=2]
 
 [ext_resource path="res://components/themes/defaultButtonTheme.tres" type="Theme" id=1]
 [ext_resource path="res://scenes/SetLevel/SetLevel.gd" type="Script" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://graphics/textures/BehindPanel2.png" type="Texture" id=6]
 [ext_resource path="res://components/themes/panel.tres" type="Theme" id=7]
 [ext_resource path="res://sounds/arpeggiosB.wav" type="AudioStream" id=8]
+[ext_resource path="res://components/fullScreen/fullScreen.tscn" type="PackedScene" id=9]
 [ext_resource path="res://graphics/background.png" type="Texture" id=10]
 [ext_resource path="res://components/DefaultDinamicFont.tres" type="DynamicFont" id=11]
 [ext_resource path="res://sounds/arpeggiosA.wav" type="AudioStream" id=12]
@@ -626,8 +627,18 @@ __meta__ = {
 position = Vector2( 403.119, -137.156 )
 scale = Vector2( 4.2131, 3.94336 )
 frames = SubResource( 61 )
-frame = 20
+frame = 52
 playing = true
+
+[node name="fullScreen" parent="." instance=ExtResource( 9 )]
+anchor_left = 0.091
+anchor_top = -0.005
+anchor_right = 0.091
+anchor_bottom = -0.005
+margin_left = 1240.97
+margin_top = 22.6
+margin_right = 1295.97
+margin_bottom = 75.6
 
 [node name="Panel" type="Panel" parent="."]
 anchor_left = 0.5
