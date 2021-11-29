@@ -31,9 +31,9 @@ __meta__ = {
 }
 
 [node name="Score2" type="Label" parent="."]
-margin_left = 523.774
+margin_left = 457.633
 margin_top = 7.80927
-margin_right = 712.774
+margin_right = 646.633
 margin_bottom = 67.8093
 theme = ExtResource( 1 )
 text = "score:"
