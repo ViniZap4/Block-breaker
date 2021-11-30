@@ -1,0 +1,406 @@
+[gd_scene load_steps=32 format=2]
+
+[ext_resource path="res://components/Scenes/Platform/PataformMini/PataformMini.tscn" type="PackedScene" id=1]
+[ext_resource path="res://components/Scenes/frontior/Frontier.tscn" type="PackedScene" id=2]
+[ext_resource path="res://graphics/Backgrounds/starts/SkeyStars.png" type="Texture" id=3]
+[ext_resource path="res://components/Scenes/ball/ballOrange/BallOrange.tscn" type="PackedScene" id=4]
+[ext_resource path="res://components/themes/panel.tres" type="Theme" id=5]
+[ext_resource path="res://components/Scenes/block/BlockPurple/BlockPurple.tscn" type="PackedScene" id=6]
+[ext_resource path="res://components/themes/TitleFont.tres" type="Theme" id=7]
+[ext_resource path="res://scenes/Levels/level1/Level1.gd" type="Script" id=8]
+[ext_resource path="res://components/Scenes/score/score.tscn" type="PackedScene" id=9]
+[ext_resource path="res://components/Scenes/life/Life.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/Pause/Pause.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/Levels/level3/BlocksArea.gd" type="Script" id=12]
+[ext_resource path="res://sounds/victory.wav" type="AudioStream" id=13]
+[ext_resource path="res://components/Scenes/block/BlockOrange/BlockOrange.tscn" type="PackedScene" id=14]
+[ext_resource path="res://components/Scenes/block/BlockRed/BlockRed.tscn" type="PackedScene" id=15]
+[ext_resource path="res://components/Scenes/block/BlockGray/BlockGray.tscn" type="PackedScene" id=16]
+[ext_resource path="res://components/Scenes/camera/Camera2D.tscn" type="PackedScene" id=17]
+[ext_resource path="res://components/fullScreen/fullScreen.tscn" type="PackedScene" id=18]
+[ext_resource path="res://components/Scenes/keyBoard/keyBoard.tscn" type="PackedScene" id=19]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 520, 520 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 3 )
+region = Rect2( 520, 0, 520, 520 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 3 )
+region = Rect2( 1040, 0, 520, 520 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 3 )
+region = Rect2( 1560, 0, 520, 520 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 520, 520, 520 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 3 )
+region = Rect2( 520, 520, 520, 520 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 3 )
+region = Rect2( 1040, 520, 520, 520 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 3 )
+region = Rect2( 1560, 520, 520, 520 )
+
+[sub_resource type="SpriteFrames" id=9]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 705.44, 26.8887 )
+
+[sub_resource type="Animation" id=11]
+length = 3.0
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.33, 0.55, 0.72, 0.87, 0.91, 0.95, 1, 2.22, 2.66 ),
+"transitions": PoolRealArray( 1, 0.659754, 1.31951, 0.659754, 1.56917, 1, 1.36604, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 438, -101 ), Vector2( 438, 80 ), Vector2( 438, 30 ), Vector2( 438, 80 ), Vector2( 438, 71 ), Vector2( 438, 80 ), Vector2( 438, 78 ), Vector2( 438, 80 ), Vector2( 438, 80 ), Vector2( 438, 750 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Title:custom_constants/shadow_offset_y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.97, 1.35 ),
+"transitions": PoolRealArray( 0.732043, 1.8025 ),
+"update": 0,
+"values": [ 1, 6 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Title:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.97, 1.35 ),
+"transitions": PoolRealArray( 0.707107, 1.23114 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -17 ) ]
+}
+
+[sub_resource type="Animation" id=12]
+length = 3.0
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.33, 0.55, 0.72, 0.87, 0.91, 0.95, 1, 2.23, 2.66 ),
+"transitions": PoolRealArray( 1, 0.659754, 1.31951, 0.659754, 1.56917, 1, 1.36604, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 424, -101 ), Vector2( 424, 80 ), Vector2( 424, 30 ), Vector2( 424, 80 ), Vector2( 424, 71 ), Vector2( 424, 80 ), Vector2( 424, 78 ), Vector2( 424, 80 ), Vector2( 424, 80 ), Vector2( 424, 750 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Panel/Title:custom_constants/shadow_offset_y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.97, 1.35 ),
+"transitions": PoolRealArray( 0.732043, 1.8025 ),
+"update": 0,
+"values": [ 1, 6 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../Panel/Title:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.97, 1.35 ),
+"transitions": PoolRealArray( 0.707107, 1.23114 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -17 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../Ball:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 645.621, 598.487 ) ]
+}
+
+[node name="Level1" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -0.140308
+margin_top = 0.038147
+margin_right = -0.140259
+margin_bottom = -9.96185
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 663.503, 566.864 )
+scale = Vector2( 2.73043, 2.67568 )
+frames = SubResource( 9 )
+frame = 3
+playing = true
+
+[node name="Limit" type="Area2D" parent="."]
+position = Vector2( 639.803, 749.805 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limit"]
+position = Vector2( 10.9316, -1.68176 )
+shape = SubResource( 10 )
+
+[node name="Frontier" parent="." instance=ExtResource( 2 )]
+light_mask = 1023
+scale = Vector2( 0.99603, 0.991966 )
+
+[node name="Platform" parent="." instance=ExtResource( 1 )]
+position = Vector2( 645.91, 645.278 )
+
+[node name="Ball" parent="." instance=ExtResource( 4 )]
+position = Vector2( 645.621, 598.487 )
+scale = Vector2( 0.6675, 0.6675 )
+
+[node name="BlocksArea" type="Node2D" parent="."]
+script = ExtResource( 12 )
+
+[node name="BlockGray10" parent="BlocksArea" instance=ExtResource( 16 )]
+position = Vector2( 288.023, 261.45 )
+
+[node name="BlockGray11" parent="BlocksArea" instance=ExtResource( 16 )]
+position = Vector2( 530.023, 261.45 )
+
+[node name="BlockGray12" parent="BlocksArea" instance=ExtResource( 16 )]
+position = Vector2( 770.023, 261.45 )
+
+[node name="BlockGray13" parent="BlocksArea" instance=ExtResource( 16 )]
+position = Vector2( 1013.02, 261.45 )
+
+[node name="BlockPurple" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 289.285, 116.155 )
+
+[node name="BlockPurple2" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 529.388, 117.744 )
+
+[node name="BlockPurple3" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 769.886, 115.626 )
+
+[node name="BlockPurple4" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 1014.09, 116.155 )
+
+[node name="BlockOrange" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 167.325, 212.815 )
+
+[node name="BlockOrange2" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 408.956, 212.871 )
+
+[node name="BlockOrange3" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 648.241, 212.59 )
+
+[node name="BlockOrange4" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 892.22, 212.871 )
+
+[node name="BlockOrange5" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 408.956, 261.871 )
+
+[node name="BlockOrange17" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 648.241, 261.59 )
+
+[node name="BlockOrange18" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 892.22, 261.871 )
+
+[node name="BlockOrange19" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 408.956, 310.871 )
+
+[node name="BlockOrange20" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 648.241, 310.59 )
+
+[node name="BlockOrange21" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 892.22, 310.871 )
+
+[node name="BlockOrange22" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 408.956, 66.8709 )
+
+[node name="BlockOrange23" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 648.241, 66.5903 )
+
+[node name="BlockOrange24" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 892.22, 66.8709 )
+
+[node name="BlockOrange7" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 408.956, 164.871 )
+
+[node name="BlockOrange8" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 648.241, 163.59 )
+
+[node name="BlockOrange9" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 892.22, 163.871 )
+
+[node name="BlockOrange16" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 1135.75, 211.226 )
+
+[node name="BlockOrange11" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 167.325, 115.815 )
+
+[node name="BlockOrange12" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 408.956, 115.871 )
+
+[node name="BlockOrange13" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 648.241, 114.59 )
+
+[node name="BlockOrange14" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 892.22, 114.871 )
+
+[node name="BlockOrange15" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 1134.49, 112.719 )
+
+[node name="BlockRed" parent="BlocksArea" instance=ExtResource( 15 )]
+position = Vector2( 288.33, 212.172 )
+
+[node name="BlockRed2" parent="BlocksArea" instance=ExtResource( 15 )]
+position = Vector2( 528.537, 213.295 )
+
+[node name="BlockRed3" parent="BlocksArea" instance=ExtResource( 15 )]
+position = Vector2( 769.866, 212.734 )
+
+[node name="BlockRed4" parent="BlocksArea" instance=ExtResource( 15 )]
+position = Vector2( 1014, 213.295 )
+
+[node name="BlockRed5" parent="BlocksArea" instance=ExtResource( 15 )]
+position = Vector2( 1014, 213.295 )
+
+[node name="BlockRed6" parent="BlocksArea" instance=ExtResource( 15 )]
+position = Vector2( 288.33, 163.172 )
+
+[node name="BlockRed7" parent="BlocksArea" instance=ExtResource( 15 )]
+position = Vector2( 528.537, 164.295 )
+
+[node name="BlockRed8" parent="BlocksArea" instance=ExtResource( 15 )]
+position = Vector2( 769.866, 163.734 )
+
+[node name="BlockRed9" parent="BlocksArea" instance=ExtResource( 15 )]
+position = Vector2( 1014, 164.295 )
+
+[node name="Panel" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -227.0
+margin_top = 750.0
+margin_right = 173.0
+margin_bottom = 853.0
+theme = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Panel"]
+anims/mov = SubResource( 11 )
+
+[node name="Title" type="Label" parent="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -0.629204
+margin_bottom = -0.629204
+theme = ExtResource( 7 )
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_offset_y = 1
+text = "Level 3"
+align = 1
+valign = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="score" parent="." instance=ExtResource( 9 )]
+
+[node name="Life" parent="." instance=ExtResource( 10 )]
+position = Vector2( 1054.78, 21.2372 )
+
+[node name="lifeLess" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -241.0
+margin_top = -101.0
+margin_right = 280.0
+margin_bottom = -0.999939
+theme = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="lifeLess"]
+anims/mov = SubResource( 12 )
+
+[node name="Title" type="Label" parent="lifeLess"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -17.0
+margin_bottom = -17.0
+theme = ExtResource( 7 )
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_offset_y = 6
+text = "only 0 Life"
+align = 1
+valign = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Pause" parent="." instance=ExtResource( 11 )]
+light_mask = 31
+margin_left = 0.19873
+margin_top = 0.0331039
+margin_right = 0.19873
+margin_bottom = 0.0330811
+
+[node name="Camera2D" parent="." instance=ExtResource( 17 )]
+
+[node name="victory" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+
+[node name="keyBoard" parent="." instance=ExtResource( 19 )]
+
+[node name="victory2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+
+[node name="fullScreen" parent="." instance=ExtResource( 18 )]
+margin_left = 145.0
+margin_top = 5.5
+margin_right = 200.0
+margin_bottom = 58.5
+
+[connection signal="body_entered" from="Limit" to="Ball" method="_on_Limit_body_entered"]

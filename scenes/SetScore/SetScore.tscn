@@ -1,263 +1,15 @@
-[gd_scene load_steps=74 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://components/themes/TitleFont.tres" type="Theme" id=1]
 [ext_resource path="res://components/themes/panel.tres" type="Theme" id=2]
 [ext_resource path="res://scenes/SetScore/SetScore.gd" type="Script" id=3]
-[ext_resource path="res://graphics/Backgrounds/orbitspace/orbitSpace.png" type="Texture" id=4]
+[ext_resource path="res://components/animations/Background.tres" type="SpriteFrames" id=4]
 [ext_resource path="res://components/themes/defaultButtonTheme.tres" type="Theme" id=5]
 [ext_resource path="res://components/themes/defaultFont.tres" type="Theme" id=6]
 [ext_resource path="res://sounds/arpeggiosG#.wav" type="AudioStream" id=7]
 [ext_resource path="res://components/fullScreen/fullScreen.tscn" type="PackedScene" id=8]
 
-[sub_resource type="AtlasTexture" id=1]
-atlas = ExtResource( 4 )
-region = Rect2( 0, 0, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=2]
-atlas = ExtResource( 4 )
-region = Rect2( 520, 0, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=3]
-atlas = ExtResource( 4 )
-region = Rect2( 1040, 0, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=4]
-atlas = ExtResource( 4 )
-region = Rect2( 1560, 0, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=5]
-atlas = ExtResource( 4 )
-region = Rect2( 2080, 0, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=6]
-atlas = ExtResource( 4 )
-region = Rect2( 2600, 0, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=7]
-atlas = ExtResource( 4 )
-region = Rect2( 3120, 0, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=8]
-atlas = ExtResource( 4 )
-region = Rect2( 3640, 0, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=9]
-atlas = ExtResource( 4 )
-region = Rect2( 4160, 0, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=10]
-atlas = ExtResource( 4 )
-region = Rect2( 4680, 0, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=11]
-atlas = ExtResource( 4 )
-region = Rect2( 0, 460, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=12]
-atlas = ExtResource( 4 )
-region = Rect2( 520, 460, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=13]
-atlas = ExtResource( 4 )
-region = Rect2( 1040, 460, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=14]
-atlas = ExtResource( 4 )
-region = Rect2( 1560, 460, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=15]
-atlas = ExtResource( 4 )
-region = Rect2( 2080, 460, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=16]
-atlas = ExtResource( 4 )
-region = Rect2( 2600, 460, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=17]
-atlas = ExtResource( 4 )
-region = Rect2( 3120, 460, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=18]
-atlas = ExtResource( 4 )
-region = Rect2( 3640, 460, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=19]
-atlas = ExtResource( 4 )
-region = Rect2( 4160, 460, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=20]
-atlas = ExtResource( 4 )
-region = Rect2( 4680, 460, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=21]
-atlas = ExtResource( 4 )
-region = Rect2( 0, 920, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=22]
-atlas = ExtResource( 4 )
-region = Rect2( 520, 920, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=23]
-atlas = ExtResource( 4 )
-region = Rect2( 1040, 920, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=24]
-atlas = ExtResource( 4 )
-region = Rect2( 1560, 920, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=25]
-atlas = ExtResource( 4 )
-region = Rect2( 2080, 920, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=26]
-atlas = ExtResource( 4 )
-region = Rect2( 2600, 920, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=27]
-atlas = ExtResource( 4 )
-region = Rect2( 3120, 920, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=28]
-atlas = ExtResource( 4 )
-region = Rect2( 3640, 920, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=29]
-atlas = ExtResource( 4 )
-region = Rect2( 4160, 920, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=30]
-atlas = ExtResource( 4 )
-region = Rect2( 4680, 920, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=31]
-atlas = ExtResource( 4 )
-region = Rect2( 0, 1380, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=32]
-atlas = ExtResource( 4 )
-region = Rect2( 520, 1380, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=33]
-atlas = ExtResource( 4 )
-region = Rect2( 1040, 1380, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=34]
-atlas = ExtResource( 4 )
-region = Rect2( 1560, 1380, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=35]
-atlas = ExtResource( 4 )
-region = Rect2( 2080, 1380, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=36]
-atlas = ExtResource( 4 )
-region = Rect2( 2600, 1380, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=37]
-atlas = ExtResource( 4 )
-region = Rect2( 3120, 1380, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=38]
-atlas = ExtResource( 4 )
-region = Rect2( 3640, 1380, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=39]
-atlas = ExtResource( 4 )
-region = Rect2( 4160, 1380, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=40]
-atlas = ExtResource( 4 )
-region = Rect2( 4680, 1380, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=41]
-atlas = ExtResource( 4 )
-region = Rect2( 0, 1840, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=42]
-atlas = ExtResource( 4 )
-region = Rect2( 520, 1840, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=43]
-atlas = ExtResource( 4 )
-region = Rect2( 1040, 1840, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=44]
-atlas = ExtResource( 4 )
-region = Rect2( 1560, 1840, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=45]
-atlas = ExtResource( 4 )
-region = Rect2( 2080, 1840, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=46]
-atlas = ExtResource( 4 )
-region = Rect2( 2600, 1840, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=47]
-atlas = ExtResource( 4 )
-region = Rect2( 3120, 1840, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=48]
-atlas = ExtResource( 4 )
-region = Rect2( 3640, 1840, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=49]
-atlas = ExtResource( 4 )
-region = Rect2( 4160, 1840, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=50]
-atlas = ExtResource( 4 )
-region = Rect2( 4680, 1840, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=51]
-atlas = ExtResource( 4 )
-region = Rect2( 0, 2300, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=52]
-atlas = ExtResource( 4 )
-region = Rect2( 520, 2300, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=53]
-atlas = ExtResource( 4 )
-region = Rect2( 1040, 2300, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=54]
-atlas = ExtResource( 4 )
-region = Rect2( 1560, 2300, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=55]
-atlas = ExtResource( 4 )
-region = Rect2( 2080, 2300, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=56]
-atlas = ExtResource( 4 )
-region = Rect2( 2600, 2300, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=57]
-atlas = ExtResource( 4 )
-region = Rect2( 3120, 2300, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=58]
-atlas = ExtResource( 4 )
-region = Rect2( 3640, 2300, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=59]
-atlas = ExtResource( 4 )
-region = Rect2( 4160, 2300, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=60]
-atlas = ExtResource( 4 )
-region = Rect2( 4680, 2300, 520, 460 )
-
-[sub_resource type="SpriteFrames" id=61]
-animations = [ {
-"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 55 ), SubResource( 56 ), SubResource( 57 ), SubResource( 58 ), SubResource( 59 ), SubResource( 60 ) ],
-"loop": true,
-"name": "default",
-"speed": 7.0
-} ]
-
-[sub_resource type="Animation" id=62]
+[sub_resource type="Animation" id=1]
 length = 2.0
 step = 0.01
 tracks/0/type = "value"
@@ -297,7 +49,7 @@ tracks/2/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 0, -17 ) ]
 }
 
-[sub_resource type="Animation" id=63]
+[sub_resource type="Animation" id=2]
 length = 2.0
 step = 0.01
 tracks/0/type = "value"
@@ -313,7 +65,7 @@ tracks/0/keys = {
 "values": [ Vector2( 354, -331 ), Vector2( 354, 197 ), Vector2( 354, 147 ), Vector2( 354, 197 ), Vector2( 354, 157 ), Vector2( 354, 197 ), Vector2( 354, 177 ), Vector2( 354, 197 ) ]
 }
 
-[sub_resource type="Animation" id=64]
+[sub_resource type="Animation" id=3]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Text:rect_position")
 tracks/0/interp = 1
@@ -339,7 +91,7 @@ tracks/1/keys = {
 "values": [ Vector2( 235, 0 ), Vector2( 235, -9 ) ]
 }
 
-[sub_resource type="Animation" id=65]
+[sub_resource type="Animation" id=4]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Text:rect_position")
 tracks/0/interp = 1
@@ -365,6 +117,58 @@ tracks/1/keys = {
 "values": [ Vector2( 235, -9 ), Vector2( 235, 0 ) ]
 }
 
+[sub_resource type="Animation" id=5]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Text:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -1 ), Vector2( 0, -6 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 570, 630 ), Vector2( 570, 621 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Text:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -6 ), Vector2( 0, -1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 570, 621 ), Vector2( 570, 630 ) ]
+}
+
 [node name="main" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -374,11 +178,12 @@ __meta__ = {
 }
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 221.121, 941.255 )
+position = Vector2( 697.628, 635.772 )
 scale = Vector2( 4.51535, 4.51535 )
-frames = SubResource( 61 )
-frame = 33
+frames = ExtResource( 4 )
+frame = 2
 playing = true
+offset = Vector2( -105.531, 67.6543 )
 flip_h = true
 
 [node name="fullScreen" parent="." instance=ExtResource( 8 )]
@@ -400,7 +205,7 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Title"]
-anims/mov = SubResource( 62 )
+anims/mov = SubResource( 1 )
 
 [node name="Title" type="Label" parent="Title"]
 anchor_left = 0.5
@@ -434,7 +239,7 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Panel"]
-anims/mov = SubResource( 63 )
+anims/mov = SubResource( 2 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
 anchor_left = 0.5
@@ -471,7 +276,7 @@ margin_right = 491.0
 margin_bottom = 60.0
 theme = ExtResource( 2 )
 align = 1
-max_length = 12
+max_length = 18
 placeholder_text = "your name"
 placeholder_alpha = 0.642
 __meta__ = {
@@ -509,10 +314,48 @@ __meta__ = {
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Panel/VBoxContainer/button/Send"]
 pause_mode = 1
-anims/movFont = SubResource( 64 )
-anims/movFontBack = SubResource( 65 )
+anims/movFont = SubResource( 3 )
+anims/movFontBack = SubResource( 4 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Panel/VBoxContainer/button/Send"]
 stream = ExtResource( 7 )
 
+[node name="Back" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -95.0
+margin_top = -90.0
+margin_right = 94.0
+margin_bottom = -30.0
+mouse_default_cursor_shape = 2
+theme = ExtResource( 5 )
+text = "Cancel"
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="Label" parent="Back"]
+light_mask = 0
+margin_top = -1.0
+margin_right = 189.0
+margin_bottom = 119.0
+theme = ExtResource( 6 )
+text = "Cancel
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationBackButtom" type="AnimationPlayer" parent="Back"]
+pause_mode = 1
+anims/movFont = SubResource( 5 )
+anims/movFontBack = SubResource( 6 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Back"]
+stream = ExtResource( 7 )
+
 [connection signal="pressed" from="Panel/VBoxContainer/button/Send" to="." method="_on_Send_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]

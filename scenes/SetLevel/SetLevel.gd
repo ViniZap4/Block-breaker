@@ -42,8 +42,20 @@ func _process(delta):
 			$GridContainer/VBoxContainer/Levls/level2/AnimationPlayer.current_animation  = "movButtonBack"
 			focusAnimate = "none"
 
-# x 593
-# y 622
+#level 3
+
+	if $GridContainer/VBoxContainer/Levls/level3.is_hovered():
+		if focusAnimate != "Level3" and focusAnimate == "none" :
+			$GridContainer/VBoxContainer/Levls/level3/AnimationPlayer.current_animation = "movButton"
+			$GridContainer/VBoxContainer/Levls/level3/AudioStreamPlayer.play()
+			focusAnimate = "Level3"
+
+	else:
+		if focusAnimate == "Level3" :
+			$GridContainer/VBoxContainer/Levls/level3/AnimationPlayer.current_animation  = "movButtonBack"
+			focusAnimate = "none"
+
+
 
 # Back
 
@@ -69,3 +81,7 @@ func _on_level1_pressed():
 
 func _on_level2_pressed():
 	get_tree().change_scene("res://scenes/Levels/level2/Level2.tscn")
+
+
+func _on_level3_pressed():
+	get_tree().change_scene("res://scenes/Levels/level3/Level3.tscn")

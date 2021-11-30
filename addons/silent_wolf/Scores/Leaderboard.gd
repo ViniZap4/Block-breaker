@@ -112,8 +112,8 @@ func add_item(player_name, score):
 	var item = ScoreItem.instance()
 	list_index += 1
 	item.get_node("PlayerName").text = str(list_index) + str(". ") + player_name
-	item.get_node("Score").text = "Score:" + str(score)
-	item.margin_top = list_index * 100
+	item.get_node("Score").text = "Score: " + str(score)
+	item.margin_top = list_index * 50
 	$"Board/HighScores/CenterContainer/ScoreItemContainer".add_child(item)
 
 

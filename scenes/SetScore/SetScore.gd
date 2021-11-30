@@ -27,7 +27,17 @@ func _process(delta):
 			$Panel/VBoxContainer/button/Send/AnimationPlayer.current_animation = "movFontBack"
 			focusAnimate = "none"
 
+# Back
+	if $Back.is_hovered():
+		if focusAnimate == "none" :
+			$Back/AnimationBackButtom.current_animation = "movFont"
+			$Back/AudioStreamPlayer.play()
+			focusAnimate = "Back"
 
+	else:
+		if focusAnimate == "Back" :
+			$Back/AnimationBackButtom.current_animation = "movFontBack"
+			focusAnimate = "none"
 
 func _on_Send_pressed():
 	if $Panel/VBoxContainer/input/LineEdit.text!='':
@@ -38,3 +48,10 @@ func _on_Send_pressed():
 		Global.blocksInLevel = 0
 		get_tree().change_scene("res://scenes/HighScore/HighScore.tscn")
 		
+
+
+func _on_Back_pressed():
+	Global.life = 3
+	Global.score = 0
+	Global.blocksInLevel = 0
+	get_tree().change_scene("res://scenes/HighScore/HighScore.tscn")

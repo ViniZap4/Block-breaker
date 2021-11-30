@@ -1,4 +1,4 @@
-[gd_scene load_steps=85 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://components/themes/defaultButtonTheme.tres" type="Theme" id=1]
 [ext_resource path="res://scenes/SetLevel/SetLevel.gd" type="Script" id=2]
@@ -13,255 +13,7 @@
 [ext_resource path="res://components/DefaultDinamicFont.tres" type="DynamicFont" id=11]
 [ext_resource path="res://sounds/arpeggiosA.wav" type="AudioStream" id=12]
 [ext_resource path="res://sounds/arpeggiosG#.wav" type="AudioStream" id=13]
-[ext_resource path="res://graphics/Backgrounds/orbitspace/orbitSpace.png" type="Texture" id=14]
-
-[sub_resource type="AtlasTexture" id=1]
-atlas = ExtResource( 14 )
-region = Rect2( 0, 0, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=2]
-atlas = ExtResource( 14 )
-region = Rect2( 520, 0, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=3]
-atlas = ExtResource( 14 )
-region = Rect2( 1040, 0, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=4]
-atlas = ExtResource( 14 )
-region = Rect2( 1560, 0, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=5]
-atlas = ExtResource( 14 )
-region = Rect2( 2080, 0, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=6]
-atlas = ExtResource( 14 )
-region = Rect2( 2600, 0, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=7]
-atlas = ExtResource( 14 )
-region = Rect2( 3120, 0, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=8]
-atlas = ExtResource( 14 )
-region = Rect2( 3640, 0, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=9]
-atlas = ExtResource( 14 )
-region = Rect2( 4160, 0, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=10]
-atlas = ExtResource( 14 )
-region = Rect2( 4680, 0, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=11]
-atlas = ExtResource( 14 )
-region = Rect2( 0, 460, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=12]
-atlas = ExtResource( 14 )
-region = Rect2( 520, 460, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=13]
-atlas = ExtResource( 14 )
-region = Rect2( 1040, 460, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=14]
-atlas = ExtResource( 14 )
-region = Rect2( 1560, 460, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=15]
-atlas = ExtResource( 14 )
-region = Rect2( 2080, 460, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=16]
-atlas = ExtResource( 14 )
-region = Rect2( 2600, 460, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=17]
-atlas = ExtResource( 14 )
-region = Rect2( 3120, 460, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=18]
-atlas = ExtResource( 14 )
-region = Rect2( 3640, 460, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=19]
-atlas = ExtResource( 14 )
-region = Rect2( 4160, 460, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=20]
-atlas = ExtResource( 14 )
-region = Rect2( 4680, 460, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=21]
-atlas = ExtResource( 14 )
-region = Rect2( 0, 920, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=22]
-atlas = ExtResource( 14 )
-region = Rect2( 520, 920, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=23]
-atlas = ExtResource( 14 )
-region = Rect2( 1040, 920, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=24]
-atlas = ExtResource( 14 )
-region = Rect2( 1560, 920, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=25]
-atlas = ExtResource( 14 )
-region = Rect2( 2080, 920, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=26]
-atlas = ExtResource( 14 )
-region = Rect2( 2600, 920, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=27]
-atlas = ExtResource( 14 )
-region = Rect2( 3120, 920, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=28]
-atlas = ExtResource( 14 )
-region = Rect2( 3640, 920, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=29]
-atlas = ExtResource( 14 )
-region = Rect2( 4160, 920, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=30]
-atlas = ExtResource( 14 )
-region = Rect2( 4680, 920, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=31]
-atlas = ExtResource( 14 )
-region = Rect2( 0, 1380, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=32]
-atlas = ExtResource( 14 )
-region = Rect2( 520, 1380, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=33]
-atlas = ExtResource( 14 )
-region = Rect2( 1040, 1380, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=34]
-atlas = ExtResource( 14 )
-region = Rect2( 1560, 1380, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=35]
-atlas = ExtResource( 14 )
-region = Rect2( 2080, 1380, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=36]
-atlas = ExtResource( 14 )
-region = Rect2( 2600, 1380, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=37]
-atlas = ExtResource( 14 )
-region = Rect2( 3120, 1380, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=38]
-atlas = ExtResource( 14 )
-region = Rect2( 3640, 1380, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=39]
-atlas = ExtResource( 14 )
-region = Rect2( 4160, 1380, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=40]
-atlas = ExtResource( 14 )
-region = Rect2( 4680, 1380, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=41]
-atlas = ExtResource( 14 )
-region = Rect2( 0, 1840, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=42]
-atlas = ExtResource( 14 )
-region = Rect2( 520, 1840, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=43]
-atlas = ExtResource( 14 )
-region = Rect2( 1040, 1840, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=44]
-atlas = ExtResource( 14 )
-region = Rect2( 1560, 1840, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=45]
-atlas = ExtResource( 14 )
-region = Rect2( 2080, 1840, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=46]
-atlas = ExtResource( 14 )
-region = Rect2( 2600, 1840, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=47]
-atlas = ExtResource( 14 )
-region = Rect2( 3120, 1840, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=48]
-atlas = ExtResource( 14 )
-region = Rect2( 3640, 1840, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=49]
-atlas = ExtResource( 14 )
-region = Rect2( 4160, 1840, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=50]
-atlas = ExtResource( 14 )
-region = Rect2( 4680, 1840, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=51]
-atlas = ExtResource( 14 )
-region = Rect2( 0, 2300, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=52]
-atlas = ExtResource( 14 )
-region = Rect2( 520, 2300, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=53]
-atlas = ExtResource( 14 )
-region = Rect2( 1040, 2300, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=54]
-atlas = ExtResource( 14 )
-region = Rect2( 1560, 2300, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=55]
-atlas = ExtResource( 14 )
-region = Rect2( 2080, 2300, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=56]
-atlas = ExtResource( 14 )
-region = Rect2( 2600, 2300, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=57]
-atlas = ExtResource( 14 )
-region = Rect2( 3120, 2300, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=58]
-atlas = ExtResource( 14 )
-region = Rect2( 3640, 2300, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=59]
-atlas = ExtResource( 14 )
-region = Rect2( 4160, 2300, 520, 460 )
-
-[sub_resource type="AtlasTexture" id=60]
-atlas = ExtResource( 14 )
-region = Rect2( 4680, 2300, 520, 460 )
-
-[sub_resource type="SpriteFrames" id=61]
-animations = [ {
-"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 55 ), SubResource( 56 ), SubResource( 57 ), SubResource( 58 ), SubResource( 59 ), SubResource( 60 ) ],
-"loop": true,
-"name": "default",
-"speed": 7.0
-} ]
+[ext_resource path="res://components/animations/Background.tres" type="SpriteFrames" id=14]
 
 [sub_resource type="Animation" id=62]
 length = 2.0
@@ -276,7 +28,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.63, 0.96, 1.18, 1.35, 1.5, 1.54, 1.58, 1.64 ),
 "transitions": PoolRealArray( 1, 1, 0.659754, 1.31951, 0.659754, 1.56917, 1, 1.36604, 1 ),
 "update": 0,
-"values": [ Vector2( 605, -112.636 ), Vector2( 605, -101 ), Vector2( 605, 70 ), Vector2( 605, 20 ), Vector2( 605, 70 ), Vector2( 605, 61 ), Vector2( 605, 70 ), Vector2( 605, 68 ), Vector2( 605, 70 ) ]
+"values": [ Vector2( 465, -112.636 ), Vector2( 465, -101 ), Vector2( 465, 70 ), Vector2( 465, 20 ), Vector2( 465, 70 ), Vector2( 465, 61 ), Vector2( 465, 70 ), Vector2( 465, 68 ), Vector2( 465, 70 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Title:custom_constants/shadow_offset_y")
@@ -507,6 +259,108 @@ tracks/3/keys = {
 "values": [ Vector2( -10, 9 ), Vector2( -10, 0 ) ]
 }
 
+[sub_resource type="Animation" id=71]
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -6 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.35 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 519, 0 ), Vector2( 519, -12 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("panel:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.35, 0.6, 0.75, 0.85, 0.92, 0.96, 0.99, 1 ),
+"transitions": PoolRealArray( 1.36604, 0.615572, 1.7411, 0.615572, 1.36604, 0.732043, 1.36604, 0.732043 ),
+"update": 0,
+"values": [ Vector2( 0, -500 ), Vector2( 0, 85 ), Vector2( 0, -60 ), Vector2( 0, 85 ), Vector2( 0, 40 ), Vector2( 0, 85 ), Vector2( 0, 80 ), Vector2( 0, 85 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("behind:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.35 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -10, 0 ), Vector2( -10, 9 ) ]
+}
+
+[sub_resource type="Animation" id=72]
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -6 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.35 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 519, -12 ), Vector2( 519, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("panel:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 0.732043 ),
+"update": 0,
+"values": [ Vector2( 0, 85 ), Vector2( 0, 500 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("behind:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -10, 9 ), Vector2( -10, 0 ) ]
+}
+
 [sub_resource type="Animation" id=67]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Text:rect_position")
@@ -530,7 +384,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.4 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 235, 0 ), Vector2( 235, -9 ) ]
+"values": [ Vector2( 301, 0 ), Vector2( 301, -9 ) ]
 }
 
 [sub_resource type="Animation" id=68]
@@ -556,12 +410,12 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.4 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 235, -9 ), Vector2( 235, 0 ) ]
+"values": [ Vector2( 301, -9 ), Vector2( 301, 0 ) ]
 }
 
 [sub_resource type="Animation" id=69]
 tracks/0/type = "value"
-tracks/0/path = NodePath("Back/Back:rect_position")
+tracks/0/path = NodePath("Back/Text:rect_position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -582,12 +436,12 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.4 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 167, 0 ), Vector2( 167, -9 ) ]
+"values": [ Vector2( 301, 0 ), Vector2( 301, -9 ) ]
 }
 
 [sub_resource type="Animation" id=70]
 tracks/0/type = "value"
-tracks/0/path = NodePath("Back/Back:rect_position")
+tracks/0/path = NodePath("Back/Text:rect_position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -608,16 +462,12 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.4 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 167, -9 ), Vector2( 167, 0 ) ]
+"values": [ Vector2( 301, -9 ), Vector2( 301, 0 ) ]
 }
 
 [node name="setLevel" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -121.526
-margin_top = 4.04306
-margin_right = -121.526
-margin_bottom = 4.04309
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -626,8 +476,8 @@ __meta__ = {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 403.119, -137.156 )
 scale = Vector2( 4.2131, 3.94336 )
-frames = SubResource( 61 )
-frame = 52
+frames = ExtResource( 14 )
+frame = 4
 playing = true
 
 [node name="fullScreen" parent="." instance=ExtResource( 9 )]
@@ -635,18 +485,18 @@ anchor_left = 0.091
 anchor_top = -0.005
 anchor_right = 0.091
 anchor_bottom = -0.005
-margin_left = 1240.97
-margin_top = 22.6
-margin_right = 1295.97
-margin_bottom = 75.6
+margin_left = 1118.97
+margin_top = 25.6
+margin_right = 1173.97
+margin_bottom = 78.6
 
 [node name="Panel" type="Panel" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -60.0
+margin_left = -200.0
 margin_top = -112.636
-margin_right = 340.0
-margin_bottom = -9.63638
+margin_right = 200.0
+margin_bottom = -9.63635
 theme = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -658,11 +508,11 @@ anims/mov = SubResource( 62 )
 [node name="Title" type="Label" parent="Panel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = -14.0552
-margin_bottom = -14.0552
+margin_top = -17.0
+margin_bottom = -17.0
 theme = ExtResource( 5 )
 custom_constants/shadow_offset_x = 0
-custom_constants/shadow_offset_y = 5
+custom_constants/shadow_offset_y = 6
 text = "Set Level"
 align = 1
 valign = 2
@@ -676,21 +526,21 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -106.867
-margin_top = -481.898
-margin_right = 372.133
-margin_bottom = -161.898
+margin_left = -371.112
+margin_top = -464.745
+margin_right = 374.888
+margin_bottom = -54.7448
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="GridContainer"]
-margin_right = 479.0
+margin_right = 746.0
 margin_bottom = 410.0
 custom_constants/separation = 290
 
 [node name="Levls" type="HBoxContainer" parent="GridContainer/VBoxContainer"]
-margin_right = 479.0
+margin_right = 746.0
 margin_bottom = 60.0
 custom_constants/separation = 40
 
@@ -865,15 +715,100 @@ __meta__ = {
 anims/movButton = SubResource( 65 )
 anims/movButtonBack = SubResource( 66 )
 
+[node name="level3" type="Button" parent="GridContainer/VBoxContainer/Levls"]
+margin_left = 519.0
+margin_right = 746.0
+margin_bottom = 60.0
+mouse_default_cursor_shape = 2
+theme = ExtResource( 3 )
+text = "Level 3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="GridContainer/VBoxContainer/Levls/level3"]
+stream = ExtResource( 12 )
+
+[node name="Label" type="Label" parent="GridContainer/VBoxContainer/Levls/level3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 4 )
+text = "Level 3"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="behind" type="NinePatchRect" parent="GridContainer/VBoxContainer/Levls/level3"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -10.0
+margin_right = -16.5
+margin_bottom = 3.8147e-06
+rect_scale = Vector2( 1.09682, 1.08143 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="panel" type="Button" parent="GridContainer/VBoxContainer/Levls/level3"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -527.694
+margin_bottom = -370.694
+mouse_default_cursor_shape = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="GridContainer/VBoxContainer/Levls/level3/panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -106.0
+margin_top = 6.72717
+margin_right = 98.0001
+margin_bottom = 135.727
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="GridContainer/VBoxContainer/Levls/level3/panel"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -61.2922
+margin_top = -19.1686
+margin_right = 293.708
+margin_bottom = 40.8314
+rect_scale = Vector2( 0.3603, 0.3603 )
+custom_fonts/font = ExtResource( 11 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0.647059, 0.647059, 0.647059, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/line_spacing = 0
+custom_constants/shadow_offset_y = 6
+custom_constants/shadow_as_outline = 0
+text = "iniciar level"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="GridContainer/VBoxContainer/Levls/level3"]
+anims/movButton = SubResource( 71 )
+anims/movButtonBack = SubResource( 72 )
+
 [node name="LineOption" type="HBoxContainer" parent="GridContainer/VBoxContainer"]
 margin_top = 350.0
-margin_right = 479.0
+margin_right = 746.0
 margin_bottom = 410.0
 alignment = 1
 
 [node name="Back" type="Button" parent="GridContainer/VBoxContainer/LineOption"]
-margin_left = 167.0
-margin_right = 311.0
+margin_left = 301.0
+margin_right = 445.0
 margin_bottom = 60.0
 mouse_default_cursor_shape = 2
 theme = ExtResource( 1 )
@@ -883,7 +818,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Back" type="Label" parent="GridContainer/VBoxContainer/LineOption/Back"]
+[node name="Text" type="Label" parent="GridContainer/VBoxContainer/LineOption/Back"]
 light_mask = 0
 margin_top = -1.0
 margin_right = 159.0
@@ -912,4 +847,6 @@ anims/movFontBack = SubResource( 70 )
 [connection signal="pressed" from="GridContainer/VBoxContainer/Levls/level1/panel" to="." method="_on_level1_pressed"]
 [connection signal="pressed" from="GridContainer/VBoxContainer/Levls/level2" to="." method="_on_level2_pressed"]
 [connection signal="pressed" from="GridContainer/VBoxContainer/Levls/level2/panel" to="." method="_on_level2_pressed"]
+[connection signal="pressed" from="GridContainer/VBoxContainer/Levls/level3" to="." method="_on_level3_pressed"]
+[connection signal="pressed" from="GridContainer/VBoxContainer/Levls/level3/panel" to="." method="_on_level2_pressed"]
 [connection signal="pressed" from="GridContainer/VBoxContainer/LineOption/Back" to="." method="_on_Back_pressed"]

@@ -23,6 +23,6 @@ func _process(delta):
 				if timeControl <=2:
 					timeControl += delta
 				else:
-					get_tree().change_scene("res://scenes/Levels/level2/Level2.tscn")
+					get_tree().change_scene("res://scenes/Levels/level3/Level3.tscn")
 			else:
 				timeControl = 6

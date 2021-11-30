@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://components/themes/defaultButtonTheme.tres" type="Theme" id=1]
 [ext_resource path="res://components/themes/defaultFont.tres" type="Theme" id=2]
 [ext_resource path="res://sounds/arpeggiosG#.wav" type="AudioStream" id=3]
+[ext_resource path="res://components/Scenes/button/back.gd" type="Script" id=4]
 
-[sub_resource type="Animation" id=69]
+[sub_resource type="Animation" id=1]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Text:rect_position")
 tracks/0/interp = 1
@@ -30,7 +31,7 @@ tracks/1/keys = {
 "values": [ Vector2( 235, 0 ), Vector2( 235, -9 ) ]
 }
 
-[sub_resource type="Animation" id=70]
+[sub_resource type="Animation" id=2]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Text:rect_position")
 tracks/0/interp = 1
@@ -61,19 +62,20 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -72.0
-margin_top = -98.0
-margin_right = 72.0
-margin_bottom = -38.0
+margin_left = -430.0
+margin_top = -729.0
+margin_right = -286.0
+margin_bottom = -669.0
 mouse_default_cursor_shape = 2
 theme = ExtResource( 1 )
 text = "Back"
 align = 0
+script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Back" type="Label" parent="."]
+[node name="Text" type="Label" parent="."]
 light_mask = 0
 margin_top = -1.0
 margin_right = 159.0
@@ -87,8 +89,8 @@ __meta__ = {
 
 [node name="AnimationBackButtom" type="AnimationPlayer" parent="."]
 pause_mode = 1
-anims/movFont = SubResource( 69 )
-anims/movFontBack = SubResource( 70 )
+anims/movFont = SubResource( 1 )
+anims/movFontBack = SubResource( 2 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )

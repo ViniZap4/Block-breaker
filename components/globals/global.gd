@@ -31,10 +31,10 @@ func _ready():
 	self.apiKey=file.get_line()
 	file.close() 
 
+
 	SilentWolf.configure({
 		"api_key": self.apiKey,
 		"game_id": NameGame,
 		"game_version": version,
 		"log_level": 1 
 	})
-	
