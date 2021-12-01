@@ -7,7 +7,7 @@
 [ext_resource path="res://components/themes/panel.tres" type="Theme" id=5]
 [ext_resource path="res://components/Scenes/block/BlockBlue/BlockBlue.tscn" type="PackedScene" id=6]
 [ext_resource path="res://components/themes/TitleFont.tres" type="Theme" id=7]
-[ext_resource path="res://scenes/Levels/level1/Level1.gd" type="Script" id=8]
+[ext_resource path="res://scenes/Levels/level2/Level2.gd" type="Script" id=8]
 [ext_resource path="res://components/Scenes/score/score.tscn" type="PackedScene" id=9]
 [ext_resource path="res://components/Scenes/life/Life.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scenes/Pause/Pause.tscn" type="PackedScene" id=11]
@@ -171,7 +171,7 @@ __meta__ = {
 position = Vector2( 662.443, 566.864 )
 scale = Vector2( 2.73043, 2.67568 )
 frames = SubResource( 9 )
-frame = 1
+frame = 4
 playing = true
 
 [node name="Limit" type="Area2D" parent="."]
