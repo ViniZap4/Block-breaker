@@ -9,7 +9,7 @@
 [ext_resource path="res://sounds/arpeggiosG#.wav" type="AudioStream" id=7]
 [ext_resource path="res://components/animations/Background.tres" type="SpriteFrames" id=8]
 
-[sub_resource type="Animation" id=62]
+[sub_resource type="Animation" id=1]
 length = 2.0
 step = 0.01
 tracks/0/type = "value"
@@ -49,28 +49,28 @@ tracks/2/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 0, -17 ) ]
 }
 
-[sub_resource type="StyleBoxFlat" id=66]
+[sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 1, 0.960784, 0.960784, 1 )
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
-[sub_resource type="StyleBoxFlat" id=67]
+[sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.599843, 0.784646, 0.920898, 1 )
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
-[sub_resource type="StyleBoxFlat" id=68]
+[sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0.133333, 0.596078, 0.937255, 1 )
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
-[sub_resource type="Theme" id=63]
+[sub_resource type="Theme" id=5]
 Button/colors/font_color = Color( 0, 0, 0, 1 )
 Button/colors/font_color_disabled = Color( 0, 0, 0, 1 )
 Button/colors/font_color_hover = Color( 0, 0, 0, 1 )
@@ -470,9 +470,9 @@ VScrollBar/icons/decrement = null
 VScrollBar/icons/decrement_highlight = null
 VScrollBar/icons/increment = null
 VScrollBar/icons/increment_highlight = null
-VScrollBar/styles/grabber = SubResource( 66 )
-VScrollBar/styles/grabber_highlight = SubResource( 67 )
-VScrollBar/styles/grabber_pressed = SubResource( 68 )
+VScrollBar/styles/grabber = SubResource( 2 )
+VScrollBar/styles/grabber_highlight = SubResource( 3 )
+VScrollBar/styles/grabber_pressed = SubResource( 4 )
 VScrollBar/styles/scroll = null
 VScrollBar/styles/scroll_focus = null
 VSeparator/constants/separation = 4
@@ -498,7 +498,7 @@ WindowDialog/icons/close = null
 WindowDialog/icons/close_highlight = null
 WindowDialog/styles/panel = null
 
-[sub_resource type="Animation" id=64]
+[sub_resource type="Animation" id=6]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Text:rect_position")
 tracks/0/interp = 1
@@ -524,7 +524,7 @@ tracks/1/keys = {
 "values": [ Vector2( 593, 9 ), Vector2( 593, 0 ) ]
 }
 
-[sub_resource type="Animation" id=65]
+[sub_resource type="Animation" id=7]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Text:rect_position")
 tracks/0/interp = 1
@@ -557,7 +557,7 @@ script = ExtResource( 1 )
 position = Vector2( 659.055, 362.309 )
 scale = Vector2( 2.69518, 2.69518 )
 frames = ExtResource( 8 )
-frame = 4
+frame = 41
 playing = true
 
 [node name="fullScreen" parent="." instance=ExtResource( 3 )]
@@ -579,7 +579,7 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Title"]
-anims/mov = SubResource( 62 )
+anims/mov = SubResource( 1 )
 
 [node name="Title" type="Label" parent="Title"]
 anchor_right = 1.0
@@ -622,6 +622,7 @@ __meta__ = {
 visible = false
 margin_right = 1330.0
 margin_bottom = 250.0
+mouse_filter = 1
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
@@ -642,12 +643,13 @@ grow_vertical = 0
 rect_min_size = Vector2( 0, 100 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = SubResource( 63 )
+theme = SubResource( 5 )
 
 [node name="CenterContainer" type="CenterContainer" parent="Board/HighScores"]
 margin_right = 1330.0
 margin_bottom = 500.0
 rect_min_size = Vector2( 1094, 0 )
+mouse_filter = 1
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
@@ -669,9 +671,8 @@ margin_bottom = 560.0
 
 [node name="CloseButton" type="Button" parent="Board/CloseButtonContainer"]
 margin_left = 593.0
-margin_top = 9.0
 margin_right = 737.0
-margin_bottom = 69.0
+margin_bottom = 60.0
 mouse_default_cursor_shape = 2
 theme = ExtResource( 6 )
 text = "Back"
@@ -692,7 +693,7 @@ stream = ExtResource( 7 )
 
 [node name="AnimationBackButtom" type="AnimationPlayer" parent="Board/CloseButtonContainer/CloseButton"]
 pause_mode = 1
-anims/movFont = SubResource( 64 )
-anims/movFontBack = SubResource( 65 )
+anims/movFont = SubResource( 6 )
+anims/movFontBack = SubResource( 7 )
 
 [connection signal="pressed" from="Board/CloseButtonContainer/CloseButton" to="." method="_on_CloseButton_pressed"]

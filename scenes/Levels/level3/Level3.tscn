@@ -7,7 +7,7 @@
 [ext_resource path="res://components/themes/panel.tres" type="Theme" id=5]
 [ext_resource path="res://components/Scenes/block/BlockPurple/BlockPurple.tscn" type="PackedScene" id=6]
 [ext_resource path="res://components/themes/TitleFont.tres" type="Theme" id=7]
-[ext_resource path="res://scenes/Levels/level1/Level1.gd" type="Script" id=8]
+[ext_resource path="res://scenes/Levels/level3/Level3.gd" type="Script" id=8]
 [ext_resource path="res://components/Scenes/score/score.tscn" type="PackedScene" id=9]
 [ext_resource path="res://components/Scenes/life/Life.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scenes/Pause/Pause.tscn" type="PackedScene" id=11]
@@ -171,7 +171,7 @@ __meta__ = {
 position = Vector2( 663.503, 566.864 )
 scale = Vector2( 2.73043, 2.67568 )
 frames = SubResource( 9 )
-frame = 3
+frame = 1
 playing = true
 
 [node name="Limit" type="Area2D" parent="."]
@@ -398,9 +398,9 @@ stream = ExtResource( 13 )
 stream = ExtResource( 13 )
 
 [node name="fullScreen" parent="." instance=ExtResource( 18 )]
-margin_left = 145.0
+margin_left = 70.0
 margin_top = 5.5
-margin_right = 200.0
+margin_right = 125.0
 margin_bottom = 58.5
 
 [connection signal="body_entered" from="Limit" to="Ball" method="_on_Limit_body_entered"]

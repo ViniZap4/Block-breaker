@@ -1,6 +1,5 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://graphics/icon/Polygon.png" type="Texture" id=1]
 [ext_resource path="res://graphics/icon/keyboardPixelIcon.png" type="Texture" id=2]
 [ext_resource path="res://components/themes/panel.tres" type="Theme" id=3]
 [ext_resource path="res://components/Scenes/keyBoard/keyBoard.gd" type="Script" id=4]
@@ -60,39 +59,6 @@ tracks/1/keys = {
 "update": 0,
 "values": [ Vector2( 1.964, 1 ), Vector2( 1.9643, 5.61231 ) ]
 }
-
-[sub_resource type="AtlasTexture" id=3]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 159, 211 )
-
-[sub_resource type="AtlasTexture" id=4]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 159, 0, 159, 211 )
-
-[sub_resource type="AtlasTexture" id=5]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 318, 0, 159, 211 )
-
-[sub_resource type="AtlasTexture" id=6]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 477, 0, 159, 211 )
-
-[sub_resource type="AtlasTexture" id=7]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 636, 0, 159, 211 )
-
-[sub_resource type="SpriteFrames" id=8]
-animations = [ {
-"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ) ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-} ]
 
 [sub_resource type="Animation" id=9]
 resource_name = "Back"
@@ -250,6 +216,7 @@ __meta__ = {
 }
 
 [node name="button" type="Button" parent="."]
+visible = false
 margin_right = 44.0
 margin_bottom = 60.0
 flat = true
@@ -280,22 +247,17 @@ anims/mov = SubResource( 1 )
 anims/movBack = SubResource( 2 )
 
 [node name="buttonLeft" type="Panel" parent="."]
-modulate = Color( 1, 1, 1, 0.470588 )
-anchor_top = 1.0
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 10.0
-margin_right = 127.0
-margin_bottom = 141.0
+margin_left = -83.0
+margin_top = 47.0
+margin_right = -583.0
 mouse_default_cursor_shape = 2
 theme = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="buttonLeft"]
-position = Vector2( 65.8751, 63.6821 )
-scale = Vector2( 0.694823, 0.562062 )
-frames = SubResource( 8 )
 
 [node name="buttonLeft" type="Button" parent="buttonLeft"]
 anchor_right = 1.0
@@ -310,14 +272,13 @@ anims/Back = SubResource( 9 )
 anims/mov = SubResource( 10 )
 
 [node name="buttonRight" type="Panel" parent="."]
-modulate = Color( 1, 1, 1, 0.470588 )
-anchor_left = 1.0
-anchor_top = 1.0
+modulate = Color( 1, 1, 1, 0 )
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -127.0
-margin_top = 10.0
-margin_bottom = 141.0
+margin_left = 583.0
+margin_top = 83.0
+margin_right = 83.0
+margin_bottom = 83.0
 mouse_default_cursor_shape = 2
 theme = ExtResource( 3 )
 __meta__ = {
@@ -327,16 +288,11 @@ __meta__ = {
 [node name="buttonRight" type="Button" parent="buttonRight"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_bottom = -47.0
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="buttonRight"]
-position = Vector2( 65.8751, 63.6821 )
-scale = Vector2( 0.694823, 0.562062 )
-frames = SubResource( 8 )
-flip_h = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="buttonRight"]
 anims/Back = SubResource( 11 )

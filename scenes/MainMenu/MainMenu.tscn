@@ -11,7 +11,7 @@
 [ext_resource path="res://sounds/arpeggiosB.wav" type="AudioStream" id=9]
 [ext_resource path="res://components/animations/Background.tres" type="SpriteFrames" id=10]
 
-[sub_resource type="Animation" id=62]
+[sub_resource type="Animation" id=1]
 resource_name = "movFont"
 tracks/0/type = "value"
 tracks/0/path = NodePath("Play/Text:rect_position")
@@ -38,7 +38,7 @@ tracks/1/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 0, -9 ) ]
 }
 
-[sub_resource type="Animation" id=63]
+[sub_resource type="Animation" id=2]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Play/Text:rect_position")
 tracks/0/interp = 1
@@ -64,7 +64,7 @@ tracks/1/keys = {
 "values": [ Vector2( 0, -9 ), Vector2( 0, 0 ) ]
 }
 
-[sub_resource type="Animation" id=64]
+[sub_resource type="Animation" id=3]
 tracks/0/type = "value"
 tracks/0/path = NodePath("HighScore/Text:rect_position")
 tracks/0/interp = 1
@@ -90,7 +90,7 @@ tracks/1/keys = {
 "values": [ Vector2( 0, 82 ), Vector2( 0, 73 ) ]
 }
 
-[sub_resource type="Animation" id=65]
+[sub_resource type="Animation" id=4]
 resource_name = "movFontBack"
 tracks/0/type = "value"
 tracks/0/path = NodePath("HighScore/Text:rect_position")
@@ -117,7 +117,7 @@ tracks/1/keys = {
 "values": [ Vector2( 0, 73 ), Vector2( 0, 82 ) ]
 }
 
-[sub_resource type="Animation" id=66]
+[sub_resource type="Animation" id=5]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Close/Text:rect_position")
 tracks/0/interp = 1
@@ -143,7 +143,7 @@ tracks/1/keys = {
 "values": [ Vector2( 0, 164 ), Vector2( 0, 155 ) ]
 }
 
-[sub_resource type="Animation" id=67]
+[sub_resource type="Animation" id=6]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Close/Text:rect_position")
 tracks/0/interp = 1
@@ -169,7 +169,7 @@ tracks/1/keys = {
 "values": [ Vector2( 0, 155 ), Vector2( 0, 164 ) ]
 }
 
-[sub_resource type="Animation" id=68]
+[sub_resource type="Animation" id=7]
 length = 2.0
 step = 0.01
 tracks/0/type = "value"
@@ -221,7 +221,7 @@ __meta__ = {
 position = Vector2( 880.36, 512.068 )
 scale = Vector2( 4.15707, 4.28493 )
 frames = ExtResource( 10 )
-frame = 7
+frame = 9
 playing = true
 
 [node name="fullScreen" parent="." instance=ExtResource( 2 )]
@@ -322,17 +322,17 @@ __meta__ = {
 stream = ExtResource( 7 )
 
 [node name="AnimationPlayButtom" type="AnimationPlayer" parent="VBoxContainer"]
-anims/movFont = SubResource( 62 )
-anims/movFontBack = SubResource( 63 )
+anims/movFont = SubResource( 1 )
+anims/movFontBack = SubResource( 2 )
 
 [node name="AnimationHightScoreButtom" type="AnimationPlayer" parent="VBoxContainer"]
-anims/movFont = SubResource( 64 )
-anims/movFontBack = SubResource( 65 )
+anims/movFont = SubResource( 3 )
+anims/movFontBack = SubResource( 4 )
 
 [node name="AnimationScoreButtom" type="AnimationPlayer" parent="VBoxContainer"]
 pause_mode = 1
-anims/movFont = SubResource( 66 )
-anims/movFontBack = SubResource( 67 )
+anims/movFont = SubResource( 5 )
+anims/movFontBack = SubResource( 6 )
 
 [node name="Panel" type="Panel" parent="."]
 anchor_left = 0.5
@@ -347,7 +347,7 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Panel"]
-anims/mov = SubResource( 68 )
+anims/mov = SubResource( 7 )
 
 [node name="Title" type="Label" parent="Panel"]
 anchor_left = 0.5

@@ -1,6 +1,7 @@
 extends Control
 
 var focusAnimate = "none"
+var tempFocus
 
 func _ready():
 	$Panel/AnimationPlayer.current_animation = "mov"
@@ -8,14 +9,19 @@ func _ready():
 	$Panel/VBoxContainer/Label.text = "your Score: " + String(Global.score)
 	Global.state = "setScoreState"
 	$Panel/VBoxContainer/input/LineEdit.grab_focus()
-
+	
+	if OS.window_fullscreen:
+		tempFocus = OS.window_fullscreen
+		OS.window_fullscreen = false
+	else:
+		tempFocus = false
 	#$Panel/AnimationPlayer.current_animation = "mov"
 	# $Panel/VBoxContainer/input/lineEdit/AnimationPlayer.current_animation = "movButton"
 	# $Panel/VBoxContainer/input/lineEdit/AudioStreamPlayer.play()
 
 func _process(delta):
 # send
-
+	print("tempFocus")
 	if $Panel/VBoxContainer/button/Send.is_hovered():
 		if focusAnimate == "none":
 			$Panel/VBoxContainer/button/Send/AnimationPlayer.current_animation = "movFont"
@@ -38,6 +44,9 @@ func _process(delta):
 		if focusAnimate == "Back" :
 			$Back/AnimationBackButtom.current_animation = "movFontBack"
 			focusAnimate = "none"
+	
+
+
 
 func _on_Send_pressed():
 	if $Panel/VBoxContainer/input/LineEdit.text!='':
@@ -55,3 +64,14 @@ func _on_Back_pressed():
 	Global.score = 0
 	Global.blocksInLevel = 0
 	get_tree().change_scene("res://scenes/HighScore/HighScore.tscn")
+
+
+func _on_LineEdit_focus_entered():
+	if OS.window_fullscreen:
+		tempFocus = OS.window_fullscreen
+		OS.window_fullscreen = false
+		
+
+func _on_LineEdit_focus_exited():
+	if tempFocus:
+		OS.window_fullscreen = true

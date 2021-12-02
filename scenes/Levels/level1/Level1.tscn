@@ -172,7 +172,6 @@ __meta__ = {
 position = Vector2( 662.443, 566.864 )
 scale = Vector2( 2.73043, 2.67568 )
 frames = SubResource( 9 )
-frame = 2
 playing = true
 
 [node name="Limit" type="Area2D" parent="."]
@@ -362,9 +361,9 @@ margin_bottom = 0.0330811
 [node name="keyBoard" parent="." instance=ExtResource( 19 )]
 
 [node name="fullScreen" parent="." instance=ExtResource( 20 )]
-margin_left = 145.0
+margin_left = 70.0
 margin_top = 5.5
-margin_right = 200.0
+margin_right = 125.0
 margin_bottom = 58.5
 
 [node name="victory" type="AudioStreamPlayer" parent="."]

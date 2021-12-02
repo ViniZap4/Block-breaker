@@ -181,7 +181,7 @@ __meta__ = {
 position = Vector2( 697.628, 635.772 )
 scale = Vector2( 4.51535, 4.51535 )
 frames = ExtResource( 4 )
-frame = 2
+frame = 12
 playing = true
 offset = Vector2( -105.531, 67.6543 )
 flip_h = true
@@ -357,5 +357,7 @@ anims/movFontBack = SubResource( 6 )
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Back"]
 stream = ExtResource( 7 )
 
+[connection signal="focus_entered" from="Panel/VBoxContainer/input/LineEdit" to="." method="_on_LineEdit_focus_entered"]
+[connection signal="focus_exited" from="Panel/VBoxContainer/input/LineEdit" to="." method="_on_LineEdit_focus_exited"]
 [connection signal="pressed" from="Panel/VBoxContainer/button/Send" to="." method="_on_Send_pressed"]
 [connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]

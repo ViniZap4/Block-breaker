@@ -265,7 +265,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.52 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 8.819, 7.59 ), Vector2( 8.819, -58.41 ) ]
+"values": [ Vector2( 12, 7.59 ), Vector2( 12, -58.41 ) ]
 }
 
 [sub_resource type="Animation" id=12]
@@ -280,7 +280,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 8.819, -58.41 ), Vector2( 8.819, 7.59 ) ]
+"values": [ Vector2( 12, -58.41 ), Vector2( 12, 7.59 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Text:rect_position")
@@ -318,7 +318,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.4 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 8.819, 7.59 ), Vector2( 8.819, 3.59 ) ]
+"values": [ Vector2( 12, 7.59 ), Vector2( 12, 3.59 ) ]
 }
 
 [sub_resource type="Animation" id=14]
@@ -344,7 +344,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.4 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 8.819, 3.59 ), Vector2( 8.819, 7.59 ) ]
+"values": [ Vector2( 12, 3.59 ), Vector2( 12, 7.59 ) ]
 }
 
 [node name="Pause" type="Control"]
@@ -542,9 +542,9 @@ stream = ExtResource( 9 )
 
 [node name="Pause" type="Button" parent="."]
 margin_left = 8.819
-margin_top = -58.41
+margin_top = 3.59
 margin_right = 50.819
-margin_bottom = 1.59
+margin_bottom = 63.59
 rect_scale = Vector2( 1.22863, 0.732825 )
 mouse_default_cursor_shape = 2
 theme = ExtResource( 4 )
@@ -557,9 +557,9 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 0.936
-margin_top = -0.144
+margin_top = -6.144
 margin_right = 0.935986
-margin_bottom = -0.144001
+margin_bottom = -6.144
 theme = ExtResource( 1 )
 text = "||"
 align = 1
