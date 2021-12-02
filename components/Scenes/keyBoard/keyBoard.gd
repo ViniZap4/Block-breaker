@@ -9,7 +9,6 @@ func _ready():
 	tempState = get_tree().paused
 	
 func _process(delta):
-	pass
 #	if tempControl != Global.kayboard:
 #		tempControl = Global.kayboard
 #
@@ -17,14 +16,14 @@ func _process(delta):
 #			initKayBoard()
 #		else:
 #			BackKayBoard()
-#
-#	if tempState != get_tree().paused:
-#		tempState = get_tree().paused
-#
-#		if get_tree().paused:
-#			$AnimationPlayer.current_animation = "hidden"
-#		else:
-#			$AnimationPlayer.current_animation = "mov"
+
+	if tempState != get_tree().paused:
+		tempState = get_tree().paused
+
+		if get_tree().paused:
+			$AnimationPlayer.current_animation = "hidden"
+		else:
+			$AnimationPlayer.current_animation = "mov"
 		
 func _on_buttonRight_button_down():
 	Global.input = "Right"
