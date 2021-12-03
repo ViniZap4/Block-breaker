@@ -36,7 +36,7 @@ func _on_Limit_body_entered(body):
 		get_parent().get_node("lifeLess/AnimationPlayer").current_animation = "mov"
 		if Global.life == 0:
 			get_parent().get_node("lifeLess/Title").text = "Game Over!"
-		elif Global.life <= 2:
+		elif Global.life >= 2:
 			get_parent().get_node("lifeLess/Title").text =  "only " + String(Global.life) + " Lifes"
 		else:
 			get_parent().get_node("lifeLess/Title").text =  "only " + String(Global.life) + " Life"

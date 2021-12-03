@@ -16,7 +16,6 @@ func _process(delta):
 		else:
 			if Global.blocksInLevel == 0:
 				$Ball.veloc = Vector2(0,0)
-				
 				if !$victory.playing:
 					$victory.play()
 

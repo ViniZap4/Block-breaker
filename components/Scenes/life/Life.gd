@@ -1,27 +1,39 @@
 extends Node2D
 
-var played = 0
+var temp
 
 func _ready():
-	if(Global.life == 2):
-		$Animation1.current_animation = "heart1"
-		played = 1
-	if(Global.life == 1):
-		$Animation1.current_animation = "heart1"
-		$Animation2.current_animation = "heart2"
-		played = 2
+	if(Global.life >= 1):
+		$Animation1.current_animation = "heart3Back"
+	if(Global.life >= 2):
+		$Animation2.current_animation = "heart2Back"
+	if(Global.life >= 3):
+		$Animation3.current_animation = "heart1Back"
 
-func _process(delta):
+	temp = Global.life
 	
-	if(Global.life == 3):
-		pass
+func _process(delta):
+	if temp != Global.life:
+		if(Global.life == 3):
+			
+			$Animation1.current_animation = "heart1Back"
+		if(Global.life == 2):
+		
+			if temp == 3:
+				$Animation3.current_animation = "heart1"
+				
+			else:
+				$Animation2.current_animation = "heart2Back"
+		
+		if(Global.life == 1):
 
-	elif(Global.life == 2) and played <= 0:
-		$Animation1.current_animation = "heart1"
-		played = 1
-	elif(Global.life == 1) and played == 1:
-		$Animation2.current_animation = "heart2"
-		played = 2
-	elif(Global.life == 0) and played == 2:
-		$Animation3.current_animation = "heart3"
-		played = 3
+			if temp == 2:
+				$Animation2.current_animation = "heart2"
+				
+			else:
+				$Animation3.current_animation = "heart3Back"	
+			
+		if(Global.life == 0):
+			$Animation3.current_animation = "heart3"
+			
+		temp = Global.life

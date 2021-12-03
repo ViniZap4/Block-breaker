@@ -24,7 +24,7 @@ func _process(delta):
 			$AnimationPlayer.current_animation = "hidden"
 		else:
 			$AnimationPlayer.current_animation = "mov"
-		
+
 func _on_buttonRight_button_down():
 	Global.input = "Right"
 
