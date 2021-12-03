@@ -11,7 +11,7 @@
 [ext_resource path="res://components/Scenes/score/score.tscn" type="PackedScene" id=9]
 [ext_resource path="res://components/Scenes/life/Life.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scenes/Pause/Pause.tscn" type="PackedScene" id=11]
-[ext_resource path="res://scenes/Levels/level3/BlocksArea.gd" type="Script" id=12]
+[ext_resource path="res://components/globals/BlocksArea.gd" type="Script" id=12]
 [ext_resource path="res://sounds/victory.wav" type="AudioStream" id=13]
 [ext_resource path="res://components/Scenes/block/BlockOrange/BlockOrange.tscn" type="PackedScene" id=14]
 [ext_resource path="res://components/Scenes/block/BlockRed/BlockRed.tscn" type="PackedScene" id=15]
@@ -171,7 +171,7 @@ __meta__ = {
 position = Vector2( 663.503, 566.864 )
 scale = Vector2( 2.73043, 2.67568 )
 frames = SubResource( 9 )
-frame = 4
+frame = 7
 playing = true
 
 [node name="Limit" type="Area2D" parent="."]
@@ -190,7 +190,6 @@ position = Vector2( 645.91, 645.278 )
 
 [node name="Ball" parent="." instance=ExtResource( 4 )]
 position = Vector2( 645.621, 598.487 )
-scale = Vector2( 0.6675, 0.6675 )
 
 [node name="BlocksArea" type="Node2D" parent="."]
 script = ExtResource( 12 )

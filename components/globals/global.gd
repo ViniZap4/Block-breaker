@@ -21,6 +21,7 @@ var blockInstance
 var particleInstance
 
 var instanceControl = false
+var instanceBonus = false
 
 var input = ""
 var kayboard = false

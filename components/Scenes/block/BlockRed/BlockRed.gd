@@ -3,7 +3,6 @@ extends StaticBody2D
 var selfPosition
 var NewBlock = load("res://components/Scenes/block/BlockRedGray/BlockRedGray.tscn")
 var NewParticle = load("res://components/particles/HitBlock/HitBlock.tscn")
-onready var bonusLife = preload("res://components/Scenes/bonusLife/bonusLife.tscn")
 
 func _ready():
 	Global.blocksInLevel +=1 
@@ -23,13 +22,11 @@ func _on_Area2D_body_entered(body):
 	NewBlockColor.translate(selfPosition)
 	NewBlockColor.add_child(NewParticle.instance())
 	Global.blockInstance = NewBlockColor
+	Global.instanceBonus = true
+
 	Global.instanceControl = true
 
 	get_tree().call_group("camera", "shake", 0.8)
 
-	var newBonusLife = bonusLife.instance()
-	newBonusLife.translate(selfPosition)
-	Global.blockInstance = newBonusLife
-	Global.instanceControl = true
 
 	queue_free()

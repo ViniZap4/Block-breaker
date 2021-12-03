@@ -17,7 +17,7 @@ func _physics_process(delta):
 		
 		if collision:
 
-			print(collision.collider.name)
+#			print(collision.collider.name)
 			veloc = veloc.bounce(collision.normal)
 			if collision.collider.name == "Frontier":
 				$AudioStreamPlayerFrontier.play() 

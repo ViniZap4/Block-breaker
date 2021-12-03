@@ -12,7 +12,7 @@
 [ext_resource path="res://graphics/Backgrounds/starts/SkeyStars.png" type="Texture" id=10]
 [ext_resource path="res://scenes/Pause/Pause.tscn" type="PackedScene" id=11]
 [ext_resource path="res://components/Scenes/block/BlockGrayBlue/BlockGrayBlue.tscn" type="PackedScene" id=12]
-[ext_resource path="res://scenes/Levels/level1/BlocksArea.gd" type="Script" id=13]
+[ext_resource path="res://components/globals/BlocksArea.gd" type="Script" id=13]
 [ext_resource path="res://components/Scenes/camera/Camera2D.tscn" type="PackedScene" id=14]
 [ext_resource path="res://sounds/victory.wav" type="AudioStream" id=15]
 [ext_resource path="res://components/Scenes/block/BlockGray/BlockGray.tscn" type="PackedScene" id=16]
@@ -172,7 +172,7 @@ __meta__ = {
 position = Vector2( 662.443, 566.864 )
 scale = Vector2( 2.73043, 2.67568 )
 frames = SubResource( 9 )
-frame = 4
+frame = 6
 playing = true
 
 [node name="Limit" type="Area2D" parent="."]
