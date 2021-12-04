@@ -4,6 +4,16 @@ var velocity = 459
 var veloc = Vector2(velocity,-velocity)
 
 var initTimer = 0
+
+var randomNumber = RandomNumberGenerator.new()
+var numberChoosed
+
+func _init():
+	randomNumber.randomize()
+	numberChoosed = randomNumber.randi_range(-2,0.5)
+	veloc = veloc.rotated(numberChoosed)
+	print(numberChoosed)
+
 func _process(delta):
 	if initTimer <= 3:
 		initTimer += delta
@@ -33,6 +43,11 @@ func _on_Limit_body_entered(body):
 		initTimer = 0
 		Global.life -= 1
 		veloc = Vector2(velocity, -velocity)
+		
+		numberChoosed = randomNumber.randi_range(-2,0.5)
+		veloc = veloc.rotated(numberChoosed)
+		print(numberChoosed)
+
 		get_parent().get_node("lifeLess/AnimationPlayer").current_animation = "mov"
 		if Global.life == 0:
 			get_parent().get_node("lifeLess/Title").text = "Game Over!"

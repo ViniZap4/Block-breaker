@@ -1,34 +1,33 @@
 extends KinematicBody2D
 
-var velocity = 400
+var velocity = 490
 var veloc = Vector2(velocity,-velocity)
 
+var initTimer = 0
 
 var randomNumber = RandomNumberGenerator.new()
 var numberChoosed
 
-var rotate = 0
-
 func _init():
 	randomNumber.randomize()
-	numberChoosed = randomNumber.randf_range(-2,0.5)
+	numberChoosed = randomNumber.randi_range(-2,0.5)
 	veloc = veloc.rotated(numberChoosed)
 	print(numberChoosed)
-var initTimer = 0
 
 func _process(delta):
 	if initTimer <= 3:
 		initTimer += delta
 	elif initTimer >= 3 and Global.life == 0:
 		get_tree().change_scene("res://scenes/SetScore/SetScore.tscn")
+		
 	
-
 func _physics_process(delta):
 	if initTimer >= 3:
 		var collision = move_and_collide(veloc*delta)
+		
 		if collision:
 
-			print(collision.collider.name)
+#			print(collision.collider.name)
 			veloc = veloc.bounce(collision.normal)
 			if collision.collider.name == "Frontier":
 				$AudioStreamPlayerFrontier.play() 
@@ -43,16 +42,16 @@ func _on_Limit_body_entered(body):
 	if body.name == "Ball":
 		initTimer = 0
 		Global.life -= 1
-		veloc = Vector2(velocity,-velocity)
-		numberChoosed = randomNumber.randf_range(-2,0.5)
+		veloc = Vector2(velocity, -velocity)
+		
+		numberChoosed = randomNumber.randi_range(-2,0.5)
 		veloc = veloc.rotated(numberChoosed)
 		print(numberChoosed)
 
-		
 		get_parent().get_node("lifeLess/AnimationPlayer").current_animation = "mov"
 		if Global.life == 0:
 			get_parent().get_node("lifeLess/Title").text = "Game Over!"
-		elif Global.life <= 2:
+		elif Global.life >= 2:
 			get_parent().get_node("lifeLess/Title").text =  "only " + String(Global.life) + " Lifes"
 		else:
 			get_parent().get_node("lifeLess/Title").text =  "only " + String(Global.life) + " Life"

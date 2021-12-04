@@ -76,7 +76,7 @@ func is_default_leaderboard(ld_config):
 
 
 
-func merge_scores_with_local_scores(scores, local_scores, max_scores=10):
+func merge_scores_with_local_scores(scores, local_scores, max_scores=20):
 	if local_scores:
 		for score in local_scores:
 			var in_array = score_in_score_array(scores, score)

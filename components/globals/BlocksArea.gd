@@ -16,7 +16,7 @@ func _process(delta):
 		
 		if Global.instanceBonus:
 			randomNumber.randomize()
-			numberChoosed = randomNumber.randi_range(0,36)
+			numberChoosed = randomNumber.randi_range(0,27)
 			print(numberChoosed)
 			if numberChoosed == 10:
 				selfPosition = Global.blockInstance.transform.get_origin()

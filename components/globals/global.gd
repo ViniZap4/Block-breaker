@@ -13,7 +13,7 @@ var blocksInLevel=0
 
 var state = ""
 
-var NameGame = "VPBreakout"
+var NameGame = "vpArkanoid"
 var apiKey = ""
 var version =  "1.0.0"
 

@@ -1,24 +1,23 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=31 format=2]
 
-[ext_resource path="res://components/Scenes/Platform/Platform.tscn" type="PackedScene" id=1]
+[ext_resource path="res://components/Scenes/Platform/PataformMini/PataformMini.tscn" type="PackedScene" id=1]
 [ext_resource path="res://components/Scenes/frontior/Frontier.tscn" type="PackedScene" id=2]
 [ext_resource path="res://graphics/Backgrounds/starts/SkeyStars.png" type="Texture" id=3]
-[ext_resource path="res://components/globals/BlocksArea.gd" type="Script" id=4]
+[ext_resource path="res://components/Scenes/ball/ballPurple/ballPurple.tscn" type="PackedScene" id=4]
 [ext_resource path="res://components/themes/panel.tres" type="Theme" id=5]
-[ext_resource path="res://components/Scenes/block/BlockBlue/BlockBlue.tscn" type="PackedScene" id=6]
+[ext_resource path="res://components/Scenes/block/BlockPurple/BlockPurple.tscn" type="PackedScene" id=6]
 [ext_resource path="res://components/themes/TitleFont.tres" type="Theme" id=7]
-[ext_resource path="res://scenes/Levels/level2/Level2.gd" type="Script" id=8]
+[ext_resource path="res://scenes/Levels/level4/Level4.gd" type="Script" id=8]
 [ext_resource path="res://components/Scenes/score/score.tscn" type="PackedScene" id=9]
 [ext_resource path="res://components/Scenes/life/Life.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scenes/Pause/Pause.tscn" type="PackedScene" id=11]
+[ext_resource path="res://components/globals/BlocksArea.gd" type="Script" id=12]
 [ext_resource path="res://sounds/victory.wav" type="AudioStream" id=13]
 [ext_resource path="res://components/Scenes/block/BlockOrange/BlockOrange.tscn" type="PackedScene" id=14]
 [ext_resource path="res://components/Scenes/block/BlockRed/BlockRed.tscn" type="PackedScene" id=15]
-[ext_resource path="res://components/Scenes/block/BlockGray/BlockGray.tscn" type="PackedScene" id=16]
 [ext_resource path="res://components/Scenes/camera/Camera2D.tscn" type="PackedScene" id=17]
 [ext_resource path="res://components/fullScreen/fullScreen.tscn" type="PackedScene" id=18]
 [ext_resource path="res://components/Scenes/keyBoard/keyBoard.tscn" type="PackedScene" id=19]
-[ext_resource path="res://components/Scenes/ball/ballOrange/BallOrange.tscn" type="PackedScene" id=20]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 3 )
@@ -152,10 +151,10 @@ tracks/3/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 645.621, 591.352 ) ]
+"values": [ Vector2( 657.527, 606.318 ) ]
 }
 
-[node name="Level2" type="Control"]
+[node name="Level4" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -0.140308
@@ -168,10 +167,10 @@ __meta__ = {
 }
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 639.739, 390.931 )
-scale = Vector2( 2.76601, 2.71054 )
+position = Vector2( 659.948, 210.517 )
+scale = Vector2( 2.73043, 2.67568 )
 frames = SubResource( 9 )
-frame = 6
+frame = 3
 playing = true
 
 [node name="Limit" type="Area2D" parent="."]
@@ -186,99 +185,136 @@ light_mask = 1023
 scale = Vector2( 0.99603, 0.991966 )
 
 [node name="Platform" parent="." instance=ExtResource( 1 )]
-position = Vector2( 644.465, 631.893 )
-collision_layer = 525311
-collision_mask = 525311
+position = Vector2( 660.18, 642.9 )
 
-[node name="Ball" parent="." instance=ExtResource( 20 )]
-position = Vector2( 645.621, 591.352 )
+[node name="Ball" parent="." instance=ExtResource( 4 )]
+position = Vector2( 657.527, 606.318 )
 
 [node name="BlocksArea" type="Node2D" parent="."]
-script = ExtResource( 4 )
-__meta__ = {
-"_edit_lock_": true
-}
+script = ExtResource( 12 )
 
-[node name="BlockOrange" parent="BlocksArea" instance=ExtResource( 14 )]
-position = Vector2( 649.081, 131.797 )
-
-[node name="BlockOrange2" parent="BlocksArea" instance=ExtResource( 14 )]
-position = Vector2( 1136.12, 131.797 )
-
-[node name="BlockRed" parent="BlocksArea" instance=ExtResource( 15 )]
-position = Vector2( 286.744, 131.797 )
-
-[node name="BlockRed2" parent="BlocksArea" instance=ExtResource( 15 )]
-position = Vector2( 409.523, 131.797 )
-
-[node name="BlockRed3" parent="BlocksArea" instance=ExtResource( 15 )]
-position = Vector2( 529.744, 131.797 )
-
-[node name="BlockRed4" parent="BlocksArea" instance=ExtResource( 15 )]
-position = Vector2( 768.744, 131.797 )
-
-[node name="BlockRed5" parent="BlocksArea" instance=ExtResource( 15 )]
-position = Vector2( 891.523, 131.797 )
-
-[node name="BlockRed6" parent="BlocksArea" instance=ExtResource( 15 )]
-position = Vector2( 1012.74, 131.797 )
-
-[node name="BlockRed7" parent="BlocksArea" instance=ExtResource( 15 )]
-position = Vector2( 164.744, 181.797 )
-
-[node name="BlockRed8" parent="BlocksArea" instance=ExtResource( 15 )]
-position = Vector2( 409.744, 181.797 )
-
-[node name="BlockRed9" parent="BlocksArea" instance=ExtResource( 15 )]
-position = Vector2( 650.744, 181.797 )
-
-[node name="BlockRed10" parent="BlocksArea" instance=ExtResource( 15 )]
-position = Vector2( 890.744, 181.797 )
-
-[node name="BlockRed11" parent="BlocksArea" instance=ExtResource( 15 )]
-position = Vector2( 1135.74, 181.797 )
+[node name="BlockPurple" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 85.0545, 116.155 )
 
 [node name="BlockOrange3" parent="BlocksArea" instance=ExtResource( 14 )]
-position = Vector2( 162.012, 131.797 )
+position = Vector2( 655.534, 329.363 )
 
-[node name="BlockGray" parent="BlocksArea" instance=ExtResource( 16 )]
-position = Vector2( 288.967, 181.838 )
+[node name="BlockOrange17" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 657.913, 182.143 )
 
-[node name="BlockGray2" parent="BlocksArea" instance=ExtResource( 16 )]
-position = Vector2( 530.967, 181.838 )
+[node name="BlockOrange8" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 655.534, 280.363 )
 
-[node name="BlockGray3" parent="BlocksArea" instance=ExtResource( 16 )]
-position = Vector2( 768.967, 181.838 )
+[node name="BlockOrange13" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 655.534, 231.363 )
 
-[node name="BlockGray4" parent="BlocksArea" instance=ExtResource( 16 )]
-position = Vector2( 1013.97, 181.838 )
+[node name="BlockRed2" parent="BlocksArea" instance=ExtResource( 15 )]
+position = Vector2( 535.83, 330.068 )
 
-[node name="BlockGray5" parent="BlocksArea" instance=ExtResource( 16 )]
-position = Vector2( 167.967, 231.838 )
+[node name="BlockRed3" parent="BlocksArea" instance=ExtResource( 15 )]
+position = Vector2( 777.159, 329.507 )
 
-[node name="BlockGray6" parent="BlocksArea" instance=ExtResource( 16 )]
-position = Vector2( 409.967, 231.838 )
+[node name="BlockRed7" parent="BlocksArea" instance=ExtResource( 15 )]
+position = Vector2( 535.83, 281.068 )
 
-[node name="BlockGray7" parent="BlocksArea" instance=ExtResource( 16 )]
-position = Vector2( 649.967, 231.838 )
+[node name="BlockRed8" parent="BlocksArea" instance=ExtResource( 15 )]
+position = Vector2( 777.159, 280.507 )
 
-[node name="BlockGray8" parent="BlocksArea" instance=ExtResource( 16 )]
-position = Vector2( 892.967, 231.838 )
+[node name="BlockPurple3" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 777.179, 232.399 )
 
-[node name="Block1" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 288.387, 232.347 )
+[node name="BlockPurple2" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 536.681, 234.517 )
 
-[node name="Block2" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 530.387, 232.347 )
+[node name="BlockPurple4" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 1250.36, 105.476 )
 
-[node name="Block3" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 770.387, 232.347 )
+[node name="BlockOrange2" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 204.726, 212.871 )
 
-[node name="Block4" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 1014.39, 232.347 )
+[node name="BlockOrange4" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 1128.49, 202.192 )
 
-[node name="BlockGray9" parent="BlocksArea" instance=ExtResource( 16 )]
-position = Vector2( 1135.97, 231.838 )
+[node name="BlockOrange5" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 83.4264, 259.493 )
+
+[node name="BlockOrange18" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 1248.6, 253.571 )
+
+[node name="BlockOrange7" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 204.726, 164.871 )
+
+[node name="BlockOrange9" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 1128.49, 153.192 )
+
+[node name="BlockOrange12" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 204.726, 115.871 )
+
+[node name="BlockOrange14" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 1128.49, 104.192 )
+
+[node name="BlockRed" parent="BlocksArea" instance=ExtResource( 15 )]
+position = Vector2( 84.0995, 212.172 )
+
+[node name="BlockRed5" parent="BlocksArea" instance=ExtResource( 15 )]
+position = Vector2( 1250.27, 202.616 )
+
+[node name="BlockPurple5" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 419.489, 35.0397 )
+
+[node name="BlockPurple10" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 205.431, 262.178 )
+
+[node name="BlockPurple11" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 84.1322, 308.557 )
+
+[node name="BlockPurple12" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 1124.69, 253.854 )
+
+[node name="BlockPurple13" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 1251.93, 306.179 )
+
+[node name="BlockPurple14" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 1253.12, 358.504 )
+
+[node name="BlockPurple15" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 84.132, 359.693 )
+
+[node name="BlockPurple16" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 474.192, 379.91 )
+
+[node name="BlockPurple17" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 596.68, 379.91 )
+
+[node name="BlockPurple18" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 720.358, 382.288 )
+
+[node name="BlockPurple19" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 841.657, 379.91 )
+
+[node name="BlockPurple20" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 966.524, 125.419 )
+
+[node name="BlockPurple21" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 352.893, 126.609 )
+
+[node name="BlockPurple6" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 541.977, 36.2289 )
+
+[node name="BlockPurple7" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 664.465, 35.0397 )
+
+[node name="BlockPurple8" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 789.332, 33.8505 )
+
+[node name="BlockPurple9" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 911.82, 35.0397 )
+
+[node name="BlockRed6" parent="BlocksArea" instance=ExtResource( 15 )]
+position = Vector2( 84.0995, 163.172 )
+
+[node name="BlockRed9" parent="BlocksArea" instance=ExtResource( 15 )]
+position = Vector2( 1250.27, 153.616 )
 
 [node name="Panel" type="Panel" parent="."]
 anchor_left = 0.5
@@ -298,12 +334,12 @@ anims/mov = SubResource( 11 )
 [node name="Title" type="Label" parent="Panel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = -8.12413
-margin_bottom = -8.12413
+margin_top = -0.629204
+margin_bottom = -0.629204
 theme = ExtResource( 7 )
 custom_constants/shadow_offset_x = 0
-custom_constants/shadow_offset_y = 3
-text = "Level 2"
+custom_constants/shadow_offset_y = 1
+text = "Level 4"
 align = 1
 valign = 2
 __meta__ = {
@@ -322,7 +358,7 @@ anchor_right = 0.5
 margin_left = -241.0
 margin_top = -101.0
 margin_right = 280.0
-margin_bottom = -0.999924
+margin_bottom = -0.999954
 theme = ExtResource( 5 )
 __meta__ = {
 "_edit_lock_": true,
@@ -344,7 +380,6 @@ text = "only 0 Life"
 align = 1
 valign = 2
 __meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 

@@ -3,12 +3,15 @@ extends Node2D
 var temp
 
 func _ready():
-	if(Global.life >= 1):
-		$Animation1.current_animation = "heart3Back"
-	if(Global.life >= 2):
+	if(Global.life == 1):
+		$Animation3.current_animation = "heart3Back"
+	if(Global.life == 2):
+		$Animation3.current_animation = "heart3Back"
 		$Animation2.current_animation = "heart2Back"
-	if(Global.life >= 3):
-		$Animation3.current_animation = "heart1Back"
+	if(Global.life == 3):
+		$Animation3.current_animation = "heart3Back"
+		$Animation2.current_animation = "heart2Back"
+		$Animation1.current_animation = "heart1Back"
 
 	temp = Global.life
 	

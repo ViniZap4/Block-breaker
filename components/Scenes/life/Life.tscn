@@ -88,7 +88,7 @@ tracks/1/keys = {
 "values": [ ExtResource( 1 ), ExtResource( 3 ) ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=4]
 resource_name = "heart3Back"
 step = 0.01
 tracks/0/type = "value"
@@ -116,8 +116,7 @@ tracks/1/keys = {
 "values": [ ExtResource( 3 ), ExtResource( 1 ) ]
 }
 
-[sub_resource type="Animation" id=4]
-resource_name = "heart1"
+[sub_resource type="Animation" id=5]
 step = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath("heart1:position")
@@ -144,8 +143,7 @@ tracks/1/keys = {
 "values": [ ExtResource( 1 ), ExtResource( 3 ) ]
 }
 
-[sub_resource type="Animation" id=5]
-resource_name = "heart2"
+[sub_resource type="Animation" id=6]
 step = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath("heart2:position")
@@ -172,7 +170,7 @@ tracks/1/keys = {
 "values": [ ExtResource( 1 ), ExtResource( 3 ) ]
 }
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=7]
 resource_name = "heart2Back"
 step = 0.01
 tracks/0/type = "value"
@@ -200,8 +198,7 @@ tracks/1/keys = {
 "values": [ ExtResource( 3 ), ExtResource( 1 ) ]
 }
 
-[sub_resource type="Animation" id=6]
-resource_name = "heart3"
+[sub_resource type="Animation" id=8]
 step = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath("heart3:position")
@@ -228,7 +225,7 @@ tracks/1/keys = {
 "values": [ ExtResource( 1 ), ExtResource( 3 ) ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=9]
 step = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath("heart1:position")
@@ -255,7 +252,7 @@ tracks/1/keys = {
 "values": [ ExtResource( 1 ), ExtResource( 3 ) ]
 }
 
-[sub_resource type="Animation" id=12]
+[sub_resource type="Animation" id=10]
 resource_name = "heart1Back"
 step = 0.01
 tracks/0/type = "value"
@@ -283,7 +280,7 @@ tracks/1/keys = {
 "values": [ ExtResource( 3 ), ExtResource( 1 ) ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=11]
 step = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath("heart2:position")
@@ -310,7 +307,7 @@ tracks/1/keys = {
 "values": [ ExtResource( 1 ), ExtResource( 3 ) ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=12]
 step = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath("heart3:position")
@@ -358,31 +355,31 @@ position = Vector2( -10.4615, 2.87809 )
 texture = ExtResource( 3 )
 
 [node name="heart1" type="Sprite" parent="."]
-position = Vector2( 12.103, 0.901 )
-texture = ExtResource( 1 )
+position = Vector2( 12.103, 2.534 )
+texture = ExtResource( 3 )
 
 [node name="heart2" type="Sprite" parent="."]
-position = Vector2( 0.826, 0.901 )
-texture = ExtResource( 1 )
+position = Vector2( 0.826, 2.534 )
+texture = ExtResource( 3 )
 
 [node name="heart3" type="Sprite" parent="."]
-position = Vector2( -10.472, 0.901 )
-texture = ExtResource( 1 )
+position = Vector2( -10.472, 2.534 )
+texture = ExtResource( 3 )
 
 [node name="Animation3" type="AnimationPlayer" parent="."]
 anims/heart1 = SubResource( 1 )
 anims/heart2 = SubResource( 2 )
 anims/heart3 = SubResource( 3 )
-anims/heart3Back = SubResource( 10 )
+anims/heart3Back = SubResource( 4 )
 
 [node name="Animation2" type="AnimationPlayer" parent="."]
-anims/heart1 = SubResource( 4 )
-anims/heart2 = SubResource( 5 )
-anims/heart2Back = SubResource( 11 )
-anims/heart3 = SubResource( 6 )
+anims/heart1 = SubResource( 5 )
+anims/heart2 = SubResource( 6 )
+anims/heart2Back = SubResource( 7 )
+anims/heart3 = SubResource( 8 )
 
 [node name="Animation1" type="AnimationPlayer" parent="."]
-anims/heart1 = SubResource( 7 )
-anims/heart1Back = SubResource( 12 )
-anims/heart2 = SubResource( 8 )
-anims/heart3 = SubResource( 9 )
+anims/heart1 = SubResource( 9 )
+anims/heart1Back = SubResource( 10 )
+anims/heart2 = SubResource( 11 )
+anims/heart3 = SubResource( 12 )

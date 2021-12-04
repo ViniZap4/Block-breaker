@@ -5,6 +5,7 @@
 [ext_resource path="res://graphics/icon/FnormalScreen.png" type="Texture" id=3]
 
 [node name="fullScreen" type="Button"]
+pause_mode = 2
 margin_right = 55.0
 margin_bottom = 53.0
 rect_scale = Vector2( 0.925643, 0.925643 )
