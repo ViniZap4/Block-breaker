@@ -171,4 +171,4 @@ func _on_level4_pressed():
 
 
 func _on_level5_pressed():
-	get_tree().change_scene("res://scenes/Levels/level5/Level5.tscn")
+	get_tree().change_scene("res://scenes/Levels/level5/level5.tscn")
