@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://components/Scenes/Platform/PataformMini/PataformMini.tscn" type="PackedScene" id=1]
 [ext_resource path="res://components/Scenes/frontior/Frontier.tscn" type="PackedScene" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://scenes/Pause/Pause.tscn" type="PackedScene" id=11]
 [ext_resource path="res://components/globals/BlocksArea.gd" type="Script" id=12]
 [ext_resource path="res://sounds/victory.wav" type="AudioStream" id=13]
+[ext_resource path="res://components/Scenes/block/BlockOrange/BlockOrange.tscn" type="PackedScene" id=14]
 [ext_resource path="res://components/Scenes/camera/Camera2D.tscn" type="PackedScene" id=17]
 [ext_resource path="res://components/fullScreen/fullScreen.tscn" type="PackedScene" id=18]
 [ext_resource path="res://components/Scenes/keyBoard/keyBoard.tscn" type="PackedScene" id=19]
@@ -168,7 +169,6 @@ __meta__ = {
 position = Vector2( 655.453, 48.6999 )
 scale = Vector2( 2.73043, 2.67568 )
 frames = SubResource( 9 )
-frame = 2
 playing = true
 
 [node name="Limit" type="Area2D" parent="."]
@@ -193,202 +193,616 @@ position = Vector2( 657.527, 634.909 )
 script = ExtResource( 12 )
 
 [node name="BlockPurple" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 66.0545, 115.029 )
+position = Vector2( 41.3324, 112.781 )
+scale = Vector2( 2, 1.5 )
 
 [node name="BlockPurple5" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 419.489, 35.0397 )
+position = Vector2( 412.747, 21.5549 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple10" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 486.164, 21.5549 )
+scale = Vector2( 2, 1.5 )
 
 [node name="BlockPurple11" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 72.1322, 248.557 )
-
-[node name="BlockPurple13" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 1258.93, 246.179 )
-
-[node name="BlockPurple23" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 1254.93, 114.179 )
-
-[node name="BlockPurple24" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 1253.93, 162.179 )
-
-[node name="BlockPurple14" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 1258.12, 298.504 )
-
-[node name="BlockPurple27" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 1063.93, 265.179 )
+position = Vector2( 38.4203, 193.869 )
+scale = Vector2( 2, 1.5 )
 
 [node name="BlockPurple28" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 863.93, 182.179 )
+position = Vector2( 873.318, 208.914 )
+scale = Vector2( 2, 1.5 )
 
 [node name="BlockPurple29" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 867.93, 233.179 )
-
-[node name="BlockPurple30" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 1062.12, 316.504 )
+position = Vector2( 873.542, 241.036 )
+scale = Vector2( 2, 1.5 )
 
 [node name="BlockPurple31" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 650.389, 323.449 )
+position = Vector2( 648.501, 237.556 )
+scale = Vector2( 2, 1.5 )
 
 [node name="BlockPurple32" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 647.93, 181.828 )
+position = Vector2( 661.144, 111.981 )
+scale = Vector2( 2, 1.5 )
 
 [node name="BlockPurple33" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 646.93, 235.828 )
+position = Vector2( 649.762, 208.456 )
+scale = Vector2( 2, 1.5 )
 
 [node name="BlockPurple34" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 649.579, 376.774 )
-
-[node name="BlockPurple35" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 259.93, 268.179 )
+position = Vector2( 648.635, 267.285 )
+scale = Vector2( 2, 1.5 )
 
 [node name="BlockPurple36" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 440.552, 185.99 )
+position = Vector2( 441.496, 203.924 )
+scale = Vector2( 2, 1.5 )
 
 [node name="BlockPurple37" parent="BlocksArea" instance=ExtResource( 6 )]
 position = Vector2( 439.552, 233.99 )
-
-[node name="BlockPurple38" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 261.12, 320.504 )
-
-[node name="BlockPurple48" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 1060.12, 365.504 )
+scale = Vector2( 2, 1.5 )
 
 [node name="BlockPurple49" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 647.579, 425.774 )
-
-[node name="BlockPurple57" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 777.984, 330.638 )
-
-[node name="BlockPurple58" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 777.174, 383.963 )
-
-[node name="BlockPurple59" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 775.174, 432.963 )
-
-[node name="BlockPurple60" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 521.984, 333.638 )
-
-[node name="BlockPurple61" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 521.174, 386.963 )
-
-[node name="BlockPurple62" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 519.174, 435.963 )
+position = Vector2( 647.579, 299.295 )
+scale = Vector2( 2, 1.5 )
 
 [node name="BlockPurple63" parent="BlocksArea" instance=ExtResource( 6 )]
 position = Vector2( 396.93, 297.179 )
+scale = Vector2( 2, 1.5 )
 
 [node name="BlockPurple64" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 396.12, 350.504 )
+position = Vector2( 396.12, 326.907 )
+scale = Vector2( 2, 1.5 )
 
 [node name="BlockPurple65" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 394.12, 399.504 )
+position = Vector2( 395.064, 357.03 )
+scale = Vector2( 2, 1.5 )
 
 [node name="BlockPurple66" parent="BlocksArea" instance=ExtResource( 6 )]
 position = Vector2( 917.93, 297.179 )
+scale = Vector2( 2, 1.5 )
 
 [node name="BlockPurple67" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 917.12, 350.504 )
+position = Vector2( 917.12, 328.255 )
+scale = Vector2( 2, 1.5 )
 
 [node name="BlockPurple68" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 915.12, 399.504 )
+position = Vector2( 920.417, 360.304 )
+scale = Vector2( 2, 1.5 )
 
 [node name="BlockPurple51" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 1110.93, 89.179 )
-
-[node name="BlockPurple52" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 1110.12, 142.504 )
+position = Vector2( 1101.49, 100.505 )
+scale = Vector2( 2, 1.5 )
 
 [node name="BlockPurple53" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 1108.12, 191.504 )
+position = Vector2( 1100.57, 163.188 )
+scale = Vector2( 2, 1.5 )
 
 [node name="BlockPurple54" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 209.93, 82.179 )
-
-[node name="BlockPurple55" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 209.12, 135.504 )
+position = Vector2( 208.986, 106.72 )
+scale = Vector2( 2, 1.5 )
 
 [node name="BlockPurple56" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 207.12, 184.504 )
+position = Vector2( 208.064, 166.57 )
+scale = Vector2( 2, 1.5 )
 
-[node name="BlockPurple50" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 259.12, 369.504 )
+[node name="BlockPurple101" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 1093.74, 434.85 )
+scale = Vector2( 2, 1.5 )
 
-[node name="BlockPurple69" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 1117.34, 434.85 )
+[node name="BlockPurple102" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 1091.86, 404.646 )
+scale = Vector2( 2, 1.5 )
 
 [node name="BlockPurple72" parent="BlocksArea" instance=ExtResource( 6 )]
 position = Vector2( 214.863, 437.854 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple100" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 214.863, 409.538 )
+scale = Vector2( 2, 1.5 )
 
 [node name="BlockPurple15" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 72.132, 299.693 )
+position = Vector2( 36.1726, 224.029 )
+scale = Vector2( 2, 1.5 )
 
 [node name="BlockPurple12" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 72.1322, 371.557 )
-
-[node name="BlockPurple41" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 1258.93, 369.179 )
-
-[node name="BlockPurple42" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 1258.12, 421.504 )
+position = Vector2( 39.1694, 357.323 )
+scale = Vector2( 2, 1.5 )
 
 [node name="BlockPurple43" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 72.132, 422.693 )
+position = Vector2( 38.4201, 385.984 )
+scale = Vector2( 2, 1.5 )
 
 [node name="BlockPurple44" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 72.1322, 472.72 )
-
-[node name="BlockPurple45" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 1262.3, 471.465 )
+position = Vector2( 37.6712, 415.035 )
+scale = Vector2( 2, 1.5 )
 
 [node name="BlockPurple16" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 343.461, 83.5316 )
-
-[node name="BlockPurple39" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 539.547, 283.746 )
-
-[node name="BlockPurple40" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 761.44, 278.559 )
-
-[node name="BlockPurple17" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 465.408, 83.7208 )
+position = Vector2( 342.517, 51.4399 )
+scale = Vector2( 2, 1.5 )
 
 [node name="BlockPurple18" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 589.086, 85.0988 )
+position = Vector2( 592.862, 52.0632 )
+scale = Vector2( 2, 1.5 )
 
 [node name="BlockPurple70" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 711.574, 87.2884 )
-
-[node name="BlockPurple71" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 835.252, 88.6664 )
+position = Vector2( 720.069, 50.4773 )
+scale = Vector2( 2, 1.5 )
 
 [node name="BlockPurple19" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 957.577, 83.91 )
+position = Vector2( 967.016, 50.8744 )
+scale = Vector2( 2, 1.5 )
 
 [node name="BlockPurple20" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 963.524, 133.419 )
+position = Vector2( 909.723, 109.822 )
+scale = Vector2( 2, 1.5 )
 
 [node name="BlockPurple21" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 344.731, 134.636 )
+position = Vector2( 397.588, 110.095 )
+scale = Vector2( 2, 1.5 )
 
 [node name="BlockPurple25" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 542.893, 135.609 )
+position = Vector2( 527.791, 107.293 )
+scale = Vector2( 2, 1.5 )
 
 [node name="BlockPurple26" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 755.893, 138.609 )
+position = Vector2( 778.546, 107.461 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple69" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 596.961, 140.298 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple103" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 885.182, 140.026 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple104" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 306.976, 139.355 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple105" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 453.225, 137.497 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple106" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 739.847, 139.553 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple107" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 667.751, 142.185 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple108" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 957.861, 140.026 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple109" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 379.654, 139.355 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple110" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 525.904, 138.441 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple111" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 813.469, 140.497 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple112" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 595.073, 169.558 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple113" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 883.295, 169.286 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple114" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 305.088, 168.616 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple115" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 451.337, 166.757 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple116" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 737.96, 168.813 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple117" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 665.864, 171.445 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple118" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 955.973, 169.286 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple119" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 377.767, 168.616 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple120" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 524.016, 167.701 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple121" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 811.581, 169.757 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple122" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 620.269, 408.342 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple123" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 908.491, 408.07 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple124" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 330.284, 407.4 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple125" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 476.533, 405.541 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple126" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 763.156, 407.597 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple127" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 691.06, 410.229 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple128" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 981.169, 408.07 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple129" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 402.963, 407.4 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple130" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 549.212, 406.485 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple131" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 836.777, 408.541 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple132" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 618.381, 437.602 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple133" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 906.603, 437.33 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple134" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 328.397, 436.66 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple135" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 474.646, 434.801 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple136" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 761.268, 436.857 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple137" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 689.172, 439.49 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple138" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 979.281, 437.33 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple139" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 401.075, 436.66 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple140" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 547.324, 435.745 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple141" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 834.89, 437.801 )
+scale = Vector2( 2, 1.5 )
 
 [node name="BlockPurple22" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 66.893, 164.609 )
+position = Vector2( 39.1743, 142.884 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple2" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 116.172, 111.94 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple13" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 113.26, 193.028 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple23" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 111.012, 223.188 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple14" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 114.009, 356.482 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple45" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 113.26, 385.143 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple77" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 112.511, 414.194 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple24" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 114.014, 142.043 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple3" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 1213.53, 116.145 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple41" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 1210.62, 197.232 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple42" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 1208.37, 227.392 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple84" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 1211.37, 360.687 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple85" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 1210.62, 389.348 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple86" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 1209.87, 418.399 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple87" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 1211.37, 146.247 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple4" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 1288.37, 115.304 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple88" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 1285.46, 196.392 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple89" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 1283.21, 226.551 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple96" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 1286.21, 359.846 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple97" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 1285.46, 388.507 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple98" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 1284.71, 417.558 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple99" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 1286.21, 145.406 )
+scale = Vector2( 2, 1.5 )
 
 [node name="BlockPurple6" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 541.977, 36.2289 )
+position = Vector2( 559.208, 21.995 )
+scale = Vector2( 2, 1.5 )
 
 [node name="BlockPurple7" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 664.465, 35.0397 )
+position = Vector2( 630.753, 20.8058 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple46" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 701.923, 20.0566 )
+scale = Vector2( 2, 1.5 )
 
 [node name="BlockPurple8" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 789.332, 33.8505 )
+position = Vector2( 773.6, 18.8674 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockPurple47" parent="BlocksArea" instance=ExtResource( 6 )]
+position = Vector2( 846.268, 18.8674 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockOrange" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 547.906, 239.191 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockOrange2" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 520.533, 269.867 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockOrange3" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 519.117, 298.655 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockOrange4" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 519.117, 327.443 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockOrange5" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 767.828, 240.135 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockOrange6" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 797.56, 270.811 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockOrange7" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 796.145, 299.599 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockOrange8" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 796.145, 328.387 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockOrange9" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 1060.35, 265.705 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockOrange10" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 1058.93, 294.493 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockOrange11" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 1058.93, 323.281 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockOrange12" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 274.79, 261.925 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockOrange15" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 208.014, 137.193 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockOrange17" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 456.848, 52.7781 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockOrange18" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 841.754, 49.6283 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockOrange16" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 1100.67, 131.523 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockOrange13" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 273.374, 290.713 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockOrange19" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 39.8542, 277.005 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockOrange20" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 38.4387, 305.793 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockOrange21" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 113.668, 276.212 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockOrange35" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 39.0605, 82.5487 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockOrange36" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 112.875, 81.755 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockOrange37" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 1213.74, 86.5172 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockOrange38" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 1287.55, 85.7235 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockOrange22" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 112.253, 305 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockOrange23" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 329.555, 468.287 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockOrange24" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 40.0261, 509.774 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockOrange25" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 403.369, 467.494 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockOrange39" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 474.802, 467.493 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockOrange40" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 546.934, 466.7 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockOrange41" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 618.273, 468.24 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockOrange42" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 689.985, 468.287 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockOrange43" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 761.225, 466.979 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockOrange44" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 836.721, 467.026 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockOrange45" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 908.803, 467.819 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockOrange46" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 980.515, 467.446 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockOrange26" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 113.84, 508.981 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockOrange27" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 1212.15, 280.18 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockOrange28" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 1210.73, 308.968 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockOrange29" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 1285.96, 279.387 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockOrange30" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 1284.55, 308.175 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockOrange31" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 1214.53, 479.399 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockOrange32" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 1213.12, 508.187 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockOrange33" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 1288.34, 478.605 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockOrange34" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 1286.93, 507.393 )
+scale = Vector2( 2, 1.5 )
+
+[node name="BlockOrange14" parent="BlocksArea" instance=ExtResource( 14 )]
+position = Vector2( 273.374, 319.501 )
+scale = Vector2( 2, 1.5 )
 
 [node name="BlockPurple9" parent="BlocksArea" instance=ExtResource( 6 )]
-position = Vector2( 911.82, 35.0397 )
+position = Vector2( 917.813, 20.0566 )
+scale = Vector2( 2, 1.5 )
 
 [node name="Panel" type="Panel" parent="."]
 anchor_left = 0.5
@@ -470,6 +884,8 @@ margin_bottom = 0.0330811
 stream = ExtResource( 13 )
 
 [node name="keyBoard" parent="." instance=ExtResource( 19 )]
+margin_left = 82.9438
+margin_right = -81.0562
 
 [node name="victory2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 13 )

@@ -18,4 +18,3 @@ func _on_Area2D_body_entered(body):
 	Global.particleInstance = NewParticleColor
 	Global.instanceControl = true
 	queue_free()
-	
