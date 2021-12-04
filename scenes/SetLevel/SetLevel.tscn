@@ -685,7 +685,7 @@ __meta__ = {
 position = Vector2( 403.119, -137.156 )
 scale = Vector2( 4.2131, 3.94336 )
 frames = ExtResource( 14 )
-frame = 8
+frame = 43
 playing = true
 
 [node name="fullScreen" parent="." instance=ExtResource( 9 )]
@@ -1144,6 +1144,9 @@ anchor_bottom = 1.0
 margin_top = -541.433
 margin_bottom = -384.433
 mouse_default_cursor_shape = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="NinePatchRect" type="NinePatchRect" parent="GridContainer/VBoxContainer/Levls/level5/panel"]
 anchor_left = 0.5
@@ -1232,9 +1235,9 @@ anims/movFontBack = SubResource( 15 )
 [connection signal="pressed" from="GridContainer/VBoxContainer/Levls/level2" to="." method="_on_level2_pressed"]
 [connection signal="pressed" from="GridContainer/VBoxContainer/Levls/level2/panel" to="." method="_on_level2_pressed"]
 [connection signal="pressed" from="GridContainer/VBoxContainer/Levls/level3" to="." method="_on_level3_pressed"]
-[connection signal="pressed" from="GridContainer/VBoxContainer/Levls/level3/panel" to="." method="_on_level2_pressed"]
+[connection signal="pressed" from="GridContainer/VBoxContainer/Levls/level3/panel" to="." method="_on_level3_pressed"]
 [connection signal="pressed" from="GridContainer/VBoxContainer/Levls/level4" to="." method="_on_level4_pressed"]
-[connection signal="pressed" from="GridContainer/VBoxContainer/Levls/level4/panel" to="." method="_on_level2_pressed"]
+[connection signal="pressed" from="GridContainer/VBoxContainer/Levls/level4/panel" to="." method="_on_level4_pressed"]
 [connection signal="pressed" from="GridContainer/VBoxContainer/Levls/level5" to="." method="_on_level5_pressed"]
-[connection signal="pressed" from="GridContainer/VBoxContainer/Levls/level5/panel" to="." method="_on_level2_pressed"]
+[connection signal="pressed" from="GridContainer/VBoxContainer/Levls/level5/panel" to="." method="_on_level5_pressed"]
 [connection signal="pressed" from="GridContainer/VBoxContainer/LineOption/Back" to="." method="_on_Back_pressed"]
