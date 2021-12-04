@@ -25,7 +25,12 @@ func _process(delta):
 			
 		#Resume
 		if $Panel/VBoxContainer/Resume.is_hovered():
-			if focusAnimate != "resume" and focusAnimate == "none" :
+			if focusAnimate != "none":
+				AnimationBack("resume")
+			else:
+				$Panel/VBoxContainer/Resume.focus_mode =  2
+				$Panel/VBoxContainer/Resume.grab_focus()
+
 				$Panel/VBoxContainer/Resume/AnimationPlayer.current_animation = "movButton"
 				$Panel/VBoxContainer/Resume/AudioStreamPlayer.play()
 				focusAnimate = "resume"
@@ -37,7 +42,12 @@ func _process(delta):
 
 		#back to set level
 		if $Panel/VBoxContainer/setLevel.is_hovered():
-			if focusAnimate != "setLevel" and focusAnimate == "none" :
+			if focusAnimate != "none":
+				AnimationBack("setLevel")
+			else:
+				$Panel/VBoxContainer/setLevel.focus_mode =  2
+				$Panel/VBoxContainer/setLevel.grab_focus()
+
 				$Panel/VBoxContainer/setLevel/AnimationPlayer.current_animation = "movButton"
 				$Panel/VBoxContainer/setLevel/AudioStreamPlayer.play()
 				focusAnimate = "setLevel"
@@ -49,7 +59,12 @@ func _process(delta):
 		
 		#back to main menu
 		if $Panel/VBoxContainer/MainMenu.is_hovered():
-			if focusAnimate != "MainMenu" and focusAnimate == "none" :
+			if focusAnimate != "none":
+				AnimationBack("MainMenu")
+			else:
+				$Panel/VBoxContainer/MainMenu.focus_mode =  2
+				$Panel/VBoxContainer/MainMenu.grab_focus()
+
 				$Panel/VBoxContainer/MainMenu/AnimationPlayer.current_animation = "movButton"
 				$Panel/VBoxContainer/MainMenu/AudioStreamPlayer.play()
 				focusAnimate = "MainMenu"
@@ -61,7 +76,12 @@ func _process(delta):
 		
 		#exit
 		if $Panel/VBoxContainer/exit.is_hovered():
-			if focusAnimate != "exit" and focusAnimate == "none" :
+			if focusAnimate != "none":
+				AnimationBack("exit")
+			else:
+				$Panel/VBoxContainer/exit.focus_mode =  2
+				$Panel/VBoxContainer/exit.grab_focus()
+
 				$Panel/VBoxContainer/exit/AnimationPlayer.current_animation = "movButton"
 				$Panel/VBoxContainer/exit/AudioStreamPlayer.play()
 				focusAnimate = "exit"
@@ -71,6 +91,20 @@ func _process(delta):
 				$Panel/VBoxContainer/exit/AnimationPlayer.current_animation  = "movButtonBack"
 				focusAnimate = "none"
 
+
+func AnimationBack(current):
+	if focusAnimate == "resume" and current != "resume":
+		$Panel/VBoxContainer/Resume.focus_mode = false
+
+	if focusAnimate == "setLevel" and current != "setLevel":
+		$Panel/VBoxContainer/setLevel.focus_mode = false
+
+	if focusAnimate == "MainMenu" and  current != "MainMenu" :
+		$Panel/VBoxContainer/MainMenu.focus_mode = false
+
+	if focusAnimate == "exit" and  current != "exit" :
+		$Panel/VBoxContainer/exit.focus_mode = false
+		
 
 func _on_Resume_pressed():
 	$Title/AnimationPlayer.current_animation = "back"

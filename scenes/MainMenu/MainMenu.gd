@@ -13,11 +13,15 @@ func _ready():
 
 
 func _process(delta):
-
 # Play
 
 	if $VBoxContainer/Play.is_hovered():
-		if focusAnimate != "play"  and focusAnimate == "none":
+		if focusAnimate != "none":
+			AnimationBack("play")
+		else:
+			$VBoxContainer/Play.focus_mode =  2
+			$VBoxContainer/Play.grab_focus()
+
 			$VBoxContainer/AnimationPlayButtom.current_animation = "movFont"
 			$VBoxContainer/Play/AudioStreamPlayer.play()
 			focusAnimate = "play"
@@ -31,10 +35,14 @@ func _process(delta):
 # Hight score
 
 	if $VBoxContainer/HighScore.is_hovered():
-		if focusAnimate != "HighScore"  and focusAnimate == "none":
+		if focusAnimate != "none":
+			AnimationBack("HighScore")
+		else:
+			$VBoxContainer/HighScore.focus_mode =  2
+			$VBoxContainer/HighScore.grab_focus()
+			
 			$VBoxContainer/AnimationHightScoreButtom.current_animation = "movFont"
 			$VBoxContainer/HighScore/AudioStreamPlayer.play()
-
 			focusAnimate = "HighScore"
 
 	else:
@@ -46,7 +54,12 @@ func _process(delta):
 # close
 
 	if $VBoxContainer/Close.is_hovered():
-		if focusAnimate != "close" and focusAnimate == "none" :
+		if focusAnimate != "none":
+			AnimationBack("close")
+		else:
+			$VBoxContainer/Close.focus_mode =  2
+			$VBoxContainer/Close.grab_focus()
+
 			$VBoxContainer/AnimationScoreButtom.current_animation = "movFont"
 			$VBoxContainer/Close/AudioStreamPlayer.play()
 			focusAnimate = "close"
@@ -57,8 +70,16 @@ func _process(delta):
 			$VBoxContainer/AnimationScoreButtom.current_animation = "movFontBack"
 			focusAnimate = "none"
 
+func AnimationBack(current):
+	if focusAnimate == "play" and current != "play":
+		$VBoxContainer/Play.focus_mode = false
 
+	if focusAnimate == "HighScore" and current != "HighScore":
+		$VBoxContainer/HighScore.focus_mode = false
 
+	if focusAnimate == "close" and  current != "close" :
+		$VBoxContainer/Close.focus_mode = false
+	
 
 func _on_Play_pressed():
 	get_tree().change_scene("res://scenes/SetLevel/SetLevel.tscn")
