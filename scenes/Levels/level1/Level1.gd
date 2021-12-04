@@ -5,7 +5,9 @@ var timeControl = 0
 func _ready():
 	$Panel/AnimationPlayer.current_animation = "mov"
 	Global.state = "playState"
+	Global.currentLevel = "level1"
 
+	
 func _process(delta):
 	timeControl + delta
 

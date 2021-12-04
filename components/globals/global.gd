@@ -26,6 +26,8 @@ var instanceBonus = false
 var input = ""
 var kayboard = false
 
+var currentLevel
+
 func _ready():
 	var file = File.new()
 	file.open('res://apiKey.env', File.READ)

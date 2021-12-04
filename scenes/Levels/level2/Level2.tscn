@@ -171,7 +171,7 @@ __meta__ = {
 position = Vector2( 639.739, 390.931 )
 scale = Vector2( 2.76601, 2.71054 )
 frames = SubResource( 9 )
-frame = 6
+frame = 2
 playing = true
 
 [node name="Limit" type="Area2D" parent="."]
