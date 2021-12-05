@@ -17,4 +17,6 @@ func _on_Area2D_body_entered(body):
 	NewParticleColor.translate(selfPosition)
 	Global.particleInstance = NewParticleColor
 	Global.instanceControl = true
+	Global.blockPosition = selfPosition
+	Global.instanceBonus = true
 	queue_free()

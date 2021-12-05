@@ -63,7 +63,7 @@ func _on_Back_pressed():
 	Global.life = 3
 	Global.score = 0
 	Global.blocksInLevel = 0
-	get_tree().change_scene("res://scenes/HighScore/HighScore.tscn")
+	get_tree().change_scene("res://scenes/MainMenu/MainMenu.tscn")
 
 
 func _on_LineEdit_focus_entered():

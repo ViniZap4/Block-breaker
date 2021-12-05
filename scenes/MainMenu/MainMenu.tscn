@@ -221,7 +221,7 @@ __meta__ = {
 position = Vector2( 880.36, 512.068 )
 scale = Vector2( 4.15707, 4.28493 )
 frames = ExtResource( 10 )
-frame = 38
+frame = 31
 playing = true
 
 [node name="fullScreen" parent="." instance=ExtResource( 2 )]

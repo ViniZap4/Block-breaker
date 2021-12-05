@@ -18,9 +18,10 @@ var apiKey = ""
 var version =  "1.0.0"
 
 var blockInstance
+var blockPosition
 var particleInstance
 
-var instanceControl = false
+var instanceControl = false 
 var instanceBonus = false
 
 var input = ""

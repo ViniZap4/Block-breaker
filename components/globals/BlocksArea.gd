@@ -19,10 +19,10 @@ func _process(delta):
 		
 		if Global.instanceBonus:
 			randomNumber.randomize()
-			numberChoosed = randomNumber.randi_range(1,15)
+			numberChoosed = randomNumber.randi_range(1,90)
 			print(numberChoosed)
-			if numberChoosed == 10:
-				selfPosition = Global.blockInstance.transform.get_origin()
+			if numberChoosed == 50 or numberChoosed == 30 or numberChoosed == 60:
+				selfPosition = Global.blockPosition
 				var newBonusLife = bonusLife.instance()
 				newBonusLife.translate(selfPosition)
 				add_child(newBonusLife)
