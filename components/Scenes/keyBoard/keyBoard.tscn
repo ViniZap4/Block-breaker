@@ -60,7 +60,7 @@ tracks/1/keys = {
 "values": [ Vector2( 1.964, 1 ), Vector2( 1.9643, 5.61231 ) ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=3]
 resource_name = "Back"
 length = 3.0
 step = 0.01
@@ -77,7 +77,7 @@ tracks/0/keys = {
 "values": [ Vector2( 0, 489 ), Vector2( 0, 730 ) ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=4]
 length = 3.0
 step = 0.01
 tracks/0/type = "value"
@@ -93,7 +93,7 @@ tracks/0/keys = {
 "values": [ Vector2( 0, -101 ), Vector2( 0, 489 ), Vector2( 0, 449 ), Vector2( 0, 489 ), Vector2( 0, 459 ), Vector2( 0, 489 ), Vector2( 0, 469 ), Vector2( 0, 489 ) ]
 }
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=5]
 resource_name = "Back"
 length = 3.0
 step = 0.01
@@ -134,7 +134,7 @@ tracks/2/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 0, -17 ) ]
 }
 
-[sub_resource type="Animation" id=12]
+[sub_resource type="Animation" id=6]
 length = 3.0
 step = 0.01
 tracks/0/type = "value"
@@ -174,7 +174,7 @@ tracks/2/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 0, -17 ) ]
 }
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=7]
 resource_name = "hidden"
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:rect_position")
@@ -189,7 +189,7 @@ tracks/0/keys = {
 "values": [ Vector2( 82, 0 ), Vector2( 68.546, 787 ) ]
 }
 
-[sub_resource type="Animation" id=14]
+[sub_resource type="Animation" id=8]
 resource_name = "mov"
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:rect_position")
@@ -268,8 +268,8 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="buttonLeft"]
-anims/Back = SubResource( 9 )
-anims/mov = SubResource( 10 )
+anims/Back = SubResource( 3 )
+anims/mov = SubResource( 4 )
 
 [node name="buttonRight" type="Panel" parent="."]
 modulate = Color( 1, 1, 1, 0 )
@@ -295,12 +295,12 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="buttonRight"]
-anims/Back = SubResource( 11 )
-anims/mov = SubResource( 12 )
+anims/Back = SubResource( 5 )
+anims/mov = SubResource( 6 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/hidden = SubResource( 13 )
-anims/mov = SubResource( 14 )
+anims/hidden = SubResource( 7 )
+anims/mov = SubResource( 8 )
 
 [connection signal="pressed" from="button" to="." method="_on_button_pressed"]
 [connection signal="button_down" from="buttonLeft/buttonLeft" to="." method="_on_buttonLeft_button_down"]

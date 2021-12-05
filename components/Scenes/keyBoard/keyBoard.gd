@@ -34,10 +34,13 @@ func _on_buttonLeft_button_down():
 
 
 func _on_buttonLeft_button_up():
-	Global.input = ""
+	if Global.input != "Right":	
+		Global.input = ""
+	
 
 func _on_buttonRight_button_up():
-	Global.input = ""
+	if Global.input != "Left":	
+		Global.input = ""
 
 #func initKayBoard():
 #	$buttonLeft/AnimationPlayer.current_animation = "mov"
